@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+p {
+  margin-bottom: 0;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+button {
+  margin-bottom: 0;
+}
+
+a {
+  color: #333232;
+}
+
+a:hover {
+  color: #333232;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #333232;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #333232;
+  border-radius: 0;
+  border: 1px solid #333232;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333232;
+  border: 1px solid #333232;
+}
+
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:not(:disabled):not(.disabled):active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #333232;
+  background-color: #fff;
+  color: #333232;
+}
+
+.btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .show > .btn.dropdown-toggle:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show > .btn.dropdown-toggle {
+  border-color: #333232;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-size: 15px;
+  background-position: calc(100% - 8px) 50%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url(../../public/images/icons/p3/icon-chevron-dark-down.svg);
+  padding: 4px 23px 4px 10px;
+}
+
+select:focus {
+  outline: none;
+  border-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.form-control:focus {
+  background-color: #f2f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+form select::-ms-expand {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

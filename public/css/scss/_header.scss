@@ -67,12 +67,13 @@
   }
 
   .mini-nav {
-      padding: 15px;
+      padding: 9px 15px;
       border-bottom: 1px solid #ccc;
       @include mQ (992px) {
-        padding: 20px 30px; 
+        padding: 14px 30px; 
       }
   }
+
   .book-btn-nav {
     // padding-bottom: 5px;
     border-bottom: 1px solid #ccc;      
@@ -85,3 +86,70 @@
       letter-spacing: 1px;
     }
   }
+
+.main-nav {
+  .top-main-nav {
+    padding: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
+    .book-btn-nav {
+      right: 50px;
+      top: 40px;
+    }
+  }
+  .links-main-nav {
+    font-family: $headingFont;
+    font-style: italic;
+    font-size: 20px;
+    a {
+      padding: 15px 4px;
+      color: rgba(87, 86, 91, 0.8);
+      @include mQmax(1200px) {
+        padding: 15px 5px;
+      }
+    }
+  }
+}
+
+.home-banner {
+  .banner-item {
+    height: 487px;
+    background-size: cover;
+    background-position: center;
+    @include mQ (992px) {
+      height: 660px;
+    }
+  }
+  .banner-box-content {
+    border: solid 1px #ffffff;
+    background-color: rgba(33, 32, 37, 0.1);
+    margin-top: 114px;
+    max-width: 1014px;
+    margin: auto;
+    padding: 60px 30px;
+  }
+  .banner-box-wrapper {
+    margin: 114px 20px 0 20px;
+    @include mQ(992px) {
+      margin: 185px 20px 0 20px;
+    }
+
+  }
+}
+.banner-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -46px;
+  margin-left: -100px;
+  height: 92px;
+  width: 200px;
+  @include mQ(992px) {
+    height: 180px;
+    width: 393px;
+    margin-top: -90px;
+    margin-left: -196px;
+  }
+  img {
+    object-fit: cover
+  }
+}

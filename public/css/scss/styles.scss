@@ -5,3 +5,32 @@
 @import './p3';
 @import './header';
 @import './footer';
+
+// Slick
+.slick-dots {
+    bottom: 50px;
+}
+.slick-dots li button:before {
+    font-size: 15px;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+.slick-dots li button:hover:before {
+    opacity: 0.2;
+    color: white;
+}
+
+// container
+.container-fluid {
+    @include mQ (992px) {
+        padding: 0 3vw;
+    }
+    @include mQ (1200px) {
+        padding: 0 10vw;
+    }
+}

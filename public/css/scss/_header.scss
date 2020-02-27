@@ -1,0 +1,87 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $primaryColor;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 65px;
+    max-width: 500px;
+    @include mQ(992px) {
+      padding-top: 80px;
+    }
+  }
+  
+  .sidenav a {
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #abaaad;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    // margin-left: 50px;
+    @include mQ(992px) {
+      left: 40px;
+      top: 5px;
+    }
+  }
+  
+  .side-nav-links {
+    padding: 0 20px;
+    @include mQ(992px) {
+      padding: 0 40px;
+    }
+    a {
+      border-top: 1px solid rgba(240, 240, 240, 0.4);
+      font-family: $textFont;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #fff;
+      text-transform: uppercase;
+      &:last-child {
+        border-bottom: 1px solid rgba(240, 240, 240, 0.4);
+      }
+    }
+
+    
+  }
+
+  .sidenav .fa {
+    padding: 0 7px;
+    font-size: 20px; 
+  }
+
+  .mini-nav {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+      @include mQ (992px) {
+        padding: 20px 30px; 
+      }
+  }
+  .book-btn-nav {
+    // padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;      
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $textFont;
+    padding-bottom: 5px;
+    a {
+      color: #57565b;
+      letter-spacing: 1px;
+    }
+  }

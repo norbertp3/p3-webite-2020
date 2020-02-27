@@ -21,6 +21,7 @@ button {
 }
 a {
     color: $primaryColor;
+    text-decoration: none;
     &:hover {
         color: $primaryColor;
         cursor: pointer;

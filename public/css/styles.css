@@ -247,61 +247,6 @@ form select::-ms-expand {
   }
 }
 
-.home-banner .banner-item {
-  height: 487px;
-  background-size: cover;
-  background-position: center;
-}
-
-@media screen and (min-width: 992px) {
-  .home-banner .banner-item {
-    height: 660px;
-  }
-}
-
-.home-banner .banner-box-content {
-  border: solid 1px #ffffff;
-  background-color: rgba(33, 32, 37, 0.1);
-  margin-top: 114px;
-  max-width: 1014px;
-  margin: auto;
-  padding: 60px 30px;
-}
-
-.home-banner .banner-box-wrapper {
-  margin: 114px 20px 0 20px;
-}
-
-@media screen and (min-width: 992px) {
-  .home-banner .banner-box-wrapper {
-    margin: 185px 20px 0 20px;
-  }
-}
-
-.banner-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -46px;
-  margin-left: -100px;
-  height: 92px;
-  width: 200px;
-}
-
-@media screen and (min-width: 992px) {
-  .banner-logo {
-    height: 180px;
-    width: 393px;
-    margin-top: -90px;
-    margin-left: -196px;
-  }
-}
-
-.banner-logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .slick-dots {
   bottom: 50px;
 }
@@ -334,5 +279,113 @@ form select::-ms-expand {
   .container-fluid {
     padding: 0 10vw;
   }
+}
+
+.home-banner .banner-item {
+  height: 487px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .home-banner .banner-item {
+    height: 660px;
+  }
+}
+
+.home-banner .banner-box-content {
+  border: solid 1px #ffffff;
+  background-color: rgba(33, 32, 37, 0.1);
+  margin-top: 114px;
+  max-width: 1014px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+.home-banner .banner-box-wrapper {
+  margin: 114px 20px 0 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .home-banner .banner-box-wrapper {
+    margin: 185px 20px 0 20px;
+  }
+}
+
+.home-banner .banner-box-wrapper h2 {
+  color: white;
+}
+
+.home-banner .banner-devider {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.banner-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -46px;
+  margin-left: -100px;
+  height: 92px;
+  width: 200px;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-logo {
+    height: 180px;
+    width: 393px;
+    margin-top: -90px;
+    margin-left: -196px;
+  }
+}
+
+.banner-logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-transparent {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+.btn-transparent:hover {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.home-italic-text {
+  text-align: center;
+  font-size: "Gelasio";
+  font-size: 18px;
+  font-style: italic;
+  line-height: 28px;
+  color: rgba(87, 86, 91, 0.7);
+  padding: 30px 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .home-italic-text {
+    padding: 50px 20vw;
+    font-size: 20px;
+  }
+}
+
+.home-italic-text p {
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -126,13 +126,54 @@
     max-width: 1014px;
     margin: auto;
     padding: 60px 30px;
+    color: #fff;
+    h2 {
+      font-family: $headingFont;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 26px;
+      @include mQ (992px) {
+        font-size: 32px;
+      }
+    }
+    .divider {
+      border-bottom: 1px solid #ccc;
+      display: block;
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include mQ (992px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
   }
   .banner-box-wrapper {
     margin: 114px 20px 0 20px;
     @include mQ(992px) {
       margin: 185px 20px 0 20px;
     }
-
+  }
+  .btn {
+    background: transparent;
+    border-radius: 2px;
+    border: solid 2px #ffffff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    &:active {
+      background-color: transparent!important;
+      border: 2px solid #fff!important;
+      color: #fff!important;
+    }
+    &:focus {
+      background-color: transparent!important;
+      border: 2px solid #fff!important;
+      color: #fff!important;
+    }
   }
 }
 .banner-logo {

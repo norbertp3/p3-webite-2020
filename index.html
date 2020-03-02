@@ -123,14 +123,63 @@
 </div>
 
 <!-- Row Text Image -->
-<div class="home-text-image">
+<section class="home-text-slider">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-6"></div>
-            <div class="col-12 col-lg-6"></div>
+        <div class="row position-relative">
+            <div class="col-12 col-lg-6 pr-lg-0 text-position order-1 order-lg-0">
+                <div class="box-content">
+                    <h2>Come and Stay</h2>
+                    <p>This is your four-star home-from-home, famous for our warm welcome and relaxed elegance. The hotel you’ll want to come back to time and time again because it feels so right. With fantastic accommodation, excellent value and two of the best restaurants in Kildare, our stars are just four of the many reasons you’ll love the Glenroyal.</p>
+                    <button class="btn-cta">Stay with us</button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pl-lg-0 slider-position order-0 order-lg-1">
+                <div class="standard-slider">
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Home Slider Text -->
+<section class="home-slider-text">
+    <div class="container-fluid">
+        <div class="row position-relative">
+            <div class="col-12 col-lg-6 pr-lg-0">
+                <div class="standard-slider">
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                    <div class="slider-item" style="background-image: url('public/images/grb.jpg')"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pl-lg-0">
+                <div class="box-content">
+                    <h2>Eat and drink</h2>
+                    <p>This is where you’ll find two of Maynooth and Kildare’s favourite restaurants and bars. Pop in to the recently refurbished the Arkle Bar and Restaurant and savour that relaxed, stylish feel and atmosphere which makes it so popular amongst both locals and hotel guests. Or wander in to the Shoda Market Café which specialises in fresh, wholesome, healthy local food.</p>
+                    <button class="btn-cta">explore dining</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Slider with content-->
+<section class="slider-box">
+    <div class="container-fluid">
+        <div class="slider-box-content d-block d-lg-flex">
+            <img src="public/images/offer-image.jpg" alt="">
+            <div class="slider-box-content">
+                <h3>Mid-Term Little Adventures Package</h3>
+                <p>Mid-Term Little Adventures Package</p>
+                <button class="btn-cta">see offer</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- End Row Text Image -->
     <!-- JS Files -->
@@ -166,6 +215,17 @@
                     breakpoint: 768,
                         settings: {
                             dots: false,
+                        }
+                    }
+                ]
+            });
+            $('.standard-slider').slick({
+                dots: true,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                        settings: {
+                            dots: true,
                         }
                     }
                 ]

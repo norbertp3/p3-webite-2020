@@ -1,0 +1,16 @@
+.btn-cta {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    height: 50px;
+    background-color: #57565b;
+    border-radius: 2px;
+    border: 2px solid #57565b;
+    padding: 0 19px;
+    box-shadow:inset 0px 0px 0px 1px #fff;
+    text-transform: uppercase;
+    &:hover {
+        cursor: pointer;
+    }
+}

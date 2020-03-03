@@ -143,6 +143,11 @@ form select::-ms-expand {
   border: 2px solid #424146;
 }
 
+.newsletter-btn {
+  background-color: rgba(240, 240, 240, 0.2);
+  border: solid 2px #f0f0f0;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -512,10 +517,6 @@ p {
 .home-italic-text {
   text-align: center;
   font-size: "Gelasio";
-  font-size: 18px;
-  font-style: italic;
-  line-height: 28px;
-  color: rgba(87, 86, 91, 0.7);
   padding: 30px 15px;
 }
 
@@ -529,6 +530,16 @@ p {
 .home-italic-text p {
   padding-bottom: 10px;
   max-width: 1920px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 28px;
+  color: rgba(87, 86, 91, 0.7);
+}
+
+@media screen and (min-width: 992px) {
+  .home-italic-text p {
+    font-size: 20px;
+  }
 }
 
 .home-text-slider {
@@ -573,6 +584,12 @@ p {
 
 @media screen and (min-width: 992px) {
   .home-text-slider .box-content {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .home-text-slider .box-content {
     padding: 130px 100px;
   }
 }
@@ -584,6 +601,12 @@ p {
 }
 
 @media screen and (min-width: 992px) {
+  .home-text-slider .box-content h2 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .home-text-slider .box-content h2 {
     font-size: 60px;
   }
@@ -650,6 +673,12 @@ p {
 
 @media screen and (min-width: 992px) {
   .home-slider-text .box-content h2 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home-slider-text .box-content h2 {
     font-size: 60px;
   }
 }
@@ -669,6 +698,12 @@ p {
 }
 
 @media screen and (min-width: 992px) {
+  .standard-slider .slider-item {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
   .standard-slider .slider-item {
     height: 713px;
   }
@@ -737,6 +772,7 @@ p {
     padding: 40px;
     top: -470px;
     float: right;
+    max-width: 600px;
   }
 }
 
@@ -773,11 +809,8 @@ p {
   }
 }
 
-.slider-box .slider-btns button {
-  padding: 10.5px 14.5px 7.5px 14.5px;
-  border: solid 1.6px #abaaad;
+.slider-box .slider-btns a {
   margin: 0 3px;
-  background: #fff;
 }
 
 @media screen and (min-width: 992px) {
@@ -846,6 +879,12 @@ p {
 
 @media screen and (min-width: 992px) {
   .map-section .home-find-us h2 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .map-section .home-find-us h2 {
     font-size: 60px;
   }
 }
@@ -856,12 +895,122 @@ p {
 
 @media screen and (min-width: 992px) {
   .map-section .home-find-us {
-    padding-right: 10vw;
+    padding-right: 30px;
     text-align: right;
     padding-left: 30px;
     margin-top: auto;
     margin-bottom: auto;
     width: 700px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .map-section .home-find-us {
+    padding-right: 10vw;
+  }
+}
+
+.newsletter-signup {
+  padding: 30px 20px;
+  background: #57565b;
+}
+
+.newsletter-signup h2 {
+  font-size: 30px;
+  color: #c0bfc2;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-signup h2 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter-signup h2 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-signup h2 {
+    padding-top: 90px;
+    font-size: 45px;
+    text-align: right;
+    margin-right: 40px;
+  }
+}
+
+.newsletter-signup p {
+  color: #f6f6f6;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-signup {
+    padding: 95px 10vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter-signup {
+    padding: 95px 15vw;
+  }
+}
+
+.newsletter-signup .newsletter-devider {
+  display: block;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-signup .newsletter-devider {
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+}
+
+.newsletter-signup .form-control {
+  background: transparent;
+  color: #fff;
+  padding: 0;
+}
+
+.newsletter-signup .form-control::-webkit-input-placeholder {
+  color: #f6f6f6;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.newsletter-signup .form-control:-ms-input-placeholder {
+  color: #f6f6f6;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.newsletter-signup .form-control::-ms-input-placeholder {
+  color: #f6f6f6;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.newsletter-signup .form-control::placeholder {
+  color: #f6f6f6;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.newsletter-signup .form-group {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 370px) {
+  .newsletter-signup .newsletter-btn {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

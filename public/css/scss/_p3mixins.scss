@@ -20,12 +20,19 @@
         border: 2px solid #424146;
     }
 }
+.newsletter-btn {
+    background-color: rgba(240, 240, 240, 0.2);
+    border: solid 2px #f0f0f0;
+}
 
 @mixin h2 {
     font-size: 30px;
     color: #c0bfc2;
     padding-bottom: 20px;
     @include mQ (992px) {
+        font-size: 45px;
+    }
+    @include mQ (1200px) {
         font-size: 60px;
     }
 }

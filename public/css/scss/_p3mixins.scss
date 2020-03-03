@@ -10,7 +10,22 @@
     padding: 0 19px;
     box-shadow:inset 0px 0px 0px 1px #fff;
     text-transform: uppercase;
-    &:hover {
+    &:hover, &:active {
         cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
+    }
+    &:focus {
+        background-color: #424146;
+        border: 2px solid #424146;
+    }
+}
+
+@mixin h2 {
+    font-size: 30px;
+    color: #c0bfc2;
+    padding-bottom: 20px;
+    @include mQ (992px) {
+        font-size: 60px;
     }
 }

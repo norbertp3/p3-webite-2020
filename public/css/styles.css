@@ -1122,8 +1122,19 @@ p {
   color: rgba(87, 86, 91, 0.6);
 }
 
+.insta-heading {
+  margin-top: 40px;
+}
+
+.insta-heading h2 {
+  font-size: 32px;
+  color: #abaaad;
+  font-family: "Gelasio";
+  font-weight: 400;
+}
+
 .gallery {
-  margin: 40px 0;
+  margin: 15px 0 40px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (2fr)[2];
@@ -1144,10 +1155,17 @@ p {
 }
 
 .gallery .gallery__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.gallery .gallery__item {
+  background-size: cover;
+  background-position: center;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .gallery .gallery__item--1 {

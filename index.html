@@ -212,33 +212,29 @@
 
 <!-- Instagram Feed -->
 <div class="container-fluid">
-    <section class="gallery">
-        <figure class="gallery__item gallery__item--1">
-            <img src="public/images/insta-feed-image-6.jpg" class="gallery__img" alt="Image 1">
+    <div class="insta-heading text-right">
+        <h2># glenroyal_hotel</h2>
+    </div>
+    <section class="gallery" id="instagram">
+        <figure class="gallery__item gallery__item--1" id="inst1">
+            
         </figure>
-        <figure class="gallery__item gallery__item--2">
-            <img src="public/images/insta-feed-image-6.jpg" class="gallery__img" alt="Image 2">
+        <figure class="gallery__item gallery__item--2" id="inst2">
+            
         </figure>
-        <figure class="gallery__item gallery__item--3">
-            <img src="public/images/insta-feed-image-6.jpg" class="gallery__img" alt="Image 3">
+        <figure class="gallery__item gallery__item--3" id="inst3">
         </figure>
-        <figure class="gallery__item gallery__item--4">
-            <img src="public/images/insta-feed-image-6.jpg" class="gallery__img" alt="Image 4">
+        <figure class="gallery__item gallery__item--4" id="inst4">
         </figure>
-        <figure class="gallery__item gallery__item--5 d-none d-lg-block">
-            <img src="https://via.placeholder.com/750" class="gallery__img" alt="Image 5">
+        <figure class="gallery__item gallery__item--5 d-none d-lg-block" id="inst5">
         </figure>
-        <figure class="gallery__item gallery__item--6 d-none d-lg-block">
-            <img src="https://via.placeholder.com/750" class="gallery__img" alt="Image 6">
+        <figure class="gallery__item gallery__item--6 d-none d-lg-block" id="inst6">
         </figure>
-        <figure class="gallery__item gallery__item--7 d-none d-lg-block">
-            <img src="https://via.placeholder.com/750" class="gallery__img" alt="Image 6">
+        <figure class="gallery__item gallery__item--7 d-none d-lg-block" id="inst7">
         </figure>
-        <figure class="gallery__item gallery__item--8 d-none d-lg-block">
-            <img src="https://via.placeholder.com/750" class="gallery__img" alt="Image 6">
+        <figure class="gallery__item gallery__item--8 d-none d-lg-block" id="inst8">
         </figure>
-        <figure class="gallery__item gallery__item--9 d-none d-lg-block">
-            <img src="https://via.placeholder.com/750" class="gallery__img" alt="Image 6">
+        <figure class="gallery__item gallery__item--9 d-none d-lg-block" id="inst9">
         </figure>
     </section>
 </div>
@@ -376,6 +372,44 @@
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        // Instagram
+        $.ajax({
+            method: "GET",
+            url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=4416246264.1677ed0.ec76a71695d143338993973248f4ab6a"
+        }).done(function(data) {
+            $('#instagram').css({"visibility": "visible"});
+            var imagesFromInstagram = data.data;
+            var imagesToDisplay = 10;
+            var imagesFound = imagesFromInstagram.length;
+            var count = 0;
+            for (var key in imagesFromInstagram) {
+                if (imagesFromInstagram.hasOwnProperty(key)) {
+                    $('#instagram #inst' + key).css({"background-image": "url('" + imagesFromInstagram[key]['images']['standard_resolution']['url'] + "')", "background-size": "cover"});
+                    var width = imagesFromInstagram[key]['images']['low_resolution']['width'];
+                    var height = imagesFromInstagram[key]['images']['low_resolution']['height'];
+                    $('#instagram #inst' + key + ' a').attr('href', imagesFromInstagram[key]['link']);
+                    // Fix height
+                    $('#inst' + key).height($('#inst' + key).width());
+                    var caption = '';
+                    if (imagesFromInstagram[key]['caption'] != null) caption = imagesFromInstagram[key]['caption']['text'];
+                    $('#instagram #inst' + key + ' .imgDescription').text(caption);
+                    var likes = 0;
+                    if (imagesFromInstagram[key]['likes'] != null) likes = imagesFromInstagram[key]['likes']['count'];
+                    $('#instagram #inst' + key + ' .likes').text(likes);
+                    var comments = 0;
+                    if (imagesFromInstagram[key]['comments'] != null) likes = imagesFromInstagram[key]['comments']['count'];
+                    $('#instagram #inst' + key + ' .comments').text(comments);
+                    if (++count == imagesToDisplay) break;
+                }
+            }
+        }).fail(function(jqXHR, textStatus) {
+            console.log( "Request failed [instagram api]");
+        });
+    })
+</script>
 
 
 </body>

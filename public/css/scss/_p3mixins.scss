@@ -36,3 +36,22 @@
         font-size: 60px;
     }
 }
+
+@mixin standardSlider {
+    .standard-slider {
+        .slider-item {
+          height: 238px;
+          background-size: cover;
+          background-position: center;
+          @include mQ (992px) {
+            height: 600px;
+          }
+          @include mQ (1500px) {
+            height: 713px;
+          }
+        }
+        .slick-dots {
+            bottom: 10px;
+        }
+    }
+}

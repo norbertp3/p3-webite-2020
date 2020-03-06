@@ -36,6 +36,26 @@
         font-size: 60px;
     }
 }
+@mixin h2-standard {
+    font-family: $headingFont;
+    font-size: 24px;
+    color: #57565b;
+    font-weight: 400;
+    @include mQ (992px) {
+        font-size: 32px;
+    }
+}
+@mixin span-standard {
+    font-family: $headingFont;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(87, 86, 91, 0.6);
+    margin-bottom: 15px;
+    display: block;
+    @include mQ (992px) {
+        font-size: 16px;
+    }
+}
 
 @mixin standardSlider {
     .standard-slider {

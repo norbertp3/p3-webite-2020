@@ -1533,7 +1533,13 @@ p {
 
 .standard__image-text {
   margin-bottom: 40px;
-  margin-top: 100px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .standard__image-text {
+    margin-top: 100px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1703,7 +1709,13 @@ p {
 
 .contact-row {
   background-color: #f6f6f6;
-  padding: 100px 0;
+  padding: 30px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-row {
+    padding: 100px 0;
+  }
 }
 
 .contact-row img {
@@ -1758,7 +1770,13 @@ p {
 
 .contact-row form {
   background-color: #fff;
-  padding: 40px;
+  padding: 15px 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-row form {
+    padding: 40px;
+  }
 }
 
 .contact-row form .form-control {

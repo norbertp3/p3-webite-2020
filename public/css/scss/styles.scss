@@ -291,7 +291,7 @@ p {
                 padding: 40px;
                 top: -470px;
                 float: right;
-                max-width: 600px;
+                max-width: 700px;
             }
             h3 {
                 font-size: 24px;
@@ -457,10 +457,13 @@ p {
 .insta-heading {
     margin-top: 40px;
     h2 {
-        font-size: 32px;
+        font-size: 16px;
         color: #abaaad;
         font-family: $headingFont;
         font-weight: 400;
+        @include mQ (992px) {
+            font-size: 32px;
+        }
     }
 }
 .gallery {

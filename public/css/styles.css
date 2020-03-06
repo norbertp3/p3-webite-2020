@@ -864,7 +864,7 @@ p {
     padding: 40px;
     top: -470px;
     float: right;
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 
@@ -1127,10 +1127,16 @@ p {
 }
 
 .insta-heading h2 {
-  font-size: 32px;
+  font-size: 16px;
   color: #abaaad;
   font-family: "Gelasio";
   font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .insta-heading h2 {
+    font-size: 32px;
+  }
 }
 
 .gallery {

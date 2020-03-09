@@ -876,5 +876,15 @@ p {
             color: rgba(87, 86, 91, 0.85);
             font-family: $textFont;
         }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-size: 10px;
+            background-position: calc(100% - 8px) 50%;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            background-image: url(https://keycollection.netlify.com/public/images/svg/dropdown-arrows.svg);
+        }
     }
 }

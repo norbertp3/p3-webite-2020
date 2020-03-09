@@ -15,3 +15,16 @@ $('.expand').find('a[href="#"]').on('click', function (e) {
     $(this).closest('.expand').find('.hidden-list').slideToggle();
 });
 
+// Testimonials box size
+if ($(window).width() > 991) {
+    $(".testimonials").each(function(){ 
+        var largest = 0;
+        $(this).find("p").each(function(){ 
+        var findHeight = $(this).height();
+        if(findHeight > largest){
+            largest = findHeight;
+        }  
+        });
+        $(this).find("p").css({"height":largest+"px"});
+    });
+}

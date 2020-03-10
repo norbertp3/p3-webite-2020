@@ -6,6 +6,7 @@
 @import './header';
 @import './footer';
 
+
 // Slick
 .slick-dots {
     bottom: 50px;
@@ -870,21 +871,131 @@ p {
         .form-control {
             box-shadow: inset 1px 1px 0 0 #cccccd;
             background-color: #f6f6f6;
+            font-size: 16px;
+            color: rgba(87, 86, 91, 0.85);
+            font-family: $textFont;
         }
         label {
             font-size: 15px;
             color: rgba(87, 86, 91, 0.85);
             font-family: $textFont;
+            margin-bottom: 10px;
         }
         select {
             -webkit-appearance: none;
             -moz-appearance: none;
             -webkit-appearance: none;
-            background-size: 10px;
+            background-size: 15px;
             background-position: calc(100% - 8px) 50%;
             background-repeat: no-repeat;
-            background-color: #fff;
-            background-image: url(https://keycollection.netlify.com/public/images/svg/dropdown-arrows.svg);
+            background-color: #f6f6f6;
+            background-image: url(../../../../public/images/icons/arrrow-dropdown-grey.png);
+        }
+        .date-picker {
+            input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-size: 15px;
+                background-position: calc(100% - 8px) 50%;
+                background-repeat: no-repeat;
+                background-color: #f6f6f6;
+                background-image: url(../../../../public/images/icons/calendar-grey.png);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .asd__wrapper {
+                @include mQmax (991px) {
+                    // width: 100%!important;
+                    right: -25px!important;
+                }
+            }
+            .asd__month-name {
+                font-family: $headingFont;
+                color: #57565b;
+            }
+            .asd__keyboard-shortcuts-trigger {
+                display: none;
+            }
+            
+        }
+    }
+}
+.gallery-wrapper {
+    margin: 40px 0;
+    @include mQ (992px) {
+        margin: 100px 0;
+    }
+    .gallerySection {
+        text-align: center;
+        h2 {
+            @include h2-standard;
+            margin-bottom: 25px;
+            @include mQ (992px) {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}
+.contact-details-row {
+    margin: 40px 0;
+    @include mQ (992px) {
+        margin: 100px 0;
+    }
+    h2 {
+        @include h2-standard;
+        margin-bottom: 10px;
+        @include mQ (992px) {
+            margin-bottom: 40px;
+        } 
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+.standard-boxes {
+    background: #f7f7f7;
+    padding: 40px 0 0 ;
+    @include mQ (992px) {
+        padding: 100px 0 0 0;
+    }
+
+    img {
+        width: 100%;
+        height: 413px;
+        object-fit: cover;
+        @include mQ (992px) {
+            height: 700px;
+        }
+    }
+    .box-content {
+        position: relative;
+        top: -100px;
+        padding: 40px;
+        margin: 0 20px -60px 20px;
+        @include mQ (992px) {
+            margin: 0 20px 0 20px;
+        }
+        text-align: center;
+        padding: 20px 15px;
+        background-color: #ffffff;
+        @include mQ(992px) {
+            padding: 40px;
+        }
+        h3 {
+            font-size: 22px;
+            color: #57565b;
+            font-family: $headingFont;
+            @include mQ(992px) {
+                font-size: 26px;
+            }
+        }
+        p {
+            margin: 15px 0;
+            @include mQ (992px) {
+                margin: 20px 0;
+            }
         }
     }
 }

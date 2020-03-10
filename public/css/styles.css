@@ -1862,22 +1862,192 @@ p {
   -webkit-box-shadow: inset 1px 1px 0 0 #cccccd;
           box-shadow: inset 1px 1px 0 0 #cccccd;
   background-color: #f6f6f6;
+  font-size: 16px;
+  color: rgba(87, 86, 91, 0.85);
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-row form label {
   font-size: 15px;
   color: rgba(87, 86, 91, 0.85);
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
 }
 
 .contact-row form select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-size: 10px;
+  background-size: 15px;
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
-  background-color: #fff;
-  background-image: url(https://keycollection.netlify.com/public/images/svg/dropdown-arrows.svg);
+  background-color: #f6f6f6;
+  background-image: url(../../../../public/images/icons/arrrow-dropdown-grey.png);
+}
+
+.contact-row form .date-picker input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-size: 15px;
+  background-position: calc(100% - 8px) 50%;
+  background-repeat: no-repeat;
+  background-color: #f6f6f6;
+  background-image: url(../../../../public/images/icons/calendar-grey.png);
+}
+
+.contact-row form .date-picker input:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .contact-row form .date-picker .asd__wrapper {
+    right: -25px !important;
+  }
+}
+
+.contact-row form .date-picker .asd__month-name {
+  font-family: "Gelasio";
+  color: #57565b;
+}
+
+.contact-row form .date-picker .asd__keyboard-shortcuts-trigger {
+  display: none;
+}
+
+.gallery-wrapper {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .gallery-wrapper {
+    margin: 100px 0;
+  }
+}
+
+.gallery-wrapper .gallerySection {
+  text-align: center;
+}
+
+.gallery-wrapper .gallerySection h2 {
+  font-family: "Gelasio";
+  font-size: 24px;
+  color: #57565b;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  .gallery-wrapper .gallerySection h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .gallery-wrapper .gallerySection h2 {
+    margin-bottom: 90px;
+  }
+}
+
+.contact-details-row {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-details-row {
+    margin: 100px 0;
+  }
+}
+
+.contact-details-row h2 {
+  font-family: "Gelasio";
+  font-size: 24px;
+  color: #57565b;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-details-row h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-details-row h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.contact-details-row p {
+  margin-bottom: 10px;
+}
+
+.standard-boxes {
+  background: #f7f7f7;
+  padding: 40px 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes {
+    padding: 100px 0 0 0;
+  }
+}
+
+.standard-boxes img {
+  width: 100%;
+  height: 413px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes img {
+    height: 700px;
+  }
+}
+
+.standard-boxes .box-content {
+  position: relative;
+  top: -100px;
+  padding: 40px;
+  margin: 0 20px -60px 20px;
+  text-align: center;
+  padding: 20px 15px;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes .box-content {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes .box-content {
+    padding: 40px;
+  }
+}
+
+.standard-boxes .box-content h3 {
+  font-size: 22px;
+  color: #57565b;
+  font-family: "Gelasio";
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes .box-content h3 {
+    font-size: 26px;
+  }
+}
+
+.standard-boxes .box-content p {
+  margin: 15px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-boxes .box-content p {
+    margin: 20px 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

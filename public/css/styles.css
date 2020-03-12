@@ -235,7 +235,7 @@ form select::-ms-expand {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000 !important;
   top: 0;
   left: 0;
   background-color: #57565b;
@@ -310,6 +310,7 @@ form select::-ms-expand {
 }
 
 .booking-widget {
+  z-index: 999 !important;
   height: 100%;
   width: 0;
   position: fixed;
@@ -529,11 +530,21 @@ form select::-ms-expand {
 .mini-nav {
   padding: 9px 15px;
   border-bottom: 1px solid #ccc;
+  -webkit-transition: top 0.5s ease;
+  transition: top 0.5s ease;
+  background: #fff;
+  z-index: 999;
 }
 
 @media screen and (min-width: 992px) {
   .mini-nav {
     padding: 14px 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-hide {
+    top: -61px;
   }
 }
 

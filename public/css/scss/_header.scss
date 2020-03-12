@@ -2,7 +2,7 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000!important;
     top: 0;
     left: 0;
     background-color: $primaryColor;
@@ -60,6 +60,7 @@
   }
 
 .booking-widget {
+    z-index: 999!important;
     height: 100%;
     width: 0;
     position: fixed;
@@ -232,10 +233,20 @@
   .mini-nav {
       padding: 9px 15px;
       border-bottom: 1px solid #ccc;
+      transition: top 0.5s ease;
+      background: #fff;
+      z-index: 999;
       @include mQ (992px) {
         padding: 14px 30px; 
       }
   }
+
+
+.navbar-hide {
+  @include mQ (992px){
+    top: -61px;
+  }
+}
 
   .book-btn-nav {
     // padding-bottom: 5px;

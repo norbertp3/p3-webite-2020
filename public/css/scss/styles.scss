@@ -105,16 +105,24 @@ p {
     background: transparent;
     color: #fff;
     border: 2px solid #fff;
+    height: 50px;
+    padding: 15px 20px;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 2px;
-    height: 50px;
-    padding: 0 20px;
+    font-family: $textFont;
+    text-transform: uppercase;
     &:hover {
         background: transparent;
         color: #fff;
         border: 2px solid #fff;
         cursor: pointer;
+    }
+    &:focus {
+        color: #fff!important;
+    }
+    &:active {
+        color: #fff!important;
     }
 }
 
@@ -924,7 +932,11 @@ p {
             .asd__keyboard-shortcuts-trigger {
                 display: none;
             }
-            
+        }
+        .btn-cta {
+            @include mQmax (700px) {
+                width: 100%;
+            }
         }
     }
 }

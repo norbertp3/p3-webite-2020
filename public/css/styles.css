@@ -126,13 +126,15 @@ form select::-ms-expand {
   background-color: #57565b;
   border-radius: 2px;
   border: 2px solid #57565b;
-  padding: 0 19px;
+  padding: 15px 20px;
   -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
           box-shadow: inset 0px 0px 0px 1px #fff;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-cta:hover, .btn-cta:active {
+  color: #f0f0f0;
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
@@ -141,11 +143,12 @@ form select::-ms-expand {
 .btn-cta:focus {
   background-color: #424146;
   border: 2px solid #424146;
+  color: #f0f0f0;
 }
 
 .newsletter-btn {
   background-color: rgba(240, 240, 240, 0.2);
-  border: solid 2px #f0f0f0;
+  border: solid 2px rgba(240, 240, 240, 0.2);
 }
 
 .galleryContent {
@@ -888,11 +891,13 @@ p {
   background: transparent;
   color: #fff;
   border: 2px solid #fff;
+  height: 50px;
+  padding: 15px 20px;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 2px;
-  height: 50px;
-  padding: 0 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 .btn-transparent:hover {
@@ -900,6 +905,14 @@ p {
   color: #fff;
   border: 2px solid #fff;
   cursor: pointer;
+}
+
+.btn-transparent:focus {
+  color: #fff !important;
+}
+
+.btn-transparent:active {
+  color: #fff !important;
 }
 
 .home-italic-text {
@@ -2134,6 +2147,12 @@ p {
 
 .contact-row form .date-picker .asd__keyboard-shortcuts-trigger {
   display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .contact-row form .btn-cta {
+    width: 100%;
+  }
 }
 
 .gallery-wrapper {

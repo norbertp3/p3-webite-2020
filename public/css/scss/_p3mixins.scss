@@ -7,10 +7,12 @@
     background-color: #57565b;
     border-radius: 2px;
     border: 2px solid #57565b;
-    padding: 0 19px;
+    padding: 15px 20px;
     box-shadow:inset 0px 0px 0px 1px #fff;
     text-transform: uppercase;
+    font-family: $textFont;
     &:hover, &:active {
+        color: #f0f0f0;
         cursor: pointer;
         background-color: rgba(87, 86, 91, 0.8);
         border: 2px solid rgba(87, 86, 91, 0.8);
@@ -18,11 +20,12 @@
     &:focus {
         background-color: #424146;
         border: 2px solid #424146;
+        color: #f0f0f0;
     }
 }
 .newsletter-btn {
     background-color: rgba(240, 240, 240, 0.2);
-    border: solid 2px #f0f0f0;
+    border: solid 2px rgba(240, 240, 240, 0.2);
 }
 
 @mixin h2 {

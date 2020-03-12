@@ -7,6 +7,15 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+// Booking Widget
+function openWidget() {
+    document.getElementById("booking-widget").style.width = "100%";
+}
+
+function closeWidget() {
+    document.getElementById("booking-widget").style.width = "0";
+}
+
 // Read more
 $('.expand').find('a[href="#"]').on('click', function (e) {
     e.preventDefault();
@@ -28,3 +37,15 @@ if ($(window).width() > 991) {
         $(this).find("p").css({"height":largest+"px"});
     });
 }
+
+// Booking Widget
+$('.promo-code-link').on('click', function (e) {
+    e.preventDefault();
+    $(this).next('.form-group').slideToggle();
+});
+
+
+$('#testp1').on('click', function () {
+    alert('aaaa');
+    $('.guest-widget-buttons').slideToggle();
+});

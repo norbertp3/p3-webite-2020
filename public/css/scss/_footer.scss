@@ -5,6 +5,15 @@ footer {
             display: inline-block;
         }
     }
+    @include mQmax (991px) {
+        text-align: center;
+    }
+    a {
+        color: rgba(87, 86, 91, 0.85);
+        font-size: 16px;
+        line-height: 26px;
+        font-family: $textFont;
+    }
 }
 ul.footer-nav {
     @include mQmax (991px) {
@@ -22,17 +31,7 @@ ul.footer-nav {
         padding: 0 10px;
     }
 }
-footer {
-    @include mQmax (991px) {
-        text-align: center;
-    }
-    a {
-        color: rgba(87, 86, 91, 0.85);
-        font-size: 16px;
-        line-height: 26px;
-        font-family: $textFont;
-    }
-}
+
 .footer-social-links {
     .fa {
         color: #abaaad;
@@ -48,7 +47,10 @@ footer {
     padding-top: 20px;
 }
 .footer-sub-links {
-    margin: 20px 0;
+    margin: 20px 0 60px 0;
+    @include mQ {
+        margin: 20px 0;
+    }
     ul {
         columns: 1;
         li {

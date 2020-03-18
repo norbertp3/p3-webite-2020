@@ -6,6 +6,7 @@
 @import './header';
 @import './footer';
 
+
 // Slick
 .slick-dots {
     bottom: 50px;
@@ -104,16 +105,24 @@ p {
     background: transparent;
     color: #fff;
     border: 2px solid #fff;
+    height: 50px;
+    padding: 15px 20px;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 2px;
-    height: 50px;
-    padding: 0 20px;
+    font-family: $textFont;
+    text-transform: uppercase;
     &:hover {
         background: transparent;
         color: #fff;
         border: 2px solid #fff;
         cursor: pointer;
+    }
+    &:focus {
+        color: #fff!important;
+    }
+    &:active {
+        color: #fff!important;
     }
 }
 
@@ -250,6 +259,12 @@ p {
         bottom: 10px;
     }
 }
+.not-slider .slick-dots {
+    display: none!important;
+}
+
+
+
 .slick-dotted.slick-slider {
     margin-bottom: 0;
 }
@@ -870,11 +885,165 @@ p {
         .form-control {
             box-shadow: inset 1px 1px 0 0 #cccccd;
             background-color: #f6f6f6;
+            font-size: 16px;
+            color: rgba(87, 86, 91, 0.85);
+            font-family: $textFont;
         }
         label {
             font-size: 15px;
             color: rgba(87, 86, 91, 0.85);
             font-family: $textFont;
+            margin-bottom: 10px;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-size: 15px;
+            background-position: calc(100% - 8px) 50%;
+            background-repeat: no-repeat;
+            background-color: #f6f6f6;
+            background-image: url(../../../../public/images/icons/arrrow-dropdown-grey.png);
+        }
+        .date-picker {
+            input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-size: 15px;
+                background-position: calc(100% - 8px) 50%;
+                background-repeat: no-repeat;
+                background-color: #f6f6f6;
+                background-image: url(../../../../public/images/icons/calendar-grey.png);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .asd__wrapper {
+                @include mQmax (991px) {
+                    // width: 100%!important;
+                    right: -25px!important;
+                }
+            }
+            .asd__month-name {
+                font-family: $headingFont;
+                color: #57565b;
+            }
+            .asd__keyboard-shortcuts-trigger {
+                display: none;
+            }
+        }
+        .btn-cta {
+            @include mQmax (700px) {
+                width: 100%;
+            }
         }
     }
 }
+.gallery-wrapper {
+    margin: 40px 0;
+    @include mQ (992px) {
+        margin: 100px 0;
+    }
+    .gallerySection {
+        text-align: center;
+        h2 {
+            @include h2-standard;
+            margin-bottom: 25px;
+            @include mQ (992px) {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}
+.contact-details-row {
+    margin: 40px 0;
+    @include mQ (992px) {
+        margin: 100px 0;
+    }
+    h2 {
+        @include h2-standard;
+        margin-bottom: 10px;
+        @include mQ (992px) {
+            margin-bottom: 40px;
+        } 
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+.standard-boxes {
+    background: #f7f7f7;
+    padding: 40px 0 0 ;
+    @include mQ (992px) {
+        padding: 100px 0 0 0;
+    }
+
+    img {
+        width: 100%;
+        height: 413px;
+        object-fit: cover;
+        @include mQ (992px) {
+            height: 700px;
+        }
+    }
+    .box-content {
+        position: relative;
+        top: -100px;
+        padding: 40px;
+        margin: 0 20px -60px 20px;
+        @include mQ (992px) {
+            margin: 0 20px 0 20px;
+        }
+        text-align: center;
+        padding: 20px 15px;
+        background-color: #ffffff;
+        @include mQ(992px) {
+            padding: 40px;
+        }
+        h3 {
+            font-size: 22px;
+            color: #57565b;
+            font-family: $headingFont;
+            @include mQ(992px) {
+                font-size: 26px;
+            }
+        }
+        p {
+            margin: 15px 0;
+            @include mQ (992px) {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.mobile-buttons {
+    background-color: #57565b;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    a {
+        color: #f0f0f0;
+        font-family: $textFont;
+        padding: 11px 0;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        display: block;
+    }
+    .call-btn {
+        border-right: 1px solid #f0f0f0;
+        border-left: 1px solid #f0f0f0;
+    }
+    .book-btn {
+        
+        a {
+            color: #57565b;
+            background-color: #f0f0f0;
+        }
+    }
+}
+

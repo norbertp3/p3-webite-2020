@@ -1666,6 +1666,7 @@ p {
 
 .content-banner .banner-box-wrapper h2 {
   color: white;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 992px) {

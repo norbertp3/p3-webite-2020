@@ -622,6 +622,7 @@ p {
         }
         h2 {
             color: white;
+            font-weight: 400;
             @include mQ (992px) {
                 font-size: 32px;
             }

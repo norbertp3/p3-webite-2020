@@ -272,7 +272,7 @@ p {
 // Home Slider with box
 .slider-box {
     background: #f6f6f6;
-    padding: 50px 0 100px 0;
+    padding: 50px 5px 100px 5px;
     @include mQ (992px) {
         padding: 100px 0;
     }
@@ -324,6 +324,12 @@ p {
                 color: rgba(87, 86, 91, 0.85);
                 font-family: $textFont;
                 padding-bottom: 20px;
+            }
+            .btn-cta {
+                @include mQmax (700px) {
+                    text-align: center;
+                    width: 100%;
+                }
             }
         }
     }
@@ -442,8 +448,9 @@ p {
         margin-bottom: 0;
     }
     .newsletter-btn {
-        @include mQmax (370px) {
+        @include mQmax (700px) {
             width: 100%;
+            text-align: center;
         }
     }
 }

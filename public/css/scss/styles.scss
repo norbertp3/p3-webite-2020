@@ -947,6 +947,7 @@ p {
             font-size: 16px;
             color: rgba(87, 86, 91, 0.85);
             font-family: $textFont;
+            height: 50px;
         }
         label {
             font-size: 15px;
@@ -1044,7 +1045,7 @@ p {
         height: 413px;
         object-fit: cover;
         @include mQ (992px) {
-            height: 700px;
+            height: 500px;
         }
     }
     .box-content {
@@ -1065,6 +1066,7 @@ p {
             font-size: 22px;
             color: #57565b;
             font-family: $headingFont;
+            font-weight: 400;
             @include mQ(992px) {
                 font-size: 26px;
             }

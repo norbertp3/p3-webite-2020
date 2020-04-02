@@ -24,7 +24,7 @@ $( document ).ready(function() {
         $(this).closest('.expand').find('.hidden-list').slideToggle();
     });
 
-    // Testimonials box size
+    // Responsive
     if ($(window).width() > 991) {
         $(".testimonials").each(function(){ 
             var largest = 0;
@@ -36,19 +36,31 @@ $( document ).ready(function() {
             });
             $(this).find("p").css({"height":largest+"px"});
         });
-            // Navbar scroll
-            $(window).scroll(function(e) {
-            
-                // add/remove class to navbar when scrolling to hide/show
-                var scroll = $(window).scrollTop();
-                if (scroll <= 150) {
-                    $('.mini-nav').addClass("navbar-hide");
-                } else {
-                    $('.mini-nav').removeClass("navbar-hide");
-                }
+        $(".standard-boxes").each(function(){ 
+            var largest = 0;
+            $(this).find(".box-content").each(function(){ 
+            var findHeight = $(this).height();
+            if(findHeight > largest){
+                largest = findHeight;
+            }  
             });
+            var largest = largest + 110;
+            $(this).find(".box-content").css({"height":largest+"px"});
+        });
+        // Navbar scroll
+        $(window).scroll(function(e) {
+        
+            // add/remove class to navbar when scrolling to hide/show
+            var scroll = $(window).scrollTop();
+            if (scroll <= 150) {
+                $('.mini-nav').addClass("navbar-hide");
+            } else {
+                $('.mini-nav').removeClass("navbar-hide");
+            }
+        });
     }
     if ($(window).width() <= 991) {
+
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;

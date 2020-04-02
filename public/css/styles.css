@@ -2415,6 +2415,15 @@ p {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .standard-boxes .box-content .btn-cta {
+    bottom: 20px;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+  }
+}
+
 .mobile-buttons {
   background-color: #57565b;
   padding: 5px;

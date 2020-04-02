@@ -1077,6 +1077,14 @@ p {
                 margin: 20px 0;
             }
         }
+        .btn-cta {
+            @include mQ (992px) {
+                bottom: 20px;
+                position: absolute;
+                left: 20%;
+                right: 20%;
+            }
+        }
     }
 }
 

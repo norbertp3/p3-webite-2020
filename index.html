@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="public/css/styles.css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Gelasio|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
 </head>
@@ -36,8 +36,8 @@
             </div>
             <div class="container-fluid">
                 <div class="links-main-nav d-flex justify-content-between">
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
+                    <a href="#" >About</a>
+                    <a href="#" class="active">Services</a>
                     <a href="#">Clients</a>
                     <a href="#">Contact</a>
                     <a href="#">About</a>
@@ -53,9 +53,11 @@
         </div>
 
         <div class="mini-nav fixed-top d-flex justify-content-between align-items-center navbar-hide">
-            <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()" >
+            <div class="mini-nav-align">
+                <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()">
+            </div>
             <img src="public/images/logo-mark-grey.png">
-            <a href="#" class="book-btn-nav d-none d-lg-block">BOOK YOUR STAY</a>
+            <a href="#" class="book-btn-nav d-none d-md-block">BOOK YOUR STAY</a>
         </div>
     </header>
 
@@ -205,8 +207,8 @@
             </div>
         </div>
         <div class="slider-btns">
-            <a href="javascript:;" class="prev-slide slick-arrow"><img src="public/images/icons/left-square.svg"></a>
-            <a href="javascript:;" class="next-slide slick-arrow"><img src="public/images/icons/right-square.svg"></a>
+            <a href="javascript:;" class="slick-arrow"><img src="public/images/icons/left-square.svg" id="prev-offer"></a>
+            <a href="javascript:;" class="slick-arrow"><img src="public/images/icons/right-square.svg" id="next-offer"></a>
         </div>
     </div>
 </section>
@@ -259,10 +261,9 @@
         <div class="col-12 col-lg-6">
             <form>
                 <p>Join our newsletter mailing list to keep up to date with all our latest special offers, news and events.</p>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email address">
+                <div class="form-group newsletter-input">
+                    <input type="email" class="form-control" placeholder="Email address" onfocus="this.placeholder = ''">
                 </div>
-                <div class="newsletter-devider"></div>
                 <a href="#" class="btn-cta newsletter-btn">Join the list</a>
             </form>
         </div>
@@ -316,6 +317,15 @@
     </div>
 </footer>
 
+<!-- Mobile Sticky Widget -->
+<section class="mobile-buttons d-md-none">
+    <div class="row">
+        <div class="col-4 pr-0"><a href="javascript:;">MAP</a></div>
+        <div class="col-4 call-btn"><a href="javascript:;">CALL</a></div>
+        <div class="col-4 book-btn pl-0"><a href="javascript:;" onclick="openWidget()">BOOK</a></div>
+    </div>
+</section>
+
 <!-- End Row Text Image -->
     <!-- JS Files -->
 
@@ -346,41 +356,41 @@
     <script src="public/js/sliders.js"></script>
 
 <script>
-    $(document).ready(function() {
-        // Instagram
-        $.ajax({
-            method: "GET",
-            url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=4416246264.1677ed0.ec76a71695d143338993973248f4ab6a"
-        }).done(function(data) {
-            $('#instagram').css({"visibility": "visible"});
-            var imagesFromInstagram = data.data;
-            var imagesToDisplay = 10;
-            var imagesFound = imagesFromInstagram.length;
-            var count = 0;
-            for (var key in imagesFromInstagram) {
-                if (imagesFromInstagram.hasOwnProperty(key)) {
-                    $('#instagram #inst' + key).css({"background-image": "url('" + imagesFromInstagram[key]['images']['standard_resolution']['url'] + "')", "background-size": "cover"});
-                    var width = imagesFromInstagram[key]['images']['low_resolution']['width'];
-                    var height = imagesFromInstagram[key]['images']['low_resolution']['height'];
-                    $('#instagram #inst' + key + ' a').attr('href', imagesFromInstagram[key]['link']);
-                    // Fix height
-                    $('#inst' + key).height($('#inst' + key).width());
-                    var caption = '';
-                    if (imagesFromInstagram[key]['caption'] != null) caption = imagesFromInstagram[key]['caption']['text'];
-                    $('#instagram #inst' + key + ' .imgDescription').text(caption);
-                    var likes = 0;
-                    if (imagesFromInstagram[key]['likes'] != null) likes = imagesFromInstagram[key]['likes']['count'];
-                    $('#instagram #inst' + key + ' .likes').text(likes);
-                    var comments = 0;
-                    if (imagesFromInstagram[key]['comments'] != null) likes = imagesFromInstagram[key]['comments']['count'];
-                    $('#instagram #inst' + key + ' .comments').text(comments);
-                    if (++count == imagesToDisplay) break;
-                }
-            }
-        }).fail(function(jqXHR, textStatus) {
-            console.log( "Request failed [instagram api]");
-        });
-    })
+    // $(document).ready(function() {
+    //     // Instagram
+    //     $.ajax({
+    //         method: "GET",
+    //         url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=4416246264.1677ed0.ec76a71695d143338993973248f4ab6a"
+    //     }).done(function(data) {
+    //         $('#instagram').css({"visibility": "visible"});
+    //         var imagesFromInstagram = data.data;
+    //         var imagesToDisplay = 10;
+    //         var imagesFound = imagesFromInstagram.length;
+    //         var count = 0;
+    //         for (var key in imagesFromInstagram) {
+    //             if (imagesFromInstagram.hasOwnProperty(key)) {
+    //                 $('#instagram #inst' + key).css({"background-image": "url('" + imagesFromInstagram[key]['images']['standard_resolution']['url'] + "')", "background-size": "cover"});
+    //                 var width = imagesFromInstagram[key]['images']['low_resolution']['width'];
+    //                 var height = imagesFromInstagram[key]['images']['low_resolution']['height'];
+    //                 $('#instagram #inst' + key + ' a').attr('href', imagesFromInstagram[key]['link']);
+    //                 // Fix height
+    //                 $('#inst' + key).height($('#inst' + key).width());
+    //                 var caption = '';
+    //                 if (imagesFromInstagram[key]['caption'] != null) caption = imagesFromInstagram[key]['caption']['text'];
+    //                 $('#instagram #inst' + key + ' .imgDescription').text(caption);
+    //                 var likes = 0;
+    //                 if (imagesFromInstagram[key]['likes'] != null) likes = imagesFromInstagram[key]['likes']['count'];
+    //                 $('#instagram #inst' + key + ' .likes').text(likes);
+    //                 var comments = 0;
+    //                 if (imagesFromInstagram[key]['comments'] != null) likes = imagesFromInstagram[key]['comments']['count'];
+    //                 $('#instagram #inst' + key + ' .comments').text(comments);
+    //                 if (++count == imagesToDisplay) break;
+    //             }
+    //         }
+    //     }).fail(function(jqXHR, textStatus) {
+    //         console.log( "Request failed [instagram api]");
+    //     });
+    // })
 </script>
 
 </body>

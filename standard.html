@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="public/css/styles.css">
 
     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Montserrat&display=swap" rel="stylesheet">
 
 </head>
@@ -37,8 +38,8 @@
             </div>
             <div class="container-fluid">
                 <div class="links-main-nav d-flex justify-content-between">
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
+                    <a href="#" >About</a>
+                    <a href="#" class="active">Services</a>
                     <a href="#">Clients</a>
                     <a href="#">Contact</a>
                     <a href="#">About</a>
@@ -53,10 +54,12 @@
             </div>
         </div>
 
-        <div class="mini-nav fixed-top d-flex justify-content-between align-items-center" id="mini-nav">
-            <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()" >
+        <div class="mini-nav fixed-top d-flex justify-content-between align-items-center navbar-hide">
+            <div class="mini-nav-align">
+                <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()">
+            </div>
             <img src="public/images/logo-mark-grey.png">
-            <a href="javascript:;" onclick="openWidget()" class="book-btn-nav d-none d-lg-block">BOOK YOUR STAY</a>
+            <a href="#" class="book-btn-nav d-none d-md-block">BOOK YOUR STAY</a>
         </div>
     </header>
 
@@ -552,7 +555,7 @@
 </footer>
 
 <!-- Mobile Sticky Widget -->
-<section class="mobile-buttons d-lg-none">
+<section class="mobile-buttons d-md-none">
     <div class="row">
         <div class="col-4 pr-0"><a href="javascript:;">MAP</a></div>
         <div class="col-4 call-btn"><a href="javascript:;">CALL</a></div>

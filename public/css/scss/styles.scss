@@ -33,6 +33,7 @@ p {
     color: rgba(87, 86, 91, 0.85);
     @include mQ (992px) {
         font-size: 16px;
+        line-height: 26px;
     }
 }
 
@@ -63,6 +64,9 @@ p {
       max-width: 1014px;
       margin: auto;
       padding: 60px 30px;
+      .btn-transparent {
+            display: inline-block;
+        }
     }
     .banner-box-wrapper {
       margin: 114px 20px 0 20px;
@@ -258,6 +262,29 @@ p {
     .slick-dots {
         bottom: 10px;
     }
+    .slick-prev {
+        left: 10px;
+        z-index: 100;
+        &:before {
+            content: url(../../public/images/icons/arrow-gallery-left.png);
+        }
+    }
+    .slick-next {
+        right: 10px;
+        &:before {
+            content: url(../../public/images/icons/arrow-gallery-right.png);
+        }
+    }
+    .slick-arrow {
+        display: none!important;
+    }
+    &:hover {
+        @include mQ (992px) {
+            .slick-arrow {
+                display: block!important;
+            }
+        }
+    }
 }
 .not-slider .slick-dots {
     display: none!important;
@@ -312,6 +339,7 @@ p {
                 font-size: 24px;
                 color: #57565b;
                 padding-bottom: 20px;
+                font-family: $headingFont;
                 @include mQ (992px) {
                     font-size: 32px;
                     padding-bottom: 27px;
@@ -438,6 +466,8 @@ p {
         background: transparent;
         color: #fff;
         padding: 0;
+        height: 50px;
+        font-family: $textFont;
         &::placeholder {
             color: #f6f6f6;
             font-size: 15px;
@@ -445,7 +475,21 @@ p {
         }
     }
     .form-group {
-        margin-bottom: 0;
+        margin-bottom: 40px;
+        position: relative;
+        @include mQ (992px) {
+            margin-bottom: 50px;
+            width: 50%;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        &::after {
+            border-bottom: 2px solid #fff;
+            content: " ";
+            position: absolute;
+            width: 100%;
+        }
     }
     .newsletter-btn {
         @include mQmax (700px) {
@@ -496,8 +540,8 @@ p {
     grid-gap: 15px;
     width: 100%;
     @include mQ (992px) {
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(6, 5vw);
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: repeat(22, 2.6vw);
     }
     .insta-feed__img {
         background-size: cover;
@@ -512,6 +556,7 @@ p {
         width: 100%!important;
         height: 100%!important;
         // height: 200px;
+        background-image: url('../../public/images/insta-feed-image-6.jpg');
     }
     .insta-feed__item--1 {
         grid-column-start: 1;
@@ -617,9 +662,9 @@ p {
         background-color: rgba(33, 32, 37, 0.1);
         max-width: 1014px;
         margin: auto;
-        padding: 17px 59px;
+        padding: 40px 59px;
         @include mQ (992px) {
-            padding: 28px 148px;
+            padding: 50px 140px;
         }
       }
       .banner-box-wrapper {
@@ -630,9 +675,13 @@ p {
         h2 {
             color: white;
             font-weight: 400;
+            font-family: $headingFont;
             @include mQ (992px) {
                 font-size: 32px;
             }
+        }
+        .btn-transparent {
+            display: inline-block;
         }
       }
       .banner-devider {
@@ -641,8 +690,7 @@ p {
           width: 80px;
           margin-left: auto;
           margin-right: auto;
-          margin-top: 30px;
-          margin-bottom: 30px;
+          margin-top: 20px;
       }
 }
 
@@ -816,6 +864,7 @@ p {
     h2 {
         @include h2-standard;
         margin-bottom: 26px;
+        font-style: italic;
         @include mQ (992px) {
             margin-bottom: 36px;
         }
@@ -889,7 +938,9 @@ p {
         @include mQ (992px) {
             padding: 40px;
         }
-        
+        .form-group {
+            margin-bottom: 30px;
+        }
         .form-control {
             box-shadow: inset 1px 1px 0 0 #cccccd;
             background-color: #f6f6f6;
@@ -902,6 +953,7 @@ p {
             color: rgba(87, 86, 91, 0.85);
             font-family: $textFont;
             margin-bottom: 10px;
+            display: block;
         }
         select {
             -webkit-appearance: none;

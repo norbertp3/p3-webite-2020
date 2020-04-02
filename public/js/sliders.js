@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
     $('.standard-slider').slick({
         dots: true,
+        arrows: true,
         responsive: [
             {
             breakpoint: 768,
@@ -23,9 +24,9 @@ $(document).ready(function(){
     });
     $('.slider-box-content').slick({
         dots: false,
-        arrows: false,
-        prevArrow: $('.prev-slide'),
-        nextArrow: $('.next-slide')
+        arrows: true,
+        prevArrow: $('#prev-offer'),
+        nextArrow: $('#next-offer')
     });
     $('.testimonials').slick({
         dots: true,

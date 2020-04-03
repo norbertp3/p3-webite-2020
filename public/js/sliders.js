@@ -12,15 +12,7 @@ $(document).ready(function(){
     });
     $('.standard-slider').slick({
         dots: true,
-        arrows: true,
-        responsive: [
-            {
-            breakpoint: 768,
-                settings: {
-                    dots: true,
-                }
-            }
-        ]
+        arrows: true
     });
     $('.slider-box-content').slick({
         dots: false,

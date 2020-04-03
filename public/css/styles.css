@@ -549,7 +549,7 @@ form select::-ms-expand {
 
 @media screen and (min-width: 992px) {
   .navbar-hide {
-    top: -61px;
+    top: -64px;
   }
 }
 
@@ -1253,7 +1253,7 @@ p {
     padding: 40px;
     top: -470px;
     float: right;
-    max-width: 700px;
+    width: 700px;
   }
 }
 

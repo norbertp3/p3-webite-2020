@@ -34,7 +34,7 @@
         <div class="main-nav position-relative d-none d-lg-block">
             <div class="top-main-nav text-center">
                 <img src="public/images/logo-stars-placeholder.png" alt="">
-                <a href="#" class="book-btn-nav position-absolute">BOOK YOUR STAY</a>
+                <a href="#" class="book-btn-nav position-absolute" onclick="openWidget()">BOOK YOUR STAY</a>
             </div>
             <div class="container-fluid">
                 <div class="links-main-nav d-flex justify-content-between">
@@ -59,7 +59,7 @@
                 <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()">
             </div>
             <img src="public/images/logo-mark-grey.png">
-            <a href="#" class="book-btn-nav d-none d-md-block">BOOK YOUR STAY</a>
+            <a href="#" class="book-btn-nav d-none d-md-block" onclick="openWidget()">BOOK YOUR STAY</a>
         </div>
     </header>
 
@@ -125,32 +125,63 @@
                     </div>
 
                     <div class="guest-widget-buttons">
-                        <div class="d-flex align-items-center just">
-                            <p>Rooms</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p>How many rooms?</p>
                             <div class="d-flex align-items-center justify-content-between w-50">
-                                <button @click="room.quantity += 1">+</button>
-                                <span v-model.number="room.quantity">{{room.quantity}}</span>
                                 <button @click="room.quantity -= 1">-</button>
+                                <span v-model.number="room.quantity">{{room.quantity}}</span>
+                                <button @click="room.quantity += 1">+</button>
+                            </div>
+                        </div>
+                        <div class="guest-info" v-if="room.quantity >= 4">
+                            <p class="room-number">Room {{room.quantity}}</p>
+                            <div class="align">
+                                <div class="d-flex align-items-center mb-1" v-for="person in people">
+                                    <p>{{person.name}}</p>
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <button @click="person.quantity -= 1">-</button>
+                                            <span>{{person.quantity}}</span>
+                                        <button @click="person.quantity += 1">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guest-info" v-if="room.quantity >= 3">
+                            <p class="room-number">Room {{room.quantity}}</p>
+                            <div class="align">
+                                <div class="d-flex align-items-center mb-1" v-for="person in people">
+                                    <p>{{person.name}}</p>
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <button @click="person.quantity -= 1">-</button>
+                                            <span>{{person.quantity}}</span>
+                                        <button @click="person.quantity += 1">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 2">
-                            <div class="d-flex align-items-center mb-1" v-for="person in people">
-                                <p>{{person.name}}</p>
-                                <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity += 1">+</button>
-                                        <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity -= 1">-</button>
+                            <p class="room-number">Room {{room.quantity}}</p>
+                            <div class="align">
+                                <div class="d-flex align-items-center mb-3" v-for="person in people">
+                                    <p>{{person.name}}</p>
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <button @click="person.quantity -= 1">-</button>
+                                            <span>{{person.quantity}}</span>
+                                        <button @click="person.quantity += 1">+</button>
+                                    </div>
                                 </div>
-    
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 1">
-                            <div class="d-flex align-items-center mb-1" v-for="person in people">
-                                <p>{{person.name}}</p>
-                                <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity += 1">+</button>
-                                        <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity -= 1">-</button>
+                            <p class="room-number">Room {{room.quantity}}</p>
+                            <div class="align">
+                                <div class="d-flex align-items-center my-3" v-for="person in people">
+                                    <p>{{person.name}}</p>
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <button @click="person.quantity -= 1">-</button>
+                                            <span>{{person.quantity}}</span>
+                                        <button @click="person.quantity += 1">+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

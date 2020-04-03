@@ -248,6 +248,9 @@ p {
 }
 
 .standard-slider {
+    &:hover {
+        cursor: pointer;
+    }
     .slider-item {
       height: 238px;
       background-size: cover;

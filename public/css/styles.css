@@ -120,7 +120,7 @@ form select::-ms-expand {
 .btn-cta {
   display: inline-block;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 2px;
   color: #f0f0f0;
   background-color: #57565b;
@@ -149,6 +149,13 @@ form select::-ms-expand {
 .newsletter-btn {
   background-color: rgba(240, 240, 240, 0.2);
   border: solid 2px rgba(240, 240, 240, 0.2);
+}
+
+.newsletter-btn:hover {
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border: solid 2px #f6f6f6;
+  color: #57565b !important;
 }
 
 .galleryContent {
@@ -454,6 +461,14 @@ form select::-ms-expand {
 .booking-widget .widget-form .btn-cta {
   background-color: rgba(240, 240, 240, 0.2);
   border: solid 2px rgba(240, 240, 240, 0.2);
+  font-weight: 500;
+}
+
+.booking-widget .widget-form .btn-cta:hover {
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border: solid 2px #f6f6f6;
+  color: #57565b !important;
 }
 
 .booking-widget .widget-form .free-drink {
@@ -552,6 +567,7 @@ form select::-ms-expand {
 }
 
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+  display: none;
   position: absolute;
   padding: 30px 20px 24px 20px;
   background: #f0f0f0;
@@ -576,6 +592,34 @@ form select::-ms-expand {
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons p {
   color: #57565b;
   width: 100%;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #f6f6f6;
+  background-color: #57565b;
+  border-radius: 2px;
+  border: 2px solid #57565b;
+  padding: 13.5px 20px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
+  box-shadow: inset 0px 0px 0px 1px #cccccd;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 30px;
+  float: right;
+  font-weight: 500;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn:hover {
+  cursor: pointer;
+  background-color: rgba(87, 86, 91, 0.8);
+  border: 2px solid rgba(87, 86, 91, 0.8);
 }
 
 .mini-nav {

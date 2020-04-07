@@ -1,7 +1,7 @@
 .btn-cta {
     display: inline-block;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2px;
     color: #f0f0f0;
     // height: 50px;
@@ -27,6 +27,12 @@
 .newsletter-btn {
     background-color: rgba(240, 240, 240, 0.2);
     border: solid 2px rgba(240, 240, 240, 0.2);
+    &:hover {
+        cursor: pointer;
+        background-color: #f6f6f6;
+        border: solid 2px #f6f6f6;
+        color: #57565b!important;
+    }
 }
 
 @mixin h2 {

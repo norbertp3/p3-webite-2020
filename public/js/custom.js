@@ -80,8 +80,7 @@ $( document ).ready(function() {
     });
 
 
-    $('#testp1').on('click', function () {
-        alert('aaaa');
+    $('#guest-widget').on('click', function () {
         $('.guest-widget-buttons').slideToggle();
     });
 

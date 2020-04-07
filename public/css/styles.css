@@ -395,6 +395,7 @@ form select::-ms-expand {
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
   background-color: #57565b;
+  font-family: "Montserrat", sans-serif;
 }
 
 .booking-widget .widget-form .form-control:hover {
@@ -435,6 +436,20 @@ form select::-ms-expand {
 
 .booking-widget .widget-form .booking-widget-datepicker .form-control {
   background-image: url(../../../../public/images/icons/calendar-light.png) !important;
+}
+
+.booking-widget .widget-form .booking-widget-datepicker .asd__wrapper {
+  right: 0 !important;
+  top: 121px !important;
+  left: 20px !important;
+}
+
+@media screen and (min-width: 991px) {
+  .booking-widget .widget-form .booking-widget-datepicker .asd__wrapper {
+    right: 0 !important;
+    top: 240px !important;
+    left: 40px !important;
+  }
 }
 
 .booking-widget .widget-form .form-group {
@@ -527,11 +542,16 @@ form select::-ms-expand {
 .booking-widget .widget-form .guest-quantity button {
   text-align: center;
   height: 45px;
-  width: 45px;
-  border: 1px solid #57565b;
+  min-width: 45px;
+  border: solid 1px #57565b;
   color: #57565b;
   border-radius: 2px;
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 18px;
+}
+
+.booking-widget .widget-form .guest-quantity button:hover {
+  cursor: pointer;
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number {
@@ -556,7 +576,18 @@ form select::-ms-expand {
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .align {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-info .align {
+    padding: 0 0 0 30px;
+  }
+}
+
+.booking-widget .widget-form .guest-quantity .guest-info .age {
+  font-size: 18px;
+  color: #abaaad;
 }
 
 .booking-widget .widget-form .guest-quantity span {
@@ -569,10 +600,23 @@ form select::-ms-expand {
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
   display: none;
   position: absolute;
-  padding: 30px 20px 24px 20px;
+  padding: 30px 15px 24px 15px;
   background: #f0f0f0;
   width: 100%;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+    padding: 30px 20px 24px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+    margin-left: -20px;
+    width: 100vw;
+  }
 }
 
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons:before {

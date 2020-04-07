@@ -341,6 +341,7 @@
                             :trigger-element-id="'trigger-single'"
                             :mode= "'single'"
                             :date-one="arrivalDate"
+                            :months-to-show="1"
                             @date-one-selected="dateSelected"
                     ></airbnb-style-datepicker>
                 </div>
@@ -422,7 +423,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="apply-btn">APPLY</button>
                 </div>
             </div>
 
@@ -459,7 +459,7 @@
     <script type="text/javascript" src="public/js/slick.min.js"></script>
     <!-- Vue Datepicker -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/no-dep/vue-airbnb-style-datepicker.min.js"></script>
+    <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/vue-airbnb-style-datepicker.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="public/js/bootstrap.min.js">
@@ -508,144 +508,145 @@
 </script>
 
 <!-- Vue Datepicker -->
-<script>
+    <!-- Vue Datepicker -->
+    <script>
 
-    window.datePickerMixin = {
-        data: {
-            dateFormat: '',
-            arrivalDate: ''
-        },
-        methods: {
-            dateSelected: function(date) {
-                this.arrivalDate = date;
+        window.datePickerMixin = {
+            data: {
+                dateFormat: '',
+                arrivalDate: ''
             },
+            methods: {
+                dateSelected: function(date) {
+                    this.arrivalDate = date;
+                },
 
-            getDateSuffix: function(d) {
-                if (d > 3 && d < 21) return 'th';
-                switch (d % 10) {
-                    case 1:  return "st";
-                    case 2:  return "nd";
-                    case 3:  return "rd";
-                    default: return "th";
+                getDateSuffix: function(d) {
+                    if (d > 3 && d < 21) return 'th';
+                    switch (d % 10) {
+                        case 1:  return "st";
+                        case 2:  return "nd";
+                        case 3:  return "rd";
+                        default: return "th";
+                    }
+                },
+
+                formatDates: function(date) {
+                    var daysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                    var shortMonthNames = [
+                        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                    ];
+
+                    var date = new Date(date);
+
+                    return daysShort[date.getUTCDay()] + ' ' + date.getUTCDate() + this.getDateSuffix(date.getUTCDate()) + ' ' + shortMonthNames[date.getUTCMonth()];
                 }
-            },
-
-            formatDates: function(date) {
-                var daysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-                var shortMonthNames = [
-                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-                ];
-
-                var date = new Date(date);
-
-                return daysShort[date.getUTCDay()] + ' ' + date.getUTCDate() + this.getDateSuffix(date.getUTCDate()) + ' ' + shortMonthNames[date.getUTCMonth()];
             }
         }
-    }
 
-    window.initDatePicker = function(arrivalDate) {
-        var datePickers = document.querySelectorAll('.date-picker');
-        if ( ! datePickers || ! datePickers.length) {
-            return;
-        }
-
-        // define options (optional)
-        var datepickerOptions = {
-            sundayFirst: true,
-            colors: {
-                selected: '#57565b',
-                inRange: '#66e2da',
-                selectedText: '#fff',
-                text: '#565a5c',
-                inRangeBorder: '#33dacd',
-                disabled: '#fff',
-                hoveredInRange: '#67f6ee'
-            },
-        }
-        // install plugin
-        Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
-
-        datePickers.forEach(function (element) {
-            new Vue({
-                el: element,
-                mixins: [window.datePickerMixin],
-                mounted: function () {
-
-                    if (arrivalDate) {
-                        this.arrivalDate = arrivalDate;
-                    } else {
-                        this.arrivalDate = new Date();
-                    }
-                }
-            });
-        });
-    }
-    initDatePicker('2020-03-20');
-
-
-    window.initDatePickerBW = function(arrivalDate) {
-        var datePickers = document.querySelectorAll('.booking-widget-datepicker');
-        if ( ! datePickers || ! datePickers.length) {
-            return;
-        }
-
-        // define options (optional)
-        var datepickerOptions = {
-            sundayFirst: true,
-            colors: {
-                selected: '#57565b',
-                inRange: '#66e2da',
-                selectedText: '#fff',
-                text: '#565a5c',
-                inRangeBorder: '#33dacd',
-                disabled: '#fff',
-                hoveredInRange: '#67f6ee'
-            },
-        }
-        // install plugin
-        Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
-
-        datePickers.forEach(function (element) {
-            new Vue({
-                el: element,
-                mixins: [window.datePickerMixin],
-                mounted: function () {
-
-                    if (arrivalDate) {
-                        this.arrivalDate = arrivalDate;
-                    } else {
-                        this.arrivalDate = new Date();
-                    }
-                }
-            });
-        });
-    }
-    initDatePickerBW('2020-03-20');
-
-
-</script>
-
-<script>
-    new Vue({
-        el: '#guest-widget',
-        data: {
-            rooms: [{"id":1,"quantity":1,"name":"Room"}],
-            people: [{"id":1,"quantity":1,"name":"Adult"},{"id":2,"quantity":0,"name":"Children"},{"id":3,"quantity":0,"name":"Infant"}]
-        },
-        computed: {
-            totalRooms () {
-                return this.rooms.reduce((sum, room) => {
-                    return sum + room.quantity
-                }, 0)
-            },
-            totalPeople () {
-                return this.people.reduce((sum, people) => {
-                    return sum + people.quantity
-                }, 0)
+        window.initDatePicker = function(arrivalDate) {
+            var datePickers = document.querySelectorAll('.date-picker');
+            if ( ! datePickers || ! datePickers.length) {
+                return;
             }
+
+            // define options (optional)
+            var datepickerOptions = {
+                sundayFirst: true,
+                colors: {
+                    selected: '#57565b',
+                    inRange: '#66e2da',
+                    selectedText: '#fff',
+                    text: '#565a5c',
+                    inRangeBorder: '#33dacd',
+                    disabled: '#fff',
+                    hoveredInRange: '#67f6ee'
+                },
+            }
+            // install plugin
+            Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
+
+            datePickers.forEach(function (element) {
+                new Vue({
+                    el: element,
+                    mixins: [window.datePickerMixin],
+                    mounted: function () {
+
+                        if (arrivalDate) {
+                            this.arrivalDate = arrivalDate;
+                        } else {
+                            this.arrivalDate = new Date();
+                        }
+                    }
+                });
+            });
         }
-    })
-</script>
+        initDatePicker('2020-03-20');
+
+
+        window.initDatePickerBW = function(arrivalDate) {
+            var datePickers = document.querySelectorAll('.booking-widget-datepicker');
+            if ( ! datePickers || ! datePickers.length) {
+                return;
+            }
+
+            // define options (optional)
+            var datepickerOptions = {
+                sundayFirst: true,
+                colors: {
+                    selected: '#57565b',
+                    inRange: '#66e2da',
+                    selectedText: '#fff',
+                    text: '#565a5c',
+                    inRangeBorder: '#33dacd',
+                    disabled: '#fff',
+                    hoveredInRange: '#67f6ee'
+                },
+            }
+            // install plugin
+            Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
+
+            datePickers.forEach(function (element) {
+                new Vue({
+                    el: element,
+                    mixins: [window.datePickerMixin],
+                    mounted: function () {
+
+                        if (arrivalDate) {
+                            this.arrivalDate = arrivalDate;
+                        } else {
+                            this.arrivalDate = new Date();
+                        }
+                    }
+                });
+            });
+        }
+        initDatePickerBW('2020-03-20');
+
+    
+    </script>
+
+    <script>
+        new Vue({
+            el: '#guest-widget',
+            data: {
+                rooms: [{"id":1,"quantity":1,"name":"Room"}],
+                people: [{"id":1,"quantity":1,"name":"Adult"},{"id":2,"quantity":0,"name":"Children"},{"id":3,"quantity":0,"name":"Infant"}]
+            },
+            computed: {
+                totalRooms () {
+                    return this.rooms.reduce((sum, room) => {
+                        return sum + room.quantity
+                    }, 0)
+                },
+                totalPeople () {
+                    return this.people.reduce((sum, people) => {
+                        return sum + people.quantity
+                    }, 0)
+                }
+            }
+        })
+    </script>
 
 </body>
 </html>

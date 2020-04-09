@@ -366,9 +366,9 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <p>How many rooms?</p>
                         <div class="d-flex align-items-center justify-content-between w-50">
-                            <button @click="room.quantity -= 1">-</button>
-                            <span v-model.number="room.quantity">{{room.quantity}}</span>
-                            <button @click="room.quantity += 1">+</button>
+                            <button type="button" @click="room.quantity -= 1">-</button>
+                                <span v-model.number="room.quantity">{{room.quantity}}</span>
+                            <button type="button" @click="room.quantity += 1">+</button>
                         </div>
                     </div>
                     <div class="guest-info" v-if="room.quantity >= 4">
@@ -377,9 +377,9 @@
                             <div class="d-flex align-items-center mb-1" v-for="person in people">
                                 <p>{{person.name}}</p>
                                 <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity -= 1">-</button>
+                                    <button type="button" @click="person.quantity -= 1">-</button>
                                         <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity += 1">+</button>
+                                    <button type="button" @click="person.quantity += 1">+</button>
                                 </div>
                             </div>
                         </div>
@@ -390,9 +390,9 @@
                             <div class="d-flex align-items-center mb-1" v-for="person in people">
                                 <p>{{person.name}}</p>
                                 <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity -= 1">-</button>
+                                    <button type="button" @click="person.quantity -= 1">-</button>
                                         <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity += 1">+</button>
+                                    <button type="button" @click="person.quantity += 1">+</button>
                                 </div>
                             </div>
                         </div>
@@ -403,9 +403,9 @@
                             <div class="d-flex align-items-center mb-3" v-for="person in people">
                                 <p>{{person.name}}</p>
                                 <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity -= 1">-</button>
+                                    <button type="button" @click="person.quantity -= 1">-</button>
                                         <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity += 1">+</button>
+                                    <button type="button" @click="person.quantity += 1">+</button>
                                 </div>
                             </div>
                         </div>
@@ -416,9 +416,9 @@
                             <div class="d-flex align-items-center my-3" v-for="person in people">
                                 <p>{{person.name}}</p>
                                 <div class="d-flex align-items-center justify-content-between w-50">
-                                    <button @click="person.quantity -= 1">-</button>
+                                    <button type="button" @click="person.quantity -= 1">-</button>
                                         <span>{{person.quantity}}</span>
-                                    <button @click="person.quantity += 1">+</button>
+                                    <button type="button" @click="person.quantity += 1">+</button>
                                 </div>
                             </div>
                         </div>

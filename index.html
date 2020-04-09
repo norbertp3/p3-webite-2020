@@ -357,12 +357,12 @@
             </div>
 
             <div class="guest-quantity" id="guest-widget" v-for="room in rooms">
-                <div class="d-flex total-guests roll">
+                <div class="d-flex total-guests roll" v-on:click="isHidden = !isHidden">
                     <p>{{totalRooms}} room</p>
                     <p>{{totalPeople}} people</p>
                 </div>
 
-                <div class="guest-widget-buttons">
+                <div class="guest-widget-buttons" v-if="!isHidden">
                     <div class="d-flex align-items-center justify-content-between">
                         <p>How many rooms?</p>
                         <div class="d-flex align-items-center justify-content-between w-50">
@@ -423,7 +423,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="apply-btn">Apply</a>
+                    <button type="button" class="apply-btn" v-on:click="isHidden = true">Apply</button>
                 </div>
             </div>
 
@@ -632,7 +632,8 @@
             el: '#guest-widget',
             data: {
                 rooms: [{"id":1,"quantity":1,"name":"Room"}],
-                people: [{"id":1,"quantity":1,"name":"Adult"},{"id":2,"quantity":0,"name":"Children"},{"id":3,"quantity":0,"name":"Infant"}]
+                people: [{"id":1,"quantity":1,"name":"Adult"},{"id":2,"quantity":0,"name":"Children"},{"id":3,"quantity":0,"name":"Infant"}],
+                isHidden: true
             },
             computed: {
                 totalRooms () {

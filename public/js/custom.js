@@ -81,7 +81,7 @@ $( document ).ready(function() {
 
 
     $('#guest-widget').on('click', function () {
-        $('.guest-widget-buttons').slideToggle();
+        $('.guest-widget-buttons').show();
     });
 
 });

@@ -78,10 +78,7 @@ $( document ).ready(function() {
         e.preventDefault();
         $(this).next('.form-group').slideToggle();
     });
-
-
     $('#guest-widget').on('click', function () {
         $('.guest-widget-buttons').show();
     });
-
 });

@@ -1,16 +1,21 @@
+// Disable scroll
+function noScroll() {
+    window.scrollTo(0, 0);
+  }
+
 // Side Nav
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
+    window.addEventListener('scroll', noScroll);
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    window.removeEventListener('scroll', noScroll);
 }
 
 // Booking Widget
-function noScroll() {
-    window.scrollTo(0, 0);
-  }
+
 function openWidget() {
     document.getElementById("booking-widget").style.width = "100%";
     window.addEventListener('scroll', noScroll);

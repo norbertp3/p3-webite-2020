@@ -25,7 +25,11 @@ function closeWidget() {
     document.getElementById("booking-widget").style.width = "0";
     window.removeEventListener('scroll', noScroll);
 }
-
+document.querySelector('.guest-widget-buttons-container').scrollIntoView({ 
+    top: 100, 
+    left: 0, 
+    behavior: 'smooth' 
+});
 $( document ).ready(function() {
     // Read more
     $('.expand').find('a[href="#"]').on('click', function (e) {

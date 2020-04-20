@@ -597,7 +597,19 @@ form select::-ms-expand {
   font-family: "Montserrat", sans-serif;
 }
 
-.booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+@media screen and (max-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
   display: none;
   position: absolute;
   padding: 30px 15px 24px 15px;
@@ -607,19 +619,22 @@ form select::-ms-expand {
 }
 
 @media screen and (min-width: 992px) {
-  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
     padding: 30px 20px 24px 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
-    margin-left: -20px;
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
+    bottom: 0;
     width: 100vw;
+    margin-bottom: 0;
+    height: 456px;
+    overflow-y: auto;
   }
 }
 
-.booking-widget .widget-form .guest-quantity .guest-widget-buttons:before {
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container:before {
   content: '';
   position: absolute;
   top: -10px;
@@ -633,12 +648,12 @@ form select::-ms-expand {
   border-right: solid 10px transparent;
 }
 
-.booking-widget .widget-form .guest-quantity .guest-widget-buttons p {
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container p {
   color: #57565b;
   width: 100%;
 }
 
-.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn {
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn {
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -660,7 +675,7 @@ form select::-ms-expand {
   font-weight: 500;
 }
 
-.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn:hover {
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn:hover {
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);

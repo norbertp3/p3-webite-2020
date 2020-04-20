@@ -270,60 +270,75 @@
           font-family: $textFont;
         }
         .guest-widget-buttons {
-          display: none;
-          position: absolute;
-          padding: 30px 15px 24px 15px;
-          @include mQ (992px) {
-            padding: 30px 20px 24px 20px;
-          }
-          background: #f0f0f0;
-          width: 100%;
-          margin-bottom: 30px;
           @include mQmax (500px) {
-            margin-left: -20px;
-            width: 100vw;
-          }
-          &:before {
-            content:'';
-            position: absolute;
-            top: -10px;
-            left: 0px;
-            right: 0;
-            margin-left: 20px;
-            width: 0;
-            height: 0;
-            border-bottom: solid 10px #f0f0f0;
-            border-left: solid 10px transparent;
-            border-right: solid 10px transparent;
-          }
-          p{
-            color: #57565b;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0,0,0,0.5);
           }
-            .apply-btn {
-              display: inline-block;
-              font-size: 16px;
-              font-weight: 400;
-              letter-spacing: 2px;
-              color: #f6f6f6;
-              background-color: #57565b;
-              border-radius: 2px;
-              border: 2px solid #57565b;
-              padding: 13.5px 20px;
-              -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
-              box-shadow: inset 0px 0px 0px 1px #cccccd;
-              text-transform: uppercase;
-              font-family: "Montserrat", sans-serif;
-              width: auto;
-              height: 50px;
-              padding: 0 20px;
-              margin-top: 30px;
-              float: right;
-              font-weight: 500;
-              &:hover {
-                cursor: pointer;
-                background-color: rgba(87, 86, 91, 0.8);
-                border: 2px solid rgba(87, 86, 91, 0.8);
+          .guest-widget-buttons-container {
+            display: none;
+            position: absolute;
+            padding: 30px 15px 24px 15px;
+            @include mQ (992px) {
+              padding: 30px 20px 24px 20px;
+            }
+            background: #f0f0f0;
+            width: 100%;
+            margin-bottom: 30px;
+            @include mQmax (500px) {
+              // margin-left: -20px;
+              bottom: 0;
+              width: 100vw;
+              margin-bottom: 0;
+              height: 456px;
+              overflow-y: auto;
+            }
+            &:before {
+              content:'';
+              position: absolute;
+              top: -10px;
+              left: 0px;
+              right: 0;
+              margin-left: 20px;
+              width: 0;
+              height: 0;
+              border-bottom: solid 10px #f0f0f0;
+              border-left: solid 10px transparent;
+              border-right: solid 10px transparent;
+            }
+            p{
+              color: #57565b;
+              width: 100%;
+            }
+              .apply-btn {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                color: #f6f6f6;
+                background-color: #57565b;
+                border-radius: 2px;
+                border: 2px solid #57565b;
+                padding: 13.5px 20px;
+                -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
+                box-shadow: inset 0px 0px 0px 1px #cccccd;
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                width: auto;
+                height: 50px;
+                padding: 0 20px;
+                margin-top: 30px;
+                float: right;
+                font-weight: 500;
+                &:hover {
+                  cursor: pointer;
+                  background-color: rgba(87, 86, 91, 0.8);
+                  border: 2px solid rgba(87, 86, 91, 0.8);
+                }
               }
             }
           }

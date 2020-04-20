@@ -367,18 +367,20 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <p>How many rooms?</p>
                             <div class="d-flex align-items-center justify-content-between w-50">
-                                <button type="button" @click="room.quantity -= 1">-</button>
+                                <button type="button" @click="room.quantity -= 1" :disabled="room.quantity == 1">-</button>
                                     <span v-model.number="room.quantity">{{room.quantity}}</span>
                                 <button type="button" @click="room.quantity += 1">+</button>
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 4">
-                            <p class="room-number"><span>Room</span> {{room.quantity}}</p>
+                            <p class="room-number">
+                                <span>Room {{room.quantity}}<span>
+                            </p>                            
                             <div class="align">
-                                <div class="d-flex align-items-center mb-3" v-for="person in people">
-                                    <p>{{person.name}} <span>(15+)</span></p>
+                                <div class="d-flex align-items-center my-3" v-for="person in people">
+                                    <p class="person-age">{{person.name}} <span>(15+)</span></p>
                                     <div class="d-flex align-items-center justify-content-between w-50">
-                                        <button type="button" @click="person.quantity -= 1">-</button>
+                                        <button type="button" @click="person.quantity -= 1" :disabled="person.quantity == 0">-</button>
                                             <span>{{person.quantity}}</span>
                                         <button type="button" @click="person.quantity += 1">+</button>
                                     </div>
@@ -386,12 +388,13 @@
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 3">
-                            <p class="room-number">Room {{room.quantity}}</p>
-                            <div class="align">
-                                <div class="d-flex align-items-center mb-3" v-for="person in people">
-                                    <p>{{person.name}} <span>(15+)</span></p>
+                            <p class="room-number">
+                                <span>Room {{room.quantity}}<span>
+                            </p>                            <div class="align">
+                                <div class="d-flex align-items-center my-3" v-for="person in people">
+                                    <p class="person-age">{{person.name}} <span>(15+)</span></p>
                                     <div class="d-flex align-items-center justify-content-between w-50">
-                                        <button type="button" @click="person.quantity -= 1">-</button>
+                                        <button type="button" @click="person.quantity -= 1" :disabled="person.quantity == 0">-</button>
                                             <span>{{person.quantity}}</span>
                                         <button type="button" @click="person.quantity += 1">+</button>
                                     </div>
@@ -399,12 +402,13 @@
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 2">
-                            <p class="room-number">Room {{room.quantity}}</p>
-                            <div class="align">
-                                <div class="d-flex align-items-center mb-3" v-for="person in people">
-                                    <p>{{person.name}} <span>(15+)</span></p>
+                            <p class="room-number">
+                                <span>Room {{room.quantity}}<span>
+                            </p>                            <div class="align">
+                                <div class="d-flex align-items-center my-3" v-for="person in people">
+                                    <p class="person-age">{{person.name}} <span>(15+)</span></p>
                                     <div class="d-flex align-items-center justify-content-between w-50">
-                                        <button type="button" @click="person.quantity -= 1">-</button>
+                                        <button type="button" @click="person.quantity -= 1" :disabled="person.quantity == 0">-</button>
                                             <span>{{person.quantity}}</span>
                                         <button type="button" @click="person.quantity += 1">+</button>
                                     </div>
@@ -419,7 +423,7 @@
                                 <div class="d-flex align-items-center my-3" v-for="person in people">
                                     <p class="person-age">{{person.name}} <span>(15+)</span></p>
                                     <div class="d-flex align-items-center justify-content-between w-50">
-                                        <button type="button" @click="person.quantity -= 1">-</button>
+                                        <button type="button" @click="person.quantity -= 1" :disabled="person.quantity == 0">-</button>
                                             <span>{{person.quantity}}</span>
                                         <button type="button" @click="person.quantity += 1">+</button>
                                     </div>

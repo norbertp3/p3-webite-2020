@@ -236,6 +236,10 @@
           &:hover {
             cursor: pointer;
           }
+          &:disabled {
+            border: solid 1px #abaaad;
+            color: #abaaad;
+          }
         }
         .guest-info {
           .room-number {

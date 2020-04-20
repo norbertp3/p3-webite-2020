@@ -561,8 +561,8 @@ form select::-ms-expand {
 }
 
 .booking-widget .widget-form .guest-quantity button:disabled {
-  border: solid 1px #abaaad;
-  color: #abaaad;
+  border: solid 1px #ccc;
+  color: #ccc;
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number {

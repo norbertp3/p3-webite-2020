@@ -659,6 +659,10 @@ form select::-ms-expand {
   width: 100%;
 }
 
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .person-age span {
+  color: #abaaad;
+}
+
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn {
   display: inline-block;
   font-size: 16px;

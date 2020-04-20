@@ -561,7 +561,13 @@ form select::-ms-expand {
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number {
-  margin: 30px 0 40px 0;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .booking-widget .widget-form .guest-quantity .guest-info .room-number {
+    margin: 30px 0 40px 0;
+  }
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number::after {
@@ -618,7 +624,7 @@ form select::-ms-expand {
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
   display: none;
   position: absolute;
-  padding: 30px 15px 24px 15px;
+  padding: 20px 15px;
   background: #f0f0f0;
   width: 100%;
   margin-bottom: 30px;
@@ -680,9 +686,15 @@ form select::-ms-expand {
   width: auto;
   height: 50px;
   padding: 0 20px;
-  margin-top: 30px;
+  margin-top: 10px;
   float: right;
   font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn {
+    margin-top: 30px;
+  }
 }
 
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn:hover {

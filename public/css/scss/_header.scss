@@ -239,7 +239,10 @@
         }
         .guest-info {
           .room-number {
-            margin: 30px 0 40px 0;
+            margin: 20px 0;
+            @include mQ (992px) {
+              margin: 30px 0 40px 0;
+            }
             &::after {
               background-color: rgba(87, 86, 91, 0.2);
               content: "";
@@ -285,7 +288,7 @@
           .guest-widget-buttons-container {
             display: none;
             position: absolute;
-            padding: 30px 15px 24px 15px;
+            padding: 20px 15px;
             @include mQ (992px) {
               padding: 30px 20px 24px 20px;
             }
@@ -339,9 +342,12 @@
                 width: auto;
                 height: 50px;
                 padding: 0 20px;
-                margin-top: 30px;
+                margin-top: 10px;
                 float: right;
                 font-weight: 500;
+                @include mQ (992px) {
+                  margin-top: 30px;
+                }
                 &:hover {
                   cursor: pointer;
                   background-color: rgba(87, 86, 91, 0.8);

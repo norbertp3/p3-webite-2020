@@ -275,7 +275,6 @@
           font-family: $textFont;
         }
         .guest-widget-buttons {
-          scroll-behavior: smooth;
           @include mQmax (500px) {
             position: fixed;
             top: 0;
@@ -286,6 +285,7 @@
             background-color: rgba(0,0,0,0.5);
           }
           .guest-widget-buttons-container {
+            scroll-behavior: smooth;
             display: none;
             position: absolute;
             padding: 20px 15px;

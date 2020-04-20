@@ -75,6 +75,9 @@
     @include mQ(992px) {
       padding-top: 80px;
     }
+    @include mQmax (500px) {
+      overflow-y: hidden;
+    }
     a {
       padding: 15px 0;
       text-decoration: none;

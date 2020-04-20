@@ -337,6 +337,12 @@ form select::-ms-expand {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .booking-widget {
+    overflow-y: hidden;
+  }
+}
+
 .booking-widget a {
   padding: 15px 0;
   text-decoration: none;

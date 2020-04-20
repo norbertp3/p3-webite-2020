@@ -275,6 +275,7 @@
           font-family: $textFont;
         }
         .guest-widget-buttons {
+          scroll-behavior: smooth;
           @include mQmax (500px) {
             position: fixed;
             top: 0;

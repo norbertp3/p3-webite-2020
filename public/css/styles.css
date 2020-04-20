@@ -606,6 +606,10 @@ form select::-ms-expand {
   font-family: "Montserrat", sans-serif;
 }
 
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+  scroll-behavior: smooth;
+}
+
 @media screen and (max-width: 500px) {
   .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
     position: fixed;

@@ -8,15 +8,19 @@ function closeNav() {
 }
 
 // Booking Widget
+function noScroll() {
+    window.scrollTo(0, 0);
+  }
 function openWidget() {
     document.getElementById("booking-widget").style.width = "100%";
-    document.getElementsByTagName("BODY").style.overflow = "hidden";
+    window.addEventListener('scroll', noScroll);
 }
 
 function closeWidget() {
     document.getElementById("booking-widget").style.width = "0";
-    document.getElementsByTagName("BODY").style.overflow = "auto";
+    window.removeEventListener('scroll', noScroll);
 }
+
 $( document ).ready(function() {
     // Read more
     $('.expand').find('a[href="#"]').on('click', function (e) {

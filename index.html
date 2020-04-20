@@ -373,7 +373,7 @@
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 4">
-                            <p class="room-number">Room {{room.quantity}}</p>
+                            <p class="room-number"><span>Room</span> {{room.quantity}}</p>
                             <div class="align">
                                 <div class="d-flex align-items-center mb-3" v-for="person in people">
                                     <p>{{person.name}} <span>(15+)</span></p>
@@ -412,7 +412,9 @@
                             </div>
                         </div>
                         <div class="guest-info" v-if="room.quantity >= 1">
-                            <p class="room-number">Room {{room.quantity}}</p>
+                            <p class="room-number">
+                                <span>Room {{room.quantity}}<span>
+                            </p>
                             <div class="align">
                                 <div class="d-flex align-items-center my-3" v-for="person in people">
                                     <p class="person-age">{{person.name}} <span>(15+)</span></p>

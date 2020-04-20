@@ -562,28 +562,20 @@ form select::-ms-expand {
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number {
   margin: 20px 0;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid rgba(87, 86, 91, 0.2);
+  line-height: .1em;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-info .room-number span {
+  background-color: #fff;
+  padding: 0 10px 0 0;
 }
 
 @media screen and (min-width: 992px) {
   .booking-widget .widget-form .guest-quantity .guest-info .room-number {
     margin: 30px 0 40px 0;
-  }
-}
-
-.booking-widget .widget-form .guest-quantity .guest-info .room-number::after {
-  background-color: rgba(87, 86, 91, 0.2);
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 160px;
-  left: 10%;
-}
-
-@media screen and (min-width: 500px) {
-  .booking-widget .widget-form .guest-quantity .guest-info .room-number::after {
-    width: 280px;
   }
 }
 
@@ -625,7 +617,7 @@ form select::-ms-expand {
   display: none;
   position: absolute;
   padding: 20px 15px;
-  background: #f0f0f0;
+  background: #fff;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -641,7 +633,7 @@ form select::-ms-expand {
     bottom: 0;
     width: 100vw;
     margin-bottom: 0;
-    height: 80vh;
+    height: 70vh;
     overflow-y: auto;
   }
 }

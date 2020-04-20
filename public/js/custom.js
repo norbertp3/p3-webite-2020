@@ -10,10 +10,12 @@ function closeNav() {
 // Booking Widget
 function openWidget() {
     document.getElementById("booking-widget").style.width = "100%";
+    document.getElementsByTagName("BODY").style.overflow = "hidden";
 }
 
 function closeWidget() {
     document.getElementById("booking-widget").style.width = "0";
+    document.getElementsByTagName("BODY").style.overflow = "auto";
 }
 $( document ).ready(function() {
     // Read more

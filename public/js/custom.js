@@ -92,4 +92,11 @@ $( document ).ready(function() {
     $('#guest-widget').on('click', function () {
         $('.guest-widget-buttons-container').show();
     });
+
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: false,
+        gutter: 5
+    });
 });

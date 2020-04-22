@@ -535,113 +535,39 @@ p {
         }
     }
 }
-.insta-feed {
-    margin: 15px 0 40px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(10, 5vw);
-    grid-gap: 15px;
-    width: 100%;
-    @include mQ (992px) {
-        grid-template-columns: repeat(24, 1fr);
-        grid-template-rows: repeat(22, 2.6vw);
-    }
-    .insta-feed__img {
-        background-size: cover;
-        background-position: center;
-        width: 100%!important;
-        height: 100%!important;
-        // height: 200px;
-    }
-    .insta-feed__item {
-        background-size: cover;
-        background-position: center;
-        width: 100%!important;
-        height: 100%!important;
-        // height: 200px;
-        background-image: url('../../public/images/insta-feed-image-6.jpg');
-    }
-    .insta-feed__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-    .insta-feed__item--2 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-    .insta-feed__item--3 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 6;
-        grid-row-end: 11;
-    }
-    .insta-feed__item--4 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 11;
-    }
-    @include mQ (992px){
-        .insta-feed__item--1 {
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 5;
-        }
-        .insta-feed__item--2 {
-            grid-column-start: 7;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--3 {
-            grid-column-start: 7;
-            grid-column-end: 9;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--4 {
-            grid-column-start: 9;
-            grid-column-end: 11;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--5 {
-            grid-column-start: 5;
-            grid-column-end: 7;
-            grid-row-start: 3;
-            grid-row-end: 5;
-        }
-        .insta-feed__item--6 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--7 {
-            grid-column-start: 3;
-            grid-column-end: 5;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--8 {
-            grid-column-start: 5;
-            grid-column-end: 7;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--9 {
-            grid-column-start: 7;
-            grid-column-end: 11;
-            grid-row-start: 3;
-            grid-row-end: 7;
-        }
-    }
-}
+.grid {
+    background: #EEE;
+    // max-width: 1200px;
+  }
+  
+  /* clearfix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+    width: 20%;
+  }
+  
+  .grid-item {
+    height: 280px;
+    float: left;
+    background: #D26;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item--width2 { width:  40%; }
+  .grid-item--width3 { width:  60%; }
+  
+  .grid-item--height2 { height: 600px; }
+  .grid-item--height3 { height: 260px; }
+  .grid-item--height4 { height: 360px; }
+  
 
 
 // Rooms Page

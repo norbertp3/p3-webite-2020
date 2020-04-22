@@ -523,125 +523,81 @@ p {
 }
 
 // Instagram
-.insta-heading {
-    margin-top: 40px;
-    h2 {
-        font-size: 16px;
-        color: #abaaad;
-        font-family: $headingFont;
-        font-weight: 400;
-        @include mQ (992px) {
-            font-size: 32px;
-        }
-    }
-}
-.insta-feed {
-    margin: 15px 0 40px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(10, 5vw);
-    grid-gap: 15px;
-    width: 100%;
+.insta-gallery {
+    margin: 40px 0;
     @include mQ (992px) {
-        grid-template-columns: repeat(24, 1fr);
-        grid-template-rows: repeat(22, 2.6vw);
+        margin: 30px 0 100px 0;  
     }
-    .insta-feed__img {
-        background-size: cover;
-        background-position: center;
-        width: 100%!important;
-        height: 100%!important;
-        // height: 200px;
+    .insta-heading {
+        h2 {
+            font-size: 16px;
+            color: #abaaad;
+            font-family: $headingFont;
+            font-weight: 400;
+            margin-bottom:15px;
+            @include mQ (992px) {
+                font-size: 32px;
+            }
+        }
     }
-    .insta-feed__item {
-        background-size: cover;
-        background-position: center;
-        width: 100%!important;
-        height: 100%!important;
-        // height: 200px;
-        background-image: url('../../public/images/insta-feed-image-6.jpg');
-    }
-    .insta-feed__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-    .insta-feed__item--2 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-    .insta-feed__item--3 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 6;
-        grid-row-end: 11;
-    }
-    .insta-feed__item--4 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 11;
-    }
-    @include mQ (992px){
-        .insta-feed__item--1 {
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 5;
+    .insta-feed {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        @include mQmax (991px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
-        .insta-feed__item--2 {
-            grid-column-start: 7;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--3 {
-            grid-column-start: 7;
-            grid-column-end: 9;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--4 {
-            grid-column-start: 9;
-            grid-column-end: 11;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .insta-feed__item--5 {
-            grid-column-start: 5;
-            grid-column-end: 7;
-            grid-row-start: 3;
-            grid-row-end: 5;
-        }
-        .insta-feed__item--6 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--7 {
-            grid-column-start: 3;
-            grid-column-end: 5;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--8 {
-            grid-column-start: 5;
-            grid-column-end: 7;
-            grid-row-start: 5;
-            grid-row-end: 7;
-        }
-        .insta-feed__item--9 {
-            grid-column-start: 7;
-            grid-column-end: 11;
-            grid-row-start: 3;
-            grid-row-end: 7;
+        .insta-feed__item {
+            background: purple;
+            min-width: 100px;
+            min-height: 100px;
+            width: 100%;
+            height: 100%;
+            &:before {
+              content: "";
+              padding-bottom: 100%;
+              display: inline-block;
+              vertical-align: top;
+            }
+            &:first-child {
+                @include mQ (992px) {
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 3;
+                }
+            }
+            &:nth-child(2) {
+              background: yellow;
+            }
+            &:nth-child(3) {
+              background: orange;
+            }
+            &:nth-child(4) {
+              background: green;
+            }
+            &:nth-child(5) {
+              background: magenta;
+            }
+            &:nth-child(6) {
+              background: black;
+            }
+            &:nth-child(7) {
+              background: grey;
+            }
+            &:nth-child(8) {
+              background: pink;
+            }
+            &:last-child {
+              background: blue;
+              grid-column: 4 / 6;
+              grid-row: 2 / 4;
+            }
         }
     }
 }
+
+
 
 
 // Rooms Page

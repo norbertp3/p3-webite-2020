@@ -1,0 +1,76 @@
+.btn-primary-white {
+    background-color: #ffffff;
+    border-radius: 3px;
+    color: $primaryColour1;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.06px;
+    width: 100%;
+    padding: 13px 32px;
+    font-family: $textFont;
+    text-transform: capitalize;
+    border: 1.5px solid transparent;
+    display: inline-block;
+    @include mQ(992px) {
+        width: auto;
+    }
+    &:hover {
+        border-image-slice: 1;
+        border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+    }
+    &:focus {
+        border-image-slice: 1;
+        border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+        border-width: 3px;
+    }
+    &:active {
+        border-image-slice: 1;
+        border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+        color: $secondaryColour1;
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.btn-primary-dark {
+    background-color: $primaryColour1;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.06px;
+    width: 100%;
+    padding: 13px 32px;
+    font-family: $textFont;
+    text-transform: capitalize;
+    border: 1.5px solid transparent;
+    display: inline-block;
+    @include mQ(992px) {
+        width: auto;
+    }
+    &:hover {
+        background-color: $secondaryColour1;
+        color: #fff;
+    }
+    &:focus {
+        border: solid 3px $secondaryColour1;
+        background-color: $primaryColour1;
+    }
+    &:active {
+        background-color: $secondaryColour1;
+        color: $secondaryColour2;
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.btn-secondary-border {
+    background-color: #fff;
+    color: $primaryColour1;
+    border-radius: 2px;
+    border: solid 1.5px $primaryColour1;
+    display: block;
+    padding: 13px 20px;
+}

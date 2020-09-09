@@ -497,6 +497,12 @@ template {
   border: solid 1.5px #001a70;
   display: block;
   padding: 13px 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn-secondary-border:hover {
+  color: #001a70;
 }
 
 .h1 {
@@ -1067,6 +1073,10 @@ body {
   color: #212322;
 }
 
+.home__blog .slick-list {
+  overflow: visible;
+}
+
 .home__blog__card {
   margin: 64px 20px 0 20px;
   border: solid 1px #94a9cb;
@@ -1269,17 +1279,17 @@ body {
 
 .home__contact__form {
   background-color: #001a70;
-  padding: 0 15px;
+  padding: 0 15px 64px 15px;
   width: 100%;
   color: #fff;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
 }
 
 @media screen and (min-width: 992px) {
   .home__contact__form {
     width: 55%;
     padding: 65px 5% 64px 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 }
 
@@ -1291,12 +1301,12 @@ body {
 
 .home__contact__form__wrapper {
   width: 100%;
-  max-width: 450px;
 }
 
 @media screen and (min-width: 992px) {
   .home__contact__form__wrapper {
     margin: 0 0 0 auto;
+    max-width: 450px;
   }
 }
 
@@ -1357,7 +1367,15 @@ body {
 }
 
 .home__contact__details {
-  margin: 0 auto 0 5%;
+  margin: 0 15px;
+  padding-bottom: 128px;
+}
+
+@media screen and (min-width: 992px) {
+  .home__contact__details {
+    margin: 0 auto 0 5%;
+    padding-bottom: 0;
+  }
 }
 
 .home__contact__details .h2 {

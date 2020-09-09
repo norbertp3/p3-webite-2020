@@ -73,4 +73,9 @@
     border: solid 1.5px $primaryColour1;
     display: block;
     padding: 13px 20px;
+    text-align: center;
+    font-weight: 500;
+    &:hover {
+        color: $primaryColour1;
+    }
 }

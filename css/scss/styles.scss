@@ -389,6 +389,9 @@ body {
                 color: #212322;
             }
         }
+        .slick-list {
+            overflow: visible;
+        }
         &__card {
             margin: 64px 20px 0 20px;
             border: solid 1px $secondaryColour2;
@@ -548,23 +551,23 @@ body {
         }
         &__form {
             background-color: $primaryColour1;
-            padding: 0 15px;
+            padding: 0 15px 64px 15px;
             width: 100%;
             color: #fff;
-            border-top-right-radius: 6px;
-            border-bottom-right-radius: 6px;
             @include mQ(992px) {
                 width: 55%;
                 padding: 65px 5% 64px 0;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
             }
             @include mQ(1200px) {
                 padding: 65px 10% 64px 0;
             }
             &__wrapper {
                 width: 100%;
-                max-width: 450px;
                 @include mQ(992px) {
                     margin: 0 0 0 auto;
+                    max-width: 450px;
                 }
                 .h2 {
                     margin-bottom: 34px;
@@ -604,7 +607,12 @@ body {
             margin-top: 36px;
         }
         &__details {
-            margin: 0 auto 0 5%;
+            margin: 0 15px;
+            padding-bottom: 128px;
+            @include mQ(992px) {
+                margin: 0 auto 0 5%;
+                padding-bottom: 0;
+            }
             .h2 {
                 padding-top: 55px;
             }

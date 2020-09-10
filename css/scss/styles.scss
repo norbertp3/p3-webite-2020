@@ -228,7 +228,7 @@ body {
         background-color: $primaryColour1;
         padding: 67px 0 20px 0;
         @include mQ(992px) {
-            padding: 95px 0;
+            padding: 95px 0 32px 0;
         }
         .d2 {
             font-family: $headingFont;
@@ -273,16 +273,6 @@ body {
         &__desktop-image {
             width: 100%;
             position: relative;
-            &::after {
-                content: '';
-                background: url('/images/icons/arrow-down-white.svg');
-                height: 100px;
-                width: 100px;
-                color: #fff;
-                position: absolute;
-                background-size: 21px;
-                z-index: 1000;
-            }
         }
     }
     &__diagram {
@@ -546,6 +536,7 @@ body {
         }
     }
     &__contact {
+        position: relative;
         @include mQ(992px) {
             margin: 128px 0;
         }
@@ -594,6 +585,18 @@ body {
                 }
             }
         }
+        &__circles {
+            background-image: url('/images/icons/circles.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            height: 100%;
+            width: 355px;
+            right: -55px;
+            @include mQmax(991px) {
+                display: none;
+            }
+        }
         &__submit {
             background-color: transparent;
             padding: 14px 0;
@@ -617,5 +620,59 @@ body {
                 padding-top: 55px;
             }
         }
+    }
+}
+
+.footer {
+    padding: 64px 0;
+    background-color: $primaryColour1;
+    @include mQmax(991px) {
+        text-align: center;
+    }
+    &__logo {
+        margin-bottom: 64px;
+        width: 130px;
+        height: auto;
+        @include mQ(992px) {
+            margin-bottom: 72px;
+        }
+    }
+    &__social-media {
+        margin-bottom: 64px;
+        @include mQ(992px) {
+            margin-bottom: 72px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 14px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__reg {
+        color: $secondaryColour2;
+        letter-spacing: 1px;
+    }
+    &__links-col {
+        li {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__col-heading {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 32px;
+        font-weight: 600;
+    }
+    &__button {
+        margin-bottom: 64px;
     }
 }

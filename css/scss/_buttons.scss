@@ -79,3 +79,33 @@
         color: $primaryColour1;
     }
 }
+.button-secondary-on-dark {
+    border-radius: 3px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.06px;
+    padding: 13px 32px;
+    font-family: $textFont;
+    border: 1.5px solid #fff;
+    display: inline-block;
+    @include mQ(992px) {
+        width: auto;
+    }
+    &:hover {
+        background-color: #fff;
+        color: $primaryColour1;
+    }
+    &:focus {
+        color: $primaryColour1;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+    }
+    &:active {
+        background-color: #fff;
+        color: $primaryColour1;
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+}

@@ -6,6 +6,7 @@
 @import './sliders';
 @import './buttons';
 @import './typography';
+@import './navigation';
 
 @font-face {
     font-family: Questrial;
@@ -222,6 +223,7 @@ body {
         }
     }
 }
+
 
 .home {
     &__header {

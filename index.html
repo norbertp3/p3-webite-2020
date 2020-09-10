@@ -8,31 +8,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Vendors -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Temp bootstrap for tests -->
-
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Fonts -->
 
 </head>
 
 <body>
 
-    <div class="d-none d-lg-flex nav-desktop">
-        <img src="" alt="">
-        <div class="nav-desktop__links">
-
+    <nav>
+        <div class="nav d-flex justify-content-between align-items-center">
+            <img src="/images/p3-logo.svg" alt="" class="nav__logo">
+            <div class="nav__mobile d-lg-none">
+                <button class="nav__open" onclick="openNav()"></button>
+                <div id="mySidenav" class="sidenav">
+                    <div class="sidenav__header d-flex justify-content-between align-items-center">
+                        <img src="/images/p3-logo-blue.svg" alt="" class="nav__logo">
+                        <button class="nav__close" onclick="closeNav()"></button>
+                    </div>
+                    <ul class="sidenav__links">
+                        <li class="sidenav__item sidenav__dropdown--toggle">
+                            <a href="#">About</a>
+                            <ul class="sidenav__dropdown">
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                            </ul>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="nav__desktop d-none d-lg-flex">
+                <div class="nav-desktop__links">
+            </div>
         </div>
-    </div>
+
+    </nav>
 
     <header class="home__header">
         <div class="container">
@@ -456,17 +476,17 @@
                         <p>No. 330688 © 2020</p>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2  order-lg-3">
+                <div class="col-12 col-lg-2 order-lg-3 pr-lg-5">
                     <ul class="footer__links-col">
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-2 d-none d-lg-block  order-lg-4">
+                <div class="col-12 col-lg-2 d-none d-lg-block order-lg-4">
                     <p class="footer__col-heading">Products</p>
                     <ul class="footer__links-col">
                         <li><a href="#" class="footer__link">Abc</a></li>
@@ -523,7 +543,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom -->
-    <script src="public/js/custom.js"></script>
+    <script src="js/custom.js"></script>
 
     <script>
 

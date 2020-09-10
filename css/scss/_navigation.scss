@@ -1,0 +1,80 @@
+.nav {
+  background-color: $primaryColour1;
+  padding: 15px;
+  &__logo {
+    height: 40px;
+    width: auto;
+  }
+  &__open {
+    background: inherit;
+    border: none;
+    background: url("/images/icons/nav-open.svg");
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__close {
+    background: inherit;
+    border: none;
+    background: url("/images/icons/nav-close.svg");
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  &__header {
+    padding: 15px;
+  }
+  &__links {
+    padding: 15px;
+    list-style: none;
+  }
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__dropdown {
+    margin-top: 32px;
+    list-style: none;
+    padding-left: 40px;
+    li {
+        margin-bottom: 32px;
+    }
+  }
+}
+
+.sidenav a {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1.06px;
+  color: $primaryColour1;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  font-size: 36px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}

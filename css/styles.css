@@ -637,6 +637,96 @@ template {
   text-decoration: underline;
 }
 
+.nav {
+  background-color: #001a70;
+  padding: 15px;
+}
+
+.nav__logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav__open {
+  background: inherit;
+  border: none;
+  background: url("/images/icons/nav-open.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.nav__close {
+  background: inherit;
+  border: none;
+  background: url("/images/icons/nav-close.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidenav__header {
+  padding: 15px;
+}
+
+.sidenav__links {
+  padding: 15px;
+  list-style: none;
+}
+
+.sidenav__item {
+  margin-bottom: 32px;
+}
+
+.sidenav__dropdown {
+  margin-top: 32px;
+  list-style: none;
+  padding-left: 40px;
+}
+
+.sidenav__dropdown li {
+  margin-bottom: 32px;
+}
+
+.sidenav a {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1.06px;
+  color: #001a70;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  font-size: 36px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
 @font-face {
   font-family: Questrial;
   src: url("/css/fonts/Questrial-Regular.ttf");

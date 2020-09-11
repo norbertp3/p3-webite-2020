@@ -532,6 +532,7 @@ template {
   color: #001a70;
   border-image-slice: 1;
   border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+  color: #ffffff;
 }
 
 .button-secondary-on-dark:active {
@@ -541,6 +542,10 @@ template {
 
 .button-secondary-on-dark:disabled {
   opacity: 0.5;
+}
+
+.button-secondary-on-dark:focus:hover {
+  color: #001a70;
 }
 
 .h1 {
@@ -642,9 +647,21 @@ template {
   padding: 15px;
 }
 
+@media screen and (min-width: 992px) {
+  .nav {
+    padding: 24px;
+  }
+}
+
 .nav__logo {
   height: 40px;
   width: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .nav__logo {
+    height: 48px;
+  }
 }
 
 .nav__open {
@@ -665,6 +682,45 @@ template {
   height: 40px;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.nav__desktop__links {
+  margin-bottom: 0;
+}
+
+.nav__desktop__links li {
+  display: inline-block;
+  padding: 0 16px;
+}
+
+.nav__desktop__links a {
+  color: #fff;
+}
+
+.nav__desktop__links .button-secondary-on-dark {
+  padding: 10px 32px;
+}
+
+.nav__desktop__lang {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+}
+
+.nav__desktop__lang:active, .nav__desktop__lang:focus {
+  background-color: inherit;
+  color: #fff;
+  border: none;
+}
+
+.nav__desktop option {
+  color: #001a70;
+}
+
+.nav-btn {
+  border-left: 1px solid #fff;
+  padding-left: 40px !important;
+  margin-left: 24px;
 }
 
 .sidenav {
@@ -694,13 +750,37 @@ template {
 }
 
 .sidenav__dropdown {
-  margin-top: 32px;
+  display: none;
+  margin: 32px 0;
   list-style: none;
   padding-left: 40px;
 }
 
 .sidenav__dropdown li {
   margin-bottom: 32px;
+}
+
+.sidenav__dropdown li:last-child {
+  margin-bottom: 0;
+}
+
+.sidenav__dropdown--toggle::after {
+  content: url("/images/icons/chevron-down.svg");
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.sidenav__dropdown--toggle-open {
+  border-bottom: 2px solid #94a9cb;
+}
+
+.sidenav__dropdown--toggle-open::after {
+  content: url("/images/icons/chevron-up.svg");
+}
+
+.sidenav__lang {
+  border: none;
 }
 
 .sidenav a {
@@ -710,8 +790,8 @@ template {
   color: #001a70;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav:focus {
+  color: #001a70;
 }
 
 .sidenav .closebtn {
@@ -1052,6 +1132,15 @@ body {
   position: relative;
 }
 
+.home__arrow-scroll {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home__arrow-scroll:hover {
+  padding-top: 10px;
+}
+
 .home__diagram {
   margin: 100px 0;
 }
@@ -1091,6 +1180,10 @@ body {
 
 .home__diagram .slick-dots {
   bottom: -70px;
+}
+
+.home__diagram .slick-list {
+  overflow: visible;
 }
 
 .home__diagram__arrow {
@@ -1195,7 +1288,7 @@ body {
 }
 
 .home__blog__card {
-  margin: 64px 20px 0 20px;
+  margin: 64px 20px 0 0;
   border: solid 1px #94a9cb;
   border-radius: 6px;
 }

@@ -1,9 +1,15 @@
 .nav {
   background-color: $primaryColour1;
   padding: 15px;
+  @include mQ(992px) {
+      padding: 24px;
+  }
   &__logo {
     height: 40px;
     width: auto;
+    @include mQ(992px) {
+        height: 48px;
+    }
   }
   &__open {
     background: inherit;
@@ -22,6 +28,39 @@
     height: 40px;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  &__desktop {
+      &__links {
+          margin-bottom: 0;
+          li {
+              display: inline-block;
+              padding: 0 16px;
+          }
+          a {
+              color: #fff;
+          }
+          .button-secondary-on-dark {
+              padding: 10px 32px; 
+          }
+        }
+      &__lang {
+          background-color: inherit;
+          border: none;
+          color: #fff;
+          &:active, &:focus {
+              background-color: inherit;
+              color: #fff;
+              border: none;
+            }
+          }
+          option {
+              color: $primaryColour1;
+          }
+  }
+  &-btn {
+        border-left: 1px solid #fff;
+        padding-left: 40px!important;
+        margin-left: 24px;
   }
 }
 
@@ -46,25 +85,48 @@
     margin-bottom: 32px;
   }
   &__dropdown {
-    margin-top: 32px;
+    display: none;
+    margin: 32px 0;
     list-style: none;
     padding-left: 40px;
     li {
         margin-bottom: 32px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
+    &--toggle {
+        &::after {
+            content: url('/images/icons/chevron-down.svg');
+            width:20px;
+            height: 20px;
+            position: absolute;
+        }
+        &-open {
+            border-bottom: 2px solid $secondaryColour2;
+            &::after {
+                content: url('/images/icons/chevron-up.svg');
+            }
+        }
+    }
+  }
+  &__lang {
+      border: none;
   }
 }
 
-.sidenav a {
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 1.06px;
-  color: $primaryColour1;
+.sidenav { 
+    a {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1.06px;
+    color: $primaryColour1;
+    }
+    &:focus {
+        color: $primaryColour1;
+    }
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
 
 .sidenav .closebtn {
   font-size: 36px;

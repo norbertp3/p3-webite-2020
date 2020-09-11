@@ -100,6 +100,7 @@
         color: $primaryColour1;
         border-image-slice: 1;
         border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+        color: #ffffff;
     }
     &:active {
         background-color: #fff;
@@ -107,5 +108,8 @@
     }
     &:disabled {
         opacity: 0.5;
+    }
+    &:focus:hover {
+        color: $primaryColour1;
     }
 }

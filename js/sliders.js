@@ -6,8 +6,16 @@ $(document).ready(function(){
     $('.slider-2--js').slick({
         dots: true,
         arrows: false,
-        slidesToShow: 1.5,
+        slidesToShow: 2.1,
         infinite: false,
+        responsive: [
+          {
+            breakpoint: 760,
+            settings: {
+              slidesToShow: 1.5,
+            }
+          }
+        ]
     });
     $('.slider-3--js').slick({
         dots: false,

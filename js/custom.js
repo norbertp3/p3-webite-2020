@@ -13,15 +13,28 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     window.removeEventListener('scroll', noScroll);
 }
+$(document).ready(function() {
+    // Link Scroll
+    $('.home__arrow-scroll').click(function(e) {
+      e.preventDefault();
+  
+      $('html, body').animate({
+        scrollTop: $('#main').offset().top - 70
+    }, 1000);
+    });
 
-
-// $(".home__blog").each(function(){
-//     var largest = 0;
-//     $(this).find(".card-title").each(function(){
-//     var findHeight = $(this).height();
-//     if(findHeight > largest){
-//         largest = findHeight;
-//     }
-//     });
-//     $(this).find(".card-title").css({"height":largest+"px"});
-// });
+    $(".home__blog").each(function(){
+        var largest = 0;
+        $(this).find(".card-title").each(function(){
+        var findHeight = $(this).height();
+        if(findHeight > largest){
+            largest = findHeight;
+        }
+        });
+        $(this).find(".card-title").css({"height":largest+"px"});
+    });
+    $('.sidenav__dropdown--toggle').click(function(e) {
+        $(this).next('.sidenav__dropdown').slideToggle();
+        $(this).toggleClass('sidenav__dropdown--toggle-open');
+    });
+});

@@ -19,20 +19,26 @@
 </head>
 
 <body>
-
     <nav>
         <div class="nav d-flex justify-content-between align-items-center">
-            <img src="/images/p3-logo.svg" alt="" class="nav__logo">
+            <a href="#"><img src="/images/p3-logo.svg" alt="p3 logo" class="nav__logo"></a>
             <div class="nav__mobile d-lg-none">
                 <button class="nav__open" onclick="openNav()"></button>
                 <div id="mySidenav" class="sidenav">
                     <div class="sidenav__header d-flex justify-content-between align-items-center">
                         <img src="/images/p3-logo-blue.svg" alt="" class="nav__logo">
+                        <div class="form-group mb-0">
+                            <select class="form-control sidenav__lang" id="exampleFormControlSelect1">
+                              <option>POL</option>
+                              <option>ENG</option>
+                              <option>RUS</option>
+                            </select>
+                          </div>
                         <button class="nav__close" onclick="closeNav()"></button>
                     </div>
                     <ul class="sidenav__links">
-                        <li class="sidenav__item sidenav__dropdown--toggle">
-                            <a href="#">About</a>
+                        <li class="sidenav__item">
+                            <a href="#" class="sidenav__dropdown--toggle">About</a>
                             <ul class="sidenav__dropdown">
                                 <li><a href="#">Sub link</a></li>
                                 <li><a href="#">Sub link</a></li>
@@ -48,42 +54,56 @@
                   </div>
             </div>
             <div class="nav__desktop d-none d-lg-flex">
-                <div class="nav-desktop__links">
+                <ul class="nav__desktop__links">
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <!-- <li><span class="nav-sep"></span></li> -->
+                    <li class="nav-btn"><a href="#" class="button-secondary-on-dark">Contact Us</a></li>
+                    <li>                        
+                        <div class="form-group mb-0">
+                        <select class="form-control nav__desktop__lang" id="exampleFormControlSelect1">
+                          <option>POL</option>
+                          <option>ENG</option>
+                          <option>RUS</option>
+                        </select>
+                      </div></li>
+                </ul>
             </div>
-        </div>
 
     </nav>
 
     <header class="home__header">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-5">
                     <h2 class="d2 d2--simplify">Simplify.</h2>
                     <h2 class="d2 d2--connect">Connect.</h2>
                     <h2 class="d2 d2--convert">Convert.</h2>
                     <p class="text">Empowering hotels with customised online guest journeys.</p>
                     <a href="#" class="btn-primary-white home__header__button">book a demo</a>
                 </div>
-                <div class="col-12 col-lg-7">
-                    <div class="d-lg-none">
+                <div class="col-12 col-md-7">
+                    <div class="d-md-none">
                         <div class="slider-1--js home__header__slider">
                             <img src="/images/mobile.png" alt="p3hotels" >
                             <img src="/images/mobile.png" alt="p3hotels" >
                             <img src="/images/mobile.png" alt="p3hotels" >
                         </div>
                     </div>
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-md-block">
                         <img src="/images/home-banner.png" alt="p3hotels" class="home__header__desktop-image">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-1 d-none d-lg-block">
-            <img src="/images/icons/arrow-down-white.svg" alt="" class="">
+        <div class="text-center mt-3 d-none d-md-block">
+            <img src="/images/icons/arrow-down-white.svg" alt="" class="home__arrow-scroll">
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <div class="generic__heading__text">
             <div class="container">
                 <span>Every Step of the Way</span>
@@ -459,10 +479,10 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3 text-center order-lg-2">
+                <div class="col-12 col-lg-3 col-xl-4 text-center order-lg-2">
                     <a href="" class="button-secondary-on-dark footer__button">Book a Demo</a>
                 </div>
-                <div class="col-12 col-lg-2 order-lg-1">
+                <div class="col-12 col-lg-3 col-xl-2  order-lg-1">
                     <a href="#"><img src="/images/p3-logo.svg" alt="p3 logo" class="footer__logo"></a>
                     <ul class="footer__social-media">
                         <li><a href=""><img src="/images/icons/social-linkedin.svg"></a></li>
@@ -476,11 +496,11 @@
                         <p>No. 330688 © 2020</p>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2 order-lg-3 pr-lg-5">
+                <div class="col-12 col-lg-2 order-lg-3">
                     <ul class="footer__links-col">
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Privacy Policy</a></li>
@@ -489,23 +509,23 @@
                 <div class="col-12 col-lg-2 d-none d-lg-block order-lg-4">
                     <p class="footer__col-heading">Products</p>
                     <ul class="footer__links-col">
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-1 d-none d-lg-block  order-lg-5">
+                <!-- <div class="col-12 col-lg-1 d-none d-lg-block  order-lg-5">
 
-                </div>
+                </div> -->
                 <div class="col-12 col-lg-2 d-none d-lg-block  order-lg-6">
                     <p class="footer__col-heading">Services</p>
                     <ul class="footer__links-col">
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
-                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>
                         <li><a href="#" class="footer__link">Abc</a></li>

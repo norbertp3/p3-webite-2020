@@ -277,6 +277,12 @@ body {
             position: relative;
         }
     }
+    &__arrow-scroll {
+        transition: 0.5s;
+        &:hover {
+            padding-top: 10px;
+        }
+    }
     &__diagram {
         margin: 100px 0;
         &__card {
@@ -304,6 +310,9 @@ body {
         }
         .slick-dots {
             bottom: -70px;
+        }
+        .slick-list {
+            overflow: visible;
         }
         &__arrow {
             top: -50px;
@@ -385,7 +394,7 @@ body {
             overflow: visible;
         }
         &__card {
-            margin: 64px 20px 0 20px;
+            margin: 64px 20px 0 0;
             border: solid 1px $secondaryColour2;
             border-radius:  6px;
             .card-title {

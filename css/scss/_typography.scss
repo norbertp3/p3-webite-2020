@@ -70,3 +70,26 @@
         text-decoration: underline;
     }
 }
+.link-gradient-arrow {
+    color: $primaryColour1;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    position: relative;
+    &::after {
+        content: url("/images/icons/small-arrow-right.svg");
+        position: relative;
+        top: 7px;
+        right: -5px;
+    }
+    &::before {
+        content: "";
+        background: linear-gradient(to left, #05c3dd, #9678d3, #47d7ac);
+        display: block;
+        height: 1.5px;
+        width: 100%;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+    }
+
+}

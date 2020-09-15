@@ -1,0 +1,54 @@
+.footer {
+    padding: 64px 0;
+    background-color: $primaryColour1;
+    margin-top: 128px;
+    @include mQmax(991px) {
+        text-align: center;
+    }
+    &__logo {
+        margin-bottom: 64px;
+        width: 130px;
+        height: auto;
+        @include mQ(992px) {
+            margin-bottom: 72px;
+        }
+    }
+    &__social-media {
+        margin-bottom: 64px;
+        @include mQ(992px) {
+            margin-bottom: 72px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 14px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__reg {
+        color: $secondaryColour2;
+        letter-spacing: 1px;
+    }
+    &__links-col {
+        li {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__col-heading {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 32px;
+        font-weight: 600;
+    }
+    &__button {
+        margin-bottom: 64px;
+    }
+}

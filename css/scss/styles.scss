@@ -7,6 +7,7 @@
 @import './buttons';
 @import './typography';
 @import './navigation';
+@import './footer';
 
 @font-face {
     font-family: Questrial;
@@ -281,6 +282,7 @@ body {
         transition: 0.5s;
         &:hover {
             padding-top: 10px;
+            cursor: pointer;
         }
     }
     &__diagram {
@@ -619,6 +621,9 @@ body {
             border-image-source: linear-gradient(258deg, #3bd4ae, #00c1de, #9578d3);
             border-image-slice: 1;
             margin-top: 36px;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &__details {
             margin: 0 15px;
@@ -634,56 +639,221 @@ body {
     }
 }
 
-.footer {
-    padding: 64px 0;
-    background-color: $primaryColour1;
-    @include mQmax(991px) {
-        text-align: center;
-    }
-    &__logo {
-        margin-bottom: 64px;
-        width: 130px;
-        height: auto;
-        @include mQ(992px) {
-            margin-bottom: 72px;
-        }
-    }
-    &__social-media {
-        margin-bottom: 64px;
-        @include mQ(992px) {
-            margin-bottom: 72px;
-        }
-        li {
-            display: inline-block;
-            margin-right: 14px;
-            &:last-child {
-                margin-right: 0;
+.content {
+    &__header {
+        &__small {
+            text-align: center;
+            height: 155px;
+            color: #ffffff;
+            background-color: $primaryColour1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 64px;
+            h1 {
+                font-size: 28px;
+            }
+            @include mQ(992px) {
+                height: 303px;
+                background-image: url('/images/small-header-bg.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 128px;
+                h1 {
+                    letter-spacing: 3px;
+                    font-size: 48px;
+                }
             }
         }
     }
-    &__reg {
-        color: $secondaryColour2;
-        letter-spacing: 1px;
-    }
-    &__links-col {
-        li {
-            margin-bottom: 32px;
+    &__border-grid-4 {
+        @include mQ(992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1px 1px;
+            grid-template-areas:
+              ". ."
+              ". .";
+        }
+        text-align: center;
+        img {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        h4 {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        p {
+            color: #63666a;
+            margin-bottom: 34px;
+            @include mQ(992px) {
+                margin-bottom: 58px;
+            }
+        }
+        &-item {
+            padding: 45px;
+            position: relative;
+            @include mQ(992px) {
+
+                &__1 {
+                    &::before {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 1.5px;
+                        width: 95%;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                    }
+                    &::after {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 95%;
+                        width: 1px;
+                        position: absolute;
+                        // bottom: -10px;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+                &__2 {
+                    &::before {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 1.5px;
+                        width: 95%;
+                        position: absolute;
+                        bottom: -10px;
+                        right: 0;
+                    }
+                }
+                &__3 {
+                    @include mQ(992px) {
+                        margin-top: 25px;
+                    }
+                    &::after {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 95%;
+                        width: 1px;
+                        position: absolute;
+                        // bottom: -10px;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+                &__4 {
+                    @include mQ(992px) {
+                        margin-top: 25px;
+                    }
+                }
+            }
         }
     }
-    &__link {
-        color: #fff;
-        font-weight: 600;
-        &:hover {
-            color: #fff;
+    &__border-grid-3 {
+        margin-top: 30px;
+        @include mQ(992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 1px 1px;
+            grid-template-areas:
+              ". . .";
+        }
+        text-align: center;
+        img {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        h4 {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        p {
+            color: #63666a;
+            margin-bottom: 34px;
+            @include mQ(992px) {
+                margin-bottom: 58px;
+            }
+        }
+        &-item {
+            padding: 45px;
+            position: relative;
+            @include mQ(992px) {
+                &__1 {
+                    &::before {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 1px;
+                        width: 95%;
+                        position: absolute;
+                        top: -10px;
+                        left: 0;
+                    }
+                    &::after {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 95%;
+                        width: 1px;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                    }
+                }
+                &__2 {
+                    &::before {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        position: absolute;
+                        top: -10px;
+                        left: 0;
+                    }
+                    &::after {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 95%;
+                        width: 1px;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                    }
+                }
+                &__3 {
+                    &::before {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 1px;
+                        width: 95%;
+                        position: absolute;
+                        top: -10px;
+                        right: 0;
+                    }
+
+                }
+            }
         }
     }
-    &__col-heading {
-        color: #fff;
-        border-bottom: 1px solid #fff;
-        margin-bottom: 32px;
-        font-weight: 600;
-    }
-    &__button {
-        margin-bottom: 64px;
-    }
+
 }

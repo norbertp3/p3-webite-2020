@@ -33,8 +33,12 @@ $(document).ready(function() {
         });
         $(this).find(".card-title").css({"height":largest+"px"});
     });
-    $('.sidenav__dropdown--toggle').click(function(e) {
+    $('.sidenav__dropdown--toggle').hover(function(e) {
         $(this).next('.sidenav__dropdown').slideToggle();
         $(this).toggleClass('sidenav__dropdown--toggle-open');
+    });
+    $('.nav__desktop__dropdown--toggle').click(function(e) {
+        $(this).next('.nav__desktop__dropdown').slideToggle();
+        $(this).toggleClass('nav__desktop__dropdown--toggle-open');
     });
 });

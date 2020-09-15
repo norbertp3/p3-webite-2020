@@ -1,16 +1,20 @@
 .nav {
   background-color: $primaryColour1;
   padding: 15px;
+
   @include mQ(992px) {
-      padding: 24px;
+    padding: 24px;
   }
+
   &__logo {
     height: 40px;
     width: auto;
+
     @include mQ(992px) {
-        height: 48px;
+      height: 48px;
     }
   }
+
   &__open {
     background: inherit;
     border: none;
@@ -20,6 +24,7 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
   &__close {
     background: inherit;
     border: none;
@@ -29,38 +34,147 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
   &__desktop {
-      &__links {
-          margin-bottom: 0;
-          li {
-              display: inline-block;
-              padding: 0 16px;
-          }
-          a {
-              color: #fff;
-          }
-          .button-secondary-on-dark {
-              padding: 10px 32px; 
+    &__links {
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+        padding: 0 16px;
+      }
+
+      .button-secondary-on-dark {
+        padding: 10px 32px;
+      }
+    }
+    &__item {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__lang {
+      background-color: inherit;
+      border: none;
+      color: #fff;
+
+      &:active,
+      &:focus {
+        background-color: inherit;
+        color: #fff;
+        border: none;
+      }
+    }
+
+    option {
+      color: $primaryColour1;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background-color: #fff;
+      left: 0;
+      top: 96px;
+      z-index: 10;
+      border-style: solid;
+      border-width: 1px;
+      border-image-source: linear-gradient(249deg, #3bd4ae, #00c1de, #9578d3);
+      border-image-slice: 1;
+      padding: 76px 0 32px 0;
+      &__link {
+        color: $primaryColour1;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-top: 48px;
+        text-decoration: underline;
+        display: block;
+        &:hover {
+          color: $primaryColour1;
+        }
+      }
+      &--toggle {
+        padding-right: 20px;
+        &::after {
+          content: url("/images/icons/chevron-down-white.svg");
+          position: absolute;
+          top: 1px;
+        }
+  
+        &-open {
+          border-bottom: 2px solid $secondaryColour2;
+  
+          &::after {
+            content: url("/images/icons/chevron-up-white.svg");
           }
         }
-      &__lang {
-          background-color: inherit;
-          border: none;
-          color: #fff;
-          &:active, &:focus {
-              background-color: inherit;
-              color: #fff;
-              border: none;
+      }
+    }
+
+    &__item {
+      position: relative;
+      &__products {
+        &__left {
+          min-width: 285px;
+          padding-right: 75px;
+          margin-right: 75px;
+          border-right: 1px solid rgba(148, 169, 203, 0.5);
+        }
+        &__intro {
+          color: $secondaryColour2;
+          margin-bottom: 40px;
+        }
+        &__card {
+          display: flex;
+          color: $primaryColour1;
+          align-content: center;
+          img {
+            margin-right: 20px;
+          }
+          p {
+            max-width: 130px
+          }
+          &:hover {
+            p {
+              color: $secondaryColour2;
             }
           }
-          option {
-              color: $primaryColour1;
+        }
+      }
+      &__services {
+        display: none;
+        &__card {
+          display: block;
+          color: $primaryColour1;
+          padding: 0 109px;
+          text-align: center;
+          transition: 1s;
+          &:hover {
+            p {
+              color: $secondaryColour2;
+            }
+            img {
+              opacity: 0.5;
+            }
           }
+        }
+      }
+      &__icon {
+        content: url('/images/icons/chevron-down-white.svg');
+        position: absolute;
+        top: 1px;
+      }
+
+    }
   }
+
   &-btn {
-        border-left: 1px solid #fff;
-        padding-left: 40px!important;
-        margin-left: 24px;
+    border-left: 1px solid #fff;
+    padding-left: 40px !important;
+    margin-left: 24px;
   }
 }
 
@@ -74,59 +188,69 @@
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
+
   &__header {
     padding: 15px;
   }
+
   &__links {
     padding: 15px;
     list-style: none;
   }
+
   &__item {
     margin-bottom: 32px;
   }
+
   &__dropdown {
     display: none;
     margin: 32px 0;
     list-style: none;
     padding-left: 40px;
+
     li {
-        margin-bottom: 32px;
-        &:last-child {
-            margin-bottom: 0;
-        }
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+
     &--toggle {
+      &::after {
+        content: url("/images/icons/chevron-down.svg");
+        width: 20px;
+        height: 20px;
+        position: absolute;
+      }
+
+      &-open {
+        border-bottom: 2px solid $secondaryColour2;
+
         &::after {
-            content: url('/images/icons/chevron-down.svg');
-            width:20px;
-            height: 20px;
-            position: absolute;
+          content: url("/images/icons/chevron-up.svg");
         }
-        &-open {
-            border-bottom: 2px solid $secondaryColour2;
-            &::after {
-                content: url('/images/icons/chevron-up.svg');
-            }
-        }
+      }
     }
   }
+
   &__lang {
-      border: none;
+    border: none;
   }
 }
 
-.sidenav { 
-    a {
+.sidenav {
+  a {
     font-size: 17px;
     font-weight: bold;
     letter-spacing: 1.06px;
     color: $primaryColour1;
-    }
-    &:focus {
-        color: $primaryColour1;
-    }
-}
+  }
 
+  &:focus {
+    color: $primaryColour1;
+  }
+}
 
 .sidenav .closebtn {
   font-size: 36px;
@@ -136,6 +260,7 @@
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }

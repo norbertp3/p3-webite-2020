@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav d-flex justify-content-between align-items-center">
+            <a href="#"><img src="/images/p3-logo.svg" alt="p3 logo" class="nav__logo"></a>
+            <div class="nav__mobile d-lg-none">
+                <button class="nav__open" onclick="openNav()"></button>
+                <div id="mySidenav" class="sidenav">
+                    <div class="sidenav__header d-flex justify-content-between align-items-center">
+                        <img src="/images/p3-logo-blue.svg" alt="" class="nav__logo">
+                        <div class="form-group mb-0">
+                            <select class="form-control sidenav__lang" id="exampleFormControlSelect1">
+                              <option>POL</option>
+                              <option>ENG</option>
+                              <option>RUS</option>
+                            </select>
+                          </div>
+                        <button class="nav__close" onclick="closeNav()"></button>
+                    </div>
+                    <ul class="sidenav__links">
+                        <li class="sidenav__item">
+                            <a href="#" class="sidenav__dropdown--toggle">About</a>
+                            <ul class="sidenav__dropdown">
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                            </ul>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="nav__desktop d-none d-lg-flex">
+                <ul class="nav__desktop__links">
+                    <li>
+                        <a href="#" class="nav__desktop__item nav__desktop__dropdown--toggle">Link</a>
+                        <div class="nav__desktop__item__products nav__desktop__dropdown">
+                            <div class="container">
+                                <div class="d-flex">
+                                    <div class="nav__desktop__item__products__left">
+                                        <p class="nav__desktop__item__products__intro">Find out about our interconnected products and online guest journey:</p>
+                                        <a href="#">
+                                            <div class="nav__desktop__item__products__card">
+                                                <img src="/images/icons/nav-icon.svg">
+                                                <p>Online Guest Journey</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__desktop__item__products__right">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card mb-5">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card mb-5">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card mb-5">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <div class="nav__desktop__item__products__card">
+                                                        <img src="/images/icons/nav-icon.svg">
+                                                        <p>Online Guest Journey</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="nav__desktop__dropdown__link">All Links</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <li>
+                        <a href="#" class="nav__desktop__item nav__desktop__dropdown--toggle">Link</a>
+                        <div class="nav__desktop__item__services nav__desktop__dropdown">
+                            <div class="d-flex justify-content-center">
+                                <a href="#">
+                                    <div class="nav__desktop__item__services__card">
+                                        <img src="/images/icons/services-icon.svg" alt="">
+                                        <p>Web Design</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="nav__desktop__item__services__card">
+                                        <img src="/images/icons/services-icon.svg" alt="">
+                                        <p>Web Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="nav__desktop__dropdown__link">All services</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav__desktop__item">Link</a></li>
+                    <!-- <li><span class="nav-sep"></span></li> -->
+                    <li class="nav-btn"><a href="#" class="button-secondary-on-dark">Contact Us</a></li>
+                    <li>                        
+                        <div class="form-group mb-0">
+                        <select class="form-control nav__desktop__lang" id="exampleFormControlSelect1">
+                          <option>POL</option>
+                          <option>ENG</option>
+                          <option>RUS</option>
+                        </select>
+                      </div></li>
+                </ul>
+            </div>
+
+    </nav>
+
+    <header class="content__header__small">
+        <h1>Our Products</h1>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <section class="content__border-grid-4">
+                <div class="content__border-grid-4-item content__border-grid-4-item__1">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+                <div class="content__border-grid-4-item content__border-grid-4-item__2">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+                <div class="content__border-grid-4-item content__border-grid-4-item__3">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+                <div class="content__border-grid-4-item content__border-grid-4-item__4">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+            </section>
+            <section class="content__border-grid-3">
+                <div class="content__border-grid-3-item content__border-grid-3-item__1">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+                <div class="content__border-grid-3-item content__border-grid-3-item__2">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+                <div class="content__border-grid-3-item  content__border-grid-3-item__3">
+                    <img src="/images/icons/products-icon.svg" alt="">
+                    <h4 class="h4">Online Guest Journey</h4>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="link-gradient-arrow">Find Out More</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 col-xl-4 text-center order-lg-2">
+                    <a href="" class="button-secondary-on-dark footer__button">Book a Demo</a>
+                </div>
+                <div class="col-12 col-lg-3 col-xl-2  order-lg-1">
+                    <a href="#"><img src="/images/p3-logo.svg" alt="p3 logo" class="footer__logo"></a>
+                    <ul class="footer__social-media">
+                        <li><a href=""><img src="/images/icons/social-linkedin.svg"></a></li>
+                        <li><a href=""><img src="/images/icons/social-twitter.svg"></a></li>
+                        <li><a href=""><img src="/images/icons/social-facebook.svg"></a></li>
+                        <li><a href=""><img src="/images/icons/social-instagram.svg"></a></li>
+                    </ul>
+                    <div class="footer__reg d-none d-lg-block">
+                        <p>P3 Hotel Software</p>
+                        <p>is registered in Ireland,</p>
+                        <p>No. 330688 © 2020</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 order-lg-3">
+                    <ul class="footer__links-col">
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 d-none d-lg-block order-lg-4">
+                    <p class="footer__col-heading">Products</p>
+                    <ul class="footer__links-col">
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-12 col-lg-1 d-none d-lg-block  order-lg-5">
+
+                </div> -->
+                <div class="col-12 col-lg-2 d-none d-lg-block  order-lg-6">
+                    <p class="footer__col-heading">Services</p>
+                    <ul class="footer__links-col">
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Guest Journey</a></li>
+                        <li><a href="#" class="footer__link">Online Check-out</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                        <li><a href="#" class="footer__link">Abc</a></li>
+                    </ul>
+                </div>
+                <div class="footer__reg d-lg-none mx-auto">
+                    <p>P3 Hotel Software</p>
+                    <p>is registered in Ireland,</p>
+                    <p>No. 330688 © 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Multi Select -->
+    <script type="text/javascript" src="js/popper.js"></script>
+
+    <!-- Prefixfree -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.viewport-units.js"></script>
+    <script type="text/javascript" src="js/prefixfree.jquery.js"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/sliders.js"></script>
+
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>

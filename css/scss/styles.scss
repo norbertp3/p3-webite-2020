@@ -49,6 +49,14 @@ body {
     color: #fff;
 }
 
+.separator {
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    margin: 34px 0;
+}
+
 .generic {
     // heading & text
     &__heading__text {
@@ -664,6 +672,48 @@ body {
                     letter-spacing: 3px;
                     font-size: 48px;
                 }
+            }
+        }
+        &__large {
+            background-color: $primaryColour1;
+            color: #fff;
+            padding: 64px 0;
+            @include mQ(992px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__content {
+                padding-left: 15px;
+                padding-right: 15px;
+                @include mQ(992px) {
+                    padding-left: 5%;
+                    width: 50%;
+                    margin: auto 0;
+                }
+                @include mQ(1200px) {
+                    padding-left: 10%;
+                }
+                @include mQ(1400px) {
+                    padding-left: 18%;
+                }
+            }
+            &__h1 {
+
+            }
+            &__img {
+                width: 100%;
+                position: relative;
+                right: -15px;
+                margin: 32px 0;
+                @include mQ(992px) {
+                    width: 40vw;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: auto 0;
+                }
+            }
+            .btn-primary-white {
+                margin-top: 40px;
             }
         }
     }

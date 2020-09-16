@@ -421,6 +421,7 @@ template {
   text-transform: capitalize;
   border: 1.5px solid transparent;
   display: inline-block;
+  text-align: center;
 }
 
 @media screen and (min-width: 992px) {
@@ -1062,6 +1063,14 @@ body {
 .badge-purple {
   background-color: #9678d3;
   color: #fff;
+}
+
+.separator {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  margin: 34px 0;
 }
 
 .generic__heading__text {
@@ -1863,6 +1872,69 @@ body {
     letter-spacing: 3px;
     font-size: 48px;
   }
+}
+
+.content__header__large {
+  background-color: #001a70;
+  color: #fff;
+  padding: 64px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__header__large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.content__header__large__content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__header__large__content {
+    padding-left: 5%;
+    width: 50%;
+    margin: auto 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__header__large__content {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content__header__large__content {
+    padding-left: 18%;
+  }
+}
+
+.content__header__large__img {
+  width: 100%;
+  position: relative;
+  right: -15px;
+  margin: 32px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__header__large__img {
+    width: 40vw;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: auto 0;
+  }
+}
+
+.content__header__large .btn-primary-white {
+  margin-top: 40px;
 }
 
 .content__border-grid-4 {

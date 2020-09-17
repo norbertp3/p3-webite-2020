@@ -678,9 +678,11 @@ body {
             background-color: $primaryColour1;
             color: #fff;
             padding: 64px 0;
+            margin-bottom: 64px;
             @include mQ(992px) {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 128px;
             }
             &__content {
                 padding-left: 15px;
@@ -698,12 +700,16 @@ body {
                 }
             }
             &__h1 {
-
+                font-size: 32px;
+                font-family: $headingFont;
+                @include mQ(992px) {
+                    font-size: 56px;
+                }
             }
             &__img {
-                width: 100%;
+                width: 110%;
                 position: relative;
-                right: -15px;
+                // right: -15px;
                 margin: 32px 0;
                 @include mQ(992px) {
                     width: 40vw;
@@ -715,6 +721,12 @@ body {
             .btn-primary-white {
                 margin-top: 40px;
             }
+        }
+    }
+    &__border-grid {
+        margin: 64px 0;
+        @include mQ(992px) {
+            margin: 128px 0;
         }
     }
     &__border-grid-4 {
@@ -873,10 +885,10 @@ body {
                         background: #ccc;
                         display: block;
                         height: 1px;
-                        width: 100%;
+                        width: 90%;
                         position: absolute;
                         top: -10px;
-                        left: 0;
+                        left: 5%;
                     }
                     &::after {
                         content: "";
@@ -903,6 +915,65 @@ body {
 
                 }
             }
+        }
+    }
+    &__img__title_text__links {
+        margin-top: 64px;
+        @include mQ(992px) {
+            margin-top: 124px;
+        }
+        &--img {
+            margin: auto;
+            display: block;
+            height: 130px;
+            width: 130px;
+            @include mQ(992px) {
+                height: 303px;
+                width: 303px;
+            }
+        }
+        &--span {
+            color: $secondaryColour2;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.88px;
+            margin-bottom: 8px;
+            margin-top: 32px;
+            display: block;
+            @include mQ(992px) {
+                margin-bottom: 4px;
+                margin-top: 0;
+            }
+        }
+        &--p {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: #212322;
+        }
+        &--a {
+            margin-right: 20px;
+            display: block;
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            &::before {
+                content: url("/images/icons/v-2.svg");
+                position: relative;
+                padding-right: 10px;
+                top: 3px;
+            }
+        }
+        &--margin {
+            margin-bottom: 64px;
+            @include mQ(992px) {
+                margin-bottom: 124px;
+            }
+        }
+        &--container {
+            margin-top: 32px;
         }
     }
 

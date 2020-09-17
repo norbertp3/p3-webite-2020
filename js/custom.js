@@ -41,7 +41,7 @@ $(document).ready(function() {
         $(this).next('.nav__desktop__dropdown').slideToggle();
         $(this).toggleClass('nav__desktop__dropdown--toggle-open');
     });
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 991) {
         $(".content__header__large__img").detach().insertAfter("#contentLargeHeaderSeparatow");
     }
 });

@@ -86,7 +86,7 @@
         background: linear-gradient(to left, #05c3dd, #9678d3, #47d7ac);
         display: block;
         height: 1.5px;
-        width: 100%;
+        width: calc(100% - 24px);
         position: absolute;
         bottom: -10px;
         left: 0;

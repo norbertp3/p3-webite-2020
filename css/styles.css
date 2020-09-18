@@ -1852,7 +1852,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 64px;
 }
 
 .content__header__small h1 {
@@ -1866,7 +1865,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 128px;
   }
   .content__header__small h1 {
     letter-spacing: 3px;
@@ -1878,7 +1876,6 @@ body {
   background-color: #001a70;
   color: #fff;
   padding: 64px 0;
-  margin-bottom: 64px;
 }
 
 @media screen and (min-width: 992px) {
@@ -1889,7 +1886,6 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 128px;
   }
 }
 
@@ -1901,6 +1897,7 @@ body {
 @media screen and (min-width: 992px) {
   .content__header__large__content {
     padding-left: 5%;
+    padding-right: 50px;
     width: 50%;
     margin: auto 0;
   }
@@ -1947,6 +1944,14 @@ body {
 
 .content__header__large .btn-primary-white {
   margin-top: 40px;
+}
+
+@media screen and (min-width: 1400px) {
+  .content__header__large--arrow {
+    content: url("/images/icons/arrow-down-white.svg");
+    display: block;
+    margin-top: 68px;
+  }
 }
 
 .content__border-grid {
@@ -2257,5 +2262,100 @@ body {
 
 .content__img__title_text__links--container {
   margin-top: 32px;
+}
+
+.content__product__icons {
+  background-color: #001a70;
+  padding: 68px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .content__product__icons {
+    padding: 128px 0;
+  }
+}
+
+.content__product__icons__card {
+  text-align: center;
+  padding-bottom: 68px;
+}
+
+.content__product__icons__card__img {
+  margin: 0 auto 33px auto;
+}
+
+.content__product__icons__card__p {
+  color: #fff;
+}
+
+.content__product__icons .slick-list {
+  overflow: visible;
+}
+
+.content__boxes__carousel {
+  text-align: center;
+  background-color: #001a70;
+  padding: 68px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__boxes__carousel {
+    padding: 128px 0;
+  }
+}
+
+.content__boxes__carousel__span {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+  color: #94a9cb;
+}
+
+.content__boxes__carousel__h2 {
+  color: #fff;
+  padding-bottom: 68px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__boxes__carousel__h2 {
+    padding-bottom: 128px;
+  }
+}
+
+.content__boxes__carousel__box {
+  text-align: center;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__boxes__carousel__box {
+    margin-bottom: 30px;
+  }
+}
+
+.content__boxes__carousel__img {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__boxes__carousel__img {
+    padding-bottom: 30px;
+  }
+}
+
+.content__boxes__carousel__p {
+  color: #fff;
+}
+
+.content__boxes__carousel__button {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__boxes__carousel__button {
+    margin-top: 52px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

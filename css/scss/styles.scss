@@ -657,7 +657,6 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 64px;
             h1 {
                 font-size: 28px;
             }
@@ -667,7 +666,6 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                margin-bottom: 128px;
                 h1 {
                     letter-spacing: 3px;
                     font-size: 48px;
@@ -678,17 +676,16 @@ body {
             background-color: $primaryColour1;
             color: #fff;
             padding: 64px 0;
-            margin-bottom: 64px;
             @include mQ(992px) {
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 128px;
             }
             &__content {
                 padding-left: 15px;
                 padding-right: 15px;
                 @include mQ(992px) {
                     padding-left: 5%;
+                    padding-right: 50px;
                     width: 50%;
                     margin: auto 0;
                 }
@@ -720,6 +717,13 @@ body {
             }
             .btn-primary-white {
                 margin-top: 40px;
+            }
+            &--arrow {
+                @include mQ(1400px) {
+                    content: url("/images/icons/arrow-down-white.svg");
+                    display: block;
+                    margin-top: 68px;
+                }
             }
         }
     }
@@ -976,5 +980,71 @@ body {
             margin-top: 32px;
         }
     }
-
-}
+    &__product {
+        &__icons {
+            background-color: $primaryColour1;
+            padding: 68px 0;
+            @include mQ(1200px) {
+                padding: 128px 0;
+            }
+            &__card {
+                text-align: center;
+                padding-bottom: 68px;
+                &__img {
+                    margin: 0 auto 33px auto;
+                }
+                &__p {
+                    color: #fff;
+                }
+            }
+            .slick-list {
+                overflow: visible;
+            }
+        }
+    }
+    &__boxes__carousel {
+        text-align: center;
+        background-color: $primaryColour1;
+        padding: 68px 0;
+        @include mQ(992px) {
+            padding: 128px 0;
+        }
+        &__span {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.88px;
+            color: $secondaryColour2;
+        }
+        &__h2 {
+            color: #fff;
+            padding-bottom: 68px;
+            @include mQ(992px) {
+                padding-bottom: 128px;
+            }
+        }
+        &__box {
+            text-align: center;
+            padding: 0 30px;
+            margin-bottom: 15px;
+            @include mQ(992px) {
+                margin-bottom: 30px;
+            }
+        }
+        &__img {
+            margin: 0 auto;
+            margin-bottom: 15px;
+            @include mQ(992px) {
+                padding-bottom: 30px;
+            }
+        }
+        &__p {
+            color: #fff;
+        }
+        &__button {
+            margin-top: 32px;
+            @include mQ(992px) {
+                margin-top: 52px;
+            }
+        }
+    }
+}  

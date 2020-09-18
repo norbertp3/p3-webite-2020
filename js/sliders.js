@@ -39,4 +39,32 @@ $(document).ready(function(){
             } 
           ]
     });
+    $('.slider-4--js').slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 2.5,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 460,
+          settings: {
+            slidesToShow: 1.5,
+          }
+        }
+      ]
+    });
+    $('.slider-5--js').slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
   });

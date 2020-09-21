@@ -205,6 +205,7 @@ body {
             line-height: 1.5;
             letter-spacing: 1.06px;
             margin-bottom: 30px;
+            color: #fff;
             @include mQ(992px) {
                 font-size: 18px;
                 letter-spacing: 1.13px;
@@ -715,6 +716,9 @@ body {
                     margin: auto 0;
                 }
             }
+            &__p {
+                color: #fff;
+            }
             .btn-primary-white {
                 margin-top: 40px;
             }
@@ -926,7 +930,10 @@ body {
         @include mQ(992px) {
             margin-top: 124px;
         }
-        &--img {
+        p {
+            margin-bottom: 16px;
+        }
+        &__img {
             margin: auto;
             display: block;
             height: 130px;
@@ -936,7 +943,7 @@ body {
                 width: 303px;
             }
         }
-        &--span {
+        &__span {
             color: $secondaryColour2;
             font-size: 14px;
             font-weight: 600;
@@ -949,13 +956,10 @@ body {
                 margin-top: 0;
             }
         }
-        &--p {
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 1px;
-            color: #212322;
+        &__p {
+            margin-bottom: 16px;
         }
-        &--a {
+        &__a {
             margin-right: 20px;
             display: block;
             margin-bottom: 16px;
@@ -1044,6 +1048,63 @@ body {
             margin-top: 32px;
             @include mQ(992px) {
                 margin-top: 52px;
+            }
+        }
+    }
+    &__img__title__text__button {
+        p {
+            margin-bottom: 16px;
+        }
+        &__img {
+            width: 100%;
+        
+            object-fit: cover;
+            @include mQ(992px) {
+                position: relative;
+                top: 50%;
+                margin-top: -213px;
+                height: 426px;
+            }
+        }
+        &__p {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                padding-right: 50px;
+            }
+            @include mQ(1200px) {
+                padding-right: 150px;
+            }
+        }
+        &--left {
+            margin: 64px 0;
+            @include mQ(992px) {
+                padding-right: 50px;
+                margin: 128px 0;
+            }
+            @include mQ(1200px) {
+                padding-right: 100px;
+            }
+        }
+        &--right {
+            margin: 64px 0;
+            @include mQ(992px) {
+                padding-right: 0;
+                padding-left: 50px;
+                margin: 128px 0;
+            }
+            @include mQ(1200px) {
+                padding-right: 0;
+                padding-left: 100px;
+            }
+        }
+        &--sep {
+            display: block;
+            margin: 32px 0;
+            width: 50px;
+            height: 1.5px;
+            background-color: $secondaryColour2;
+            @include mQ(992px) {
+                width: 90px;
             }
         }
     }

@@ -27,8 +27,10 @@
         }
     }
     &__reg {
-        color: $secondaryColour2;
-        letter-spacing: 1px;
+        p {
+            color: $secondaryColour2;
+            letter-spacing: 1px;
+        }
     }
     &__links-col {
         li {

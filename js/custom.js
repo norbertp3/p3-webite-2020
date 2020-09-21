@@ -33,11 +33,17 @@ $(document).ready(function() {
         });
         $(this).find(".card-title").css({"height":largest+"px"});
     });
-    $('.sidenav__dropdown--toggle').hover(function(e) {
+    $('.sidenav__dropdown--toggle').click(function(e) {
+        e.preventDefault();
         $(this).next('.sidenav__dropdown').slideToggle();
         $(this).toggleClass('sidenav__dropdown--toggle-open');
     });
     $('.nav__desktop__dropdown--toggle').click(function(e) {
+        e.preventDefault();
+        if ('nav__desktop__dropdown--toggle .nav__desktop__dropdown--toggle-open'){
+            $('.nav__desktop__dropdown').not(this).slideUp();
+            $('.nav__desktop__dropdown--toggle').not(this).removeClass('nav__desktop__dropdown--toggle-open');
+        }
         $(this).next('.nav__desktop__dropdown').slideToggle();
         $(this).toggleClass('nav__desktop__dropdown--toggle-open');
     });

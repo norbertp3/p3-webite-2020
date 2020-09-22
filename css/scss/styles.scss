@@ -1107,5 +1107,18 @@ body {
                 width: 90px;
             }
         }
+        &__footer {
+            display: flex;
+            justify-content: center;
+            @include mQ(992px) {
+                justify-content: flex-start;
+            }
+        }
+        .btn-primary-on-light {
+            margin-top: 16px;
+            @include mQ(992px) {
+                margin-top: 32px;
+            }
+        }
     }
 }  

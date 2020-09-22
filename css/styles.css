@@ -2485,4 +2485,31 @@ body {
     width: 90px;
   }
 }
+
+.content__img__title__text__button__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .content__img__title__text__button__footer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.content__img__title__text__button .btn-primary-on-light {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__img__title__text__button .btn-primary-on-light {
+    margin-top: 32px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

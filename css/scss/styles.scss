@@ -146,10 +146,10 @@ body {
             }
         }
         .text {
-            color: #212322;
+            color:$secondaryColour2;
         }
         &__card {
-            opacity: 0.5;
+            opacity: 1;
             border-radius: 3px;
             border: solid 1px $secondaryColour2;
             width: 100%;
@@ -157,9 +157,12 @@ body {
             @include mQmax(991px) {
                 margin-bottom: 32px;
             }
-            .d1 {
+            &__big {
                 line-height: 1;
                 margin-bottom: 15px;
+                font-size: 64px;
+                letter-spacing: 2px;
+                color: $primaryColour1;
             }
             &--margin {
                 @include mQ(992px) {
@@ -188,8 +191,7 @@ body {
             color: $secondaryColour2!important;
         }
         .quote {
-            font-family: $textFont;
-            margin-top: 0;
+            content: url('/images/icons/testimonial.svg')
         }
         @include mQ(992px) {
             padding: 128px 0 8px 0;
@@ -225,6 +227,11 @@ body {
             letter-spacing: 1px;
             font-weight: bold;
             text-decoration: underline;
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
         }
         &__desktop {
             .col-lg-6 {
@@ -592,7 +599,7 @@ body {
                 .form-control {
                     background-color: inherit;
                     border: none;
-                    border-bottom: 1px solid #fff;
+                    border-bottom: 1px solid $secondaryColour2;
                     border-radius: 0;
                     padding: 0;
                     color: #fff;

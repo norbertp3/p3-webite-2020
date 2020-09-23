@@ -390,10 +390,10 @@ template {
 
 .slick-dots li button {
   background: transparent;
-  border: 2px solid #93a7cb;
+  border: 1px solid #93a7cb;
   border-radius: 20px;
-  height: 10px;
-  width: 10px;
+  height: 1px;
+  width: 1px;
 }
 
 .slick-dots li button:before {
@@ -433,6 +433,7 @@ template {
 .btn-primary-white:hover {
   border-image-slice: 1;
   border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
+  border-width: 2px;
 }
 
 .btn-primary-white:focus {
@@ -1275,11 +1276,11 @@ body {
 }
 
 .generic__stats__large .text {
-  color: #212322;
+  color: #94a9cb;
 }
 
 .generic__stats__large__card {
-  opacity: 0.5;
+  opacity: 1;
   border-radius: 3px;
   border: solid 1px #94a9cb;
   width: 100%;
@@ -1292,9 +1293,12 @@ body {
   }
 }
 
-.generic__stats__large__card .d1 {
+.generic__stats__large__card__big {
   line-height: 1;
   margin-bottom: 15px;
+  font-size: 64px;
+  letter-spacing: 2px;
+  color: #001a70;
 }
 
 @media screen and (min-width: 992px) {
@@ -1326,8 +1330,7 @@ body {
 }
 
 .generic__testimonials .quote {
-  font-family: "Muli";
-  margin-top: 0;
+  content: url("/images/icons/testimonial.svg");
 }
 
 @media screen and (min-width: 992px) {
@@ -1373,6 +1376,12 @@ body {
 .generic__testimonials--company {
   letter-spacing: 1px;
   font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.generic__testimonials--company:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -1853,7 +1862,7 @@ body {
 .home__contact__form__wrapper .form-control {
   background-color: inherit;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #94a9cb;
   border-radius: 0;
   padding: 0;
   color: #fff;

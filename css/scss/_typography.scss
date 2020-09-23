@@ -37,6 +37,16 @@ p {
         letter-spacing: 1.5px;
     }
 }
+.h4 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.13px;
+    color: #001a70;
+    @include mQ(992px) {
+        font-size: 20px;
+        letter-spacing: 1.25px;
+    }
+} 
 .h5 {
     font-size: 17px;
     font-weight: bold;

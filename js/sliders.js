@@ -67,4 +67,20 @@ $(document).ready(function(){
         }
       ]
     });
+    $('.slider-6--js').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 2,
+      infinite: false,
+      nextArrow: '.home__blog__btns__right',
+      prevArrow: '.home__blog__btns__left',
+      responsive: [
+          {
+            breakpoint: 460,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
   });
+});

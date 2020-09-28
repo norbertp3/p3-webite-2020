@@ -72,8 +72,8 @@ $(document).ready(function(){
       arrows: true,
       slidesToShow: 2,
       infinite: false,
-      nextArrow: '.home__blog__btns__right',
-      prevArrow: '.home__blog__btns__left',
+      nextArrow: '.sl-6--right',
+      prevArrow: '.sl-6--left',
       responsive: [
           {
             breakpoint: 460,
@@ -82,5 +82,21 @@ $(document).ready(function(){
             }
           }
         ]
-  });
+    });
+    $('.slider-7--js').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 2,
+      infinite: false,
+      nextArrow: '.sl-7--right',
+      prevArrow: '.sl-7--left',
+      responsive: [
+          {
+            breakpoint: 460,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
+    });
 });

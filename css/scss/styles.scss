@@ -457,7 +457,6 @@ body {
             }
         }
         &__btns {
-            margin-left: 20px;
             margin-top: 32px;
             button {
                 border: none;
@@ -1236,6 +1235,7 @@ body {
         &__card {
             position: relative;
             height: 280px;
+            margin-right: 20px;
             @include mQ(460px) {
                 margin-right: 16px;
             }
@@ -1303,7 +1303,104 @@ body {
             }
         }
     }
-    .hover-overlay {
-    
+    &__nested__menu {
+        margin: 64px 0;
+        @include mQ(992px) {
+            margin: 128px 0;
+        }
+        &__card {
+            margin-right: 20px;
+        }
+        &__span {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.94px;
+            color: $primaryColour3;
+            margin-bottom: 25px;
+            @include mQ(992px) {
+                font-size: 14px;
+                letter-spacing: 0.88px;
+                margin-bottom: 38px;
+            } 
+        }
+        &__title {
+            color: $primaryColour1;
+            @include mQmax(991px) {
+                margin-bottom: 32px;
+            }
+        }
+        &__img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+
+        }
+        &__mobile {
+            @include mQ(992px) {
+                display: none;
+            }
+        }
+        &__desktop {
+            display: block;
+            @include mQmax(991px) {
+                display: none;
+            }
+            .nav {
+                padding: 0;
+                background-color: transparent;
+            }
+            .nav.nav-tabs {
+                float: left;
+                display: block;
+                margin-right: 20px;
+                border-bottom:0;
+                padding-right: 15px;
+            }
+            .nav-tabs .nav-link {
+                border: none;
+                padding: 40px 58px;
+                border-left: 3px solid #e5e1e6;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.5;
+                letter-spacing: 1.5px;
+                color: #63666a;
+                &:hover {
+                    border-left: 3px solid #e5e1e6;
+                    color: $primaryColour1;
+                }
+                @include mQ(1200px) {
+                    padding: 40px 127px;
+                }
+            }
+            
+            .nav-tabs .nav-link.active {
+                color: $primaryColour1;
+                border: none;
+                border-left: 3px solid #9678d3;
+            }
+            .tab-content>.active {
+                display: block;
+                min-height: 165px;
+            }
+            .nav.nav-tabs {
+                float: left;
+                display: block;
+                margin-right: 20px;
+                border-bottom: 0;
+                border-right: 1px solid transparent;
+                padding-right: 15px;
+            }
+            .tab-pane {
+                &__wrapper {
+                    display: grid;
+                    margin: 0 auto;
+                    max-width: 560px;
+                }
+            }
+        }
     }
 }

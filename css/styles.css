@@ -2752,9 +2752,9 @@ body {
 }
 
 .content__cards__carousel__card__overlay {
+  display: none;
   border-radius: 6px;
   position: absolute;
-  display: block;
   top: 0;
   height: 100%;
   width: 100%;
@@ -2794,6 +2794,10 @@ body {
   .content__cards__carousel__card__overlay--wrapper {
     margin-top: 200px;
   }
+}
+
+.content__cards__carousel__card:hover .content__cards__carousel__card__overlay {
+  display: block;
 }
 
 .content__cards__carousel__img {

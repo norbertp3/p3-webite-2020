@@ -1243,16 +1243,18 @@ body {
                 height: 550px;
                 margin-right: 30px;
             }
+            
             &__overlay {
+                display: none;
                 border-radius: 6px;
                 position: absolute;
-                display: block;
                 top: 0;
                 height: 100%;
                 width: 100%;
                 background-color: rgba(33, 35, 34, 0.5);
                 color: #fff;
                 margin: auto 0;
+                
                 h2 {
                     font-size: 22px;
                     @include mQ(992px) {
@@ -1277,6 +1279,11 @@ body {
                     }
                 }
             }
+            &:hover {
+                .content__cards__carousel__card__overlay {
+                    display: block;
+                }
+            }
         }
         &__img {
             height: 100%;
@@ -1296,4 +1303,7 @@ body {
             }
         }
     }
-}  
+    .hover-overlay {
+    
+    }
+}

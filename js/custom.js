@@ -49,5 +49,6 @@ $(document).ready(function() {
     });
     if ($(window).width() <= 991) {
         $(".content__header__large__img").detach().insertAfter("#contentLargeHeaderSeparatow");
+        $("#overlapDetach").detach().insertBefore($("#overlapAttach"));
     }
 });

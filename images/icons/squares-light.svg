@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="355" viewBox="0 0 410 355">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-1575 -6840) translate(1575 6840) matrix(-1 0 0 1 410 0)">
+                    <rect width="210" height="210" x="200" stroke="#A4DBE8" stroke-width="1.5" opacity=".5" rx="3"/>
+                    <rect width="130" height="130" y="145" fill="#A4DBE8" fill-opacity=".33" rx="3"/>
+                    <rect width="80" height="80" x="160" y="275" fill="#A4DBE8" fill-opacity=".33" rx="3"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

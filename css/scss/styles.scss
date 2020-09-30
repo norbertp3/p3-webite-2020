@@ -57,6 +57,24 @@ body {
     margin: 34px 0;
 }
 
+.quote {
+    content: url('/images/icons/testimonial.svg')
+}
+
+hr {
+    border-top: 1px solid rgba(148, 169, 203, 0.5);
+}
+
+.heading {
+    &__span {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.88px;
+        color: $secondaryColour2;
+        text-transform: uppercase;
+    }
+}
+
 .generic {
     // heading & text
     &__heading__text {
@@ -203,9 +221,6 @@ body {
         color: #fff;
         .h1 {
             color: $secondaryColour2!important;
-        }
-        .quote {
-            content: url('/images/icons/testimonial.svg')
         }
         @include mQ(992px) {
             padding: 128px 0 8px 0;
@@ -1551,6 +1566,7 @@ body {
         }
     }
     &__staff {
+        position: relative;
         margin: 64px 0;
         &__row {
             margin: 64px 0;
@@ -1572,10 +1588,106 @@ body {
             }
         }
         &__img {
+            width: 100%;
+            @include mQmax(991px) {
+                margin-bottom: 32px;
+            }
             @include mQ(992px) {
                 max-width: 450px;
                 margin: 0 auto;
                 display: block;
+            }
+        }
+        .quote {
+            margin: 32px 0;
+        }
+        .generic__stats__large__triangles1 {
+            top: -45px;
+            @include mQ(992px) {
+                // left: -50px;
+                right: auto;
+                top: 80px;
+            }
+        }
+        .generic__stats__large__triangles2 {
+            bottom: 200px;
+            @include mQ(992px) {
+                left: auto;
+                right: -65px; 
+            }
+        }
+    }
+    &__tiles {
+        @include mQmax(991px) {
+            padding: 0 15px;
+        }
+        &__h {
+            color: $primaryColour1;
+        }
+        &__img {
+            max-width: 100%;
+            margin: 32px 0;
+            @include mQ(992px) {
+                max-width: 60vw;
+                object-fit: contain;
+            }
+        }
+        &__left {
+            position: relative;
+            &__figure {
+                background-repeat: no-repeat;
+                background-size: 100%;
+                position: absolute;
+                height: 100%;
+                width: 355px;
+                right: -55px;
+                top: -128px;
+                @include mQmax(991px) {
+                    display: none;
+                }
+                &--circles {
+                    background-image: url('/images/icons/circles.svg');
+                }
+                &--squares {
+                    background-image: url('/images/icons/squares-light.svg');
+                }
+            }
+            margin: 64px 0;
+            @include mQ(992px) {
+                display: flex;
+                margin-bottom: 256px;
+            }
+            &__card {
+                @include mQ(992px) {
+                    padding-left: 75px;
+                    padding-right: 15px;
+                    max-width: 450px;
+                    margin: auto 0;
+                }
+                @include mQ(1600px) {
+                    padding-left: 150px;
+                }
+            }
+        }
+        &__right {
+            margin: 64px 0;
+            @include mQ(992px) {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                margin-bottom: 256px;
+            }
+            &__card {
+                @include mQ(992px) {
+                    padding-right: 75px;
+                    padding-left: 15px;
+                    max-width: 450px;
+                    margin: auto 0;
+                    margin-left: auto;
+                }
+                @include mQ(1600px) {
+                    padding-right: 150px;
+                }
             }
         }
     }

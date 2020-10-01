@@ -268,6 +268,56 @@ hr {
             }
         }
     }
+    &__content {
+        text-align: center;
+        margin: 64px auto;
+        @include mQ(992px) {
+            margin: 128px auto;
+            max-width: 750px;
+        }
+        .btn-primary-dark {
+            margin-top: 32px;
+            @include mQ(992px) {
+                margin-top: 64px;
+            }
+        }
+    }
+    &__services {
+        margin: 68px auto;
+        text-align: center;
+        @include mQ(992px) {
+            margin: 128px 0;
+            display: flex;
+        }
+        &__card {
+            padding: 36px 16px;
+            @include mQ(992px) {
+                padding: 48px;
+                &:first-child {
+                    border-right: 1px solid rgba(148, 169, 203, 0.5);
+                }
+            }
+        }
+        &__img {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        &__h3 {
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+        &__link {
+            display: inline-block;
+            margin-top: 32px;
+            @include mQ(992px) {
+                margin-top: 58px;
+            }
+        }
+    }
 }
 
 
@@ -1655,7 +1705,6 @@ hr {
             margin: 64px 0;
             @include mQ(992px) {
                 display: flex;
-                margin-bottom: 256px;
             }
             &__card {
                 @include mQ(992px) {
@@ -1675,7 +1724,6 @@ hr {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: row-reverse;
-                margin-bottom: 256px;
             }
             &__card {
                 @include mQ(992px) {
@@ -1689,6 +1737,106 @@ hr {
                     padding-right: 150px;
                 }
             }
+        }
+        &__row {
+            @include mQ(992px) {
+                margin-bottom: 256px;
+                &:last-child {
+                    margin-bottom: 128px;
+                }
+            }
+        }
+    }
+    &__logo {
+        &__card {
+            text-align: center;
+            width: 100%;
+            position: relative;
+            margin-bottom: 25px;
+            &::before {
+                content: "";
+                background: #ccc;
+                display: block;
+                height: 1.5px;
+                width: 95%;
+                position: absolute;
+                bottom: -10px;
+                left: 2.5%;
+            }
+            &__1 {
+
+                &::after {
+                    content: "";
+                    background: #ccc;
+                    display: block;
+                    height: 95%;
+                    width: 1px;
+                    position: absolute;
+                    // bottom: -10px;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            &__2 {
+
+                @include mQ(992px) {
+                    &::after {
+                        content: "";
+                        background: #ccc;
+                        display: block;
+                        height: 95%;
+                        width: 1px;
+                        position: absolute;
+                        // bottom: -10px;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+            &__3 {
+                &::after {
+                    content: "";
+                    background: #ccc;
+                    display: block;
+                    height: 95%;
+                    width: 1px;
+                    position: absolute;
+                    // bottom: -10px;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            &__4 {
+
+            }
+            &--last {
+                &::before {
+                    content: "";
+                    background: #ccc;
+                    display: block;
+                    height: 0px;
+                    width: 95%;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 2.5%;
+                }
+            }
+        }
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+              ". . ";
+            @include mQ(992px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                ". . . .";
+            }
+        }
+        &__img {
+            width: 100%;
         }
     }
 }

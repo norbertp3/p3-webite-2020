@@ -47,6 +47,7 @@
     font-family: $textFont;
     border: 1.5px solid transparent;
     display: inline-block;
+    text-align: center;
     @include mQ(992px) {
         width: auto;
     }

@@ -1485,6 +1485,12 @@ hr {
                 }
             }
         }
+        &__hr {
+            margin-bottom: 68px;
+            @include mQ(992px) {
+                margin-bottom: 128px;
+            }
+        }
     }
     &__card__overlap {
         background-color: $primaryColour1;
@@ -1809,7 +1815,22 @@ hr {
             &__4 {
 
             }
-            &--last {
+        }
+        .bb-mob {
+                &::before {
+                content: "";
+                background: #ccc;
+                display: block;
+                height: 0px;
+                width: 95%;
+                position: absolute;
+                    bottom: -10px;
+                    left: 2.5%;
+                }
+            
+        }
+        .bb-des {
+            @include mQ(992px) {
                 &::before {
                     content: "";
                     background: #ccc;
@@ -1817,8 +1838,8 @@ hr {
                     height: 0px;
                     width: 95%;
                     position: absolute;
-                    bottom: -10px;
-                    left: 2.5%;
+                        bottom: -10px;
+                        left: 2.5%;
                 }
             }
         }
@@ -1837,6 +1858,29 @@ hr {
         }
         &__img {
             width: 100%;
+        }
+    }
+    &__portfolio {
+        &__row {
+            @include mQ(992px) {              
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 0px 64px;
+                grid-template-areas:
+                  ". . ."; 
+            }
+        }
+        &__card {
+            margin-bottom: 64px;
+            text-align: center;
+            @include mQ(992px) {
+                margin-bottom: 128px;  
+            }
+        }
+        &__img {
+            width: 100%;
+            margin-bottom: 16px;
         }
     }
 }

@@ -3069,6 +3069,16 @@ hr {
   max-width: 560px;
 }
 
+.content__nested__menu__hr {
+  margin-bottom: 68px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__nested__menu__hr {
+    margin-bottom: 128px;
+  }
+}
+
 .content__card__overlap {
   background-color: #001a70;
 }
@@ -3494,7 +3504,7 @@ hr {
   top: 0;
 }
 
-.content__logo__card--last::before {
+.content__logo .bb-mob::before {
   content: "";
   background: #ccc;
   display: block;
@@ -3503,6 +3513,19 @@ hr {
   position: absolute;
   bottom: -10px;
   left: 2.5%;
+}
+
+@media screen and (min-width: 992px) {
+  .content__logo .bb-des::before {
+    content: "";
+    background: #ccc;
+    display: block;
+    height: 0px;
+    width: 95%;
+    position: absolute;
+    bottom: -10px;
+    left: 2.5%;
+  }
 }
 
 .content__logo__items {
@@ -3526,5 +3549,34 @@ hr {
 
 .content__logo__img {
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .content__portfolio__row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 0px 64px;
+        grid-template-areas: ". . .";
+  }
+}
+
+.content__portfolio__card {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .content__portfolio__card {
+    margin-bottom: 128px;
+  }
+}
+
+.content__portfolio__img {
+  width: 100%;
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=styles.css.map */

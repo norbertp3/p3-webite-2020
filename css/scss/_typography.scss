@@ -11,9 +11,11 @@ p {
     letter-spacing: 1.75px;
     line-height: 1.5;
     font-family: $headingFont;
+    margin-bottom: 32px;
     @include mQ(992px) {
         font-size: 48px;
         letter-spacing: 3px;
+        margin-bottom: 64px;
     }
 }
 
@@ -23,9 +25,11 @@ p {
     line-height: 1.5;
     font-family: $headingFont;
     color: $primaryColour1;
+    margin-bottom: 32px;
     @include mQ(992px) {
         font-size: 32px;
         letter-spacing: 2px;
+        margin-bottom: 64px;
     }
 }
 .h3 {
@@ -33,9 +37,11 @@ p {
     letter-spacing: 1.25px;
     line-height: 1.5;
     font-weight: 500;
+    margin-bottom: 32px;
     @include mQ(992px) {
         font-size: 24px;
         letter-spacing: 1.5px;
+        margin-bottom: 64px;
     }
 }
 .h4 {
@@ -43,6 +49,7 @@ p {
     font-weight: 600;
     letter-spacing: 1.13px;
     color: #001a70;
+    margin-bottom: 16px;
     @include mQ(992px) {
         font-size: 20px;
         letter-spacing: 1.25px;
@@ -54,8 +61,9 @@ p {
     line-height: 1.5;
     letter-spacing: 1.06px;
     color: $primaryColour1;
+    margin-bottom: 10px;
     @include mQ(992px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 

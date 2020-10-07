@@ -908,6 +908,7 @@ hr {
             &__h1 {
                 font-size: 32px;
                 font-family: $headingFont;
+                margin-bottom: 0px;
                 @include mQ(992px) {
                     font-size: 56px;
                 }
@@ -1888,6 +1889,8 @@ hr {
             width: 100%;
             position: relative;
             margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;
             &::before {
                 content: "";
                 background: rgba(148, 169, 203, 0.5);
@@ -1899,7 +1902,6 @@ hr {
                 left: 2.5%;
             }
             &__1 {
-
                 &::after {
                     content: "";
                     background: rgba(148, 169, 203, 0.5);
@@ -1913,7 +1915,6 @@ hr {
                 }
             }
             &__2 {
-
                 @include mQ(992px) {
                     &::after {
                         content: "";
@@ -1940,9 +1941,6 @@ hr {
                     right: 0;
                     top: 0;
                 }
-            }
-            &__4 {
-
             }
         }
         .bb-mob {
@@ -1986,7 +1984,11 @@ hr {
             }
         }
         &__img {
-            width: 100%;
+            margin: auto;
+            display: block;
+            height: 100%;
+            max-height: 108px;
+            max-width: 160px;
         }
         &__h5 {
             margin-bottom: 32px;
@@ -2025,25 +2027,53 @@ hr {
             margin: 128px 0;
         }
     }
+    &__integrations {
+        &__row {
+            margin-bottom: 64px;
+            @include mQ(992px) {
+                margin-bottom: 128px;
+            }
+        }
+        &__h3 {
+            color: $primaryColour1;
+        }
+        &__img {
+            max-height: 108px;
+            max-width: 160px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            margin-bottom: 16px;
+            @include mQ(992px) {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }
 
 .blog {
     &__header {
-        @include mQ(992px) {
-            display: flex;
+        height: 100%;
+        &__p {
+            color: #fff;
         }
-        &__img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            flex-shrink: 1;
-
-        }
-        &__content {
+        &__wrapper {
             @include mQ(992px) {
-                width: 690px;
-                flex-grow: 1;
-
+                display: flex;
+            }
+            &__img {
+                max-width: 689px;
+                height: auto;
+                object-fit: cover;
+                flex-shrink: 1;
+    
+            }
+            &__content {
+                @include mQ(992px) {
+                    width: 690px;
+                    flex-grow: 1;
+                    padding-left: 30px;
+                }
             }
         }
     }

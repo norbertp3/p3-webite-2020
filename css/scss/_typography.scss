@@ -6,7 +6,7 @@ p {
     margin-bottom: 16px;
 }
 
-.h1 {
+h1, .h1 {
     font-size: 28px;
     letter-spacing: 1.75px;
     line-height: 1.5;
@@ -19,7 +19,7 @@ p {
     }
 }
 
-.h2 {
+h2, .h2 {
     font-size: 24px;
     letter-spacing: 1.5px;
     line-height: 1.5;
@@ -32,19 +32,19 @@ p {
         margin-bottom: 64px;
     }
 }
-.h3 {
+h3, .h3 {
     font-size: 20px;
     letter-spacing: 1.25px;
     line-height: 1.5;
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
     @include mQ(992px) {
         font-size: 24px;
         letter-spacing: 1.5px;
-        margin-bottom: 64px;
+        margin-bottom: 16px;
     }
 }
-.h4 {
+h4, .h4 {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1.13px;
@@ -55,7 +55,7 @@ p {
         letter-spacing: 1.25px;
     }
 } 
-.h5 {
+h5, .h5 {
     font-size: 17px;
     font-weight: bold;
     line-height: 1.5;

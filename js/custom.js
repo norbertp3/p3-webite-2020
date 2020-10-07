@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
     $('.nav__desktop__dropdown--toggle').click(function(e) {
         e.preventDefault();
-        if ('nav__desktop__dropdown--toggle .nav__desktop__dropdown--toggle-open'){
+        if ('.nav__desktop__dropdown--toggle .nav__desktop__dropdown--toggle-open'){
             $('.nav__desktop__dropdown').not(this).slideUp();
             $('.nav__desktop__dropdown--toggle').not(this).removeClass('nav__desktop__dropdown--toggle-open');
         }

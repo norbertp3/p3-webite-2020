@@ -105,8 +105,18 @@
         }
   
         &-open {
-          border-bottom: 2px solid $secondaryColour2;
-  
+          // border-bottom: 2px solid $secondaryColour2;
+          &::before {
+            content: "";
+            background: -webkit-gradient(linear, right top, left top, from(#05c3dd), color-stop(#9678d3), to(#47d7ac));
+            background: linear-gradient(to left, #05c3dd, #9678d3, #47d7ac);
+            display: block;
+            height: 1.5px;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+          }
           &::after {
             content: url("/images/icons/chevron-up-white.svg");
           }

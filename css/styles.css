@@ -3892,7 +3892,6 @@ ul li {
 
 .bonus__header__p {
   color: #fff;
-  padding-bottom: 32px;
 }
 
 .bonus__header__img {
@@ -3911,6 +3910,12 @@ ul li {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .bonus__header__img {
+    width: 30vw;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .bonus__header__wrapper {
     display: -webkit-box;
@@ -3925,7 +3930,7 @@ ul li {
 
 @media screen and (min-width: 992px) {
   .bonus__header__content {
-    padding-top: 32px;
+    margin: auto 0;
   }
 }
 

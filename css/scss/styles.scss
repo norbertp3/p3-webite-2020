@@ -2098,7 +2098,6 @@ ul {
         }
         &__p {
             color: #fff;
-            padding-bottom: 32px;
         }
         &__img {
             width: 100%;
@@ -2110,6 +2109,9 @@ ul {
                 width: 35vw;
                 margin-right: 32px;
             }
+            @include mQ(1400px) {
+                width: 30vw;
+            }
         }
         &__wrapper {
             @include mQ(992px) {
@@ -2119,7 +2121,7 @@ ul {
         }
         &__content {
             @include mQ(992px) {
-                padding-top: 32px;
+                margin: auto 0;
             }
         }
         &__spam {

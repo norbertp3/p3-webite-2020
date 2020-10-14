@@ -582,7 +582,7 @@ template {
 
 .button-secondary-on-white {
   background-color: inherit;
-  border-radius: 3px;
+  border-radius: 2px;
   color: #001a70;
   font-size: 17px;
   font-weight: 500;
@@ -1519,6 +1519,12 @@ hr {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .generic__services__card {
+    width: 50%;
+  }
+}
+
 .generic__services__img {
   margin-bottom: 16px;
 }
@@ -1548,6 +1554,171 @@ hr {
 @media screen and (min-width: 992px) {
   .generic__services__link {
     margin-top: 58px;
+  }
+}
+
+.generic__contact {
+  background: #001a70;
+  padding-top: 64px;
+  margin-bottom: -128px;
+}
+
+.generic__contact__form {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__form {
+    margin: 0 0 0 auto;
+    max-width: 450px;
+  }
+}
+
+.generic__contact__form .h2 {
+  margin-bottom: 34px;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__form .h2 {
+    margin-bottom: 36px;
+  }
+}
+
+.generic__contact__form .form-control {
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #94a9cb;
+  border-radius: 0;
+  padding: 0;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.generic__contact__form .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.generic__contact__form .form-control:-ms-input-placeholder {
+  color: #fff;
+}
+
+.generic__contact__form .form-control::-ms-input-placeholder {
+  color: #fff;
+}
+
+.generic__contact__form .form-control::placeholder {
+  color: #fff;
+}
+
+.generic__contact__form .form-control option {
+  color: #001a70;
+}
+
+.generic__contact__heading {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__heading {
+    text-align: left;
+  }
+}
+
+.generic__contact__h2 {
+  color: #fff;
+}
+
+.generic__contact__span {
+  color: #94a9cb;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__border {
+    border-bottom: 1px solid rgba(148, 169, 203, 0.5);
+    padding-bottom: 64px;
+  }
+}
+
+.generic__contact__links {
+  margin-bottom: 32px;
+}
+
+.generic__contact__links a {
+  display: block;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__links a {
+    margin-bottom: 8px;
+  }
+}
+
+.generic__contact--technical {
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact--technical {
+    margin-top: 0;
+  }
+}
+
+.generic__contact__details {
+  background-color: #fff;
+  margin-top: 64px;
+  padding: 64px 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .generic__contact__details {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__details {
+    border-radius: 6px;
+    padding: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 68px;
+    margin-top: 0;
+  }
+}
+
+.generic__contact__details h5 {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__details h5 {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .generic__contact__details--map {
+    margin-left: 48px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .generic__contact__details .button-secondary-on-white {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .generic__contact__mobile {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
   }
 }
 
@@ -3040,6 +3211,10 @@ hr {
   }
 }
 
+.content__cards__carousel h2 {
+  margin-bottom: 16px;
+}
+
 .content__cards__carousel__card {
   position: relative;
   height: 280px;
@@ -3073,6 +3248,7 @@ hr {
 
 .content__cards__carousel__card__overlay h2 {
   font-size: 22px;
+  color: #fff;
 }
 
 @media screen and (min-width: 992px) {
@@ -3876,6 +4052,89 @@ hr {
   }
 }
 
+.content__stats-small {
+  margin: 64px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__stats-small {
+    margin: 128px 0;
+  }
+}
+
+.content__stats-small__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .content__stats-small__card {
+    margin-bottom: 64px;
+  }
+}
+
+.content__stats-small__card img {
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .content__stats-small__card img {
+    padding-right: 56px;
+  }
+}
+
+.content__bullet-points {
+  margin: 64px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__bullet-points {
+    margin: 128px 0;
+  }
+}
+
+.content__bullet-points ul {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.06px;
+  color: #212322;
+  margin: 62px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content__bullet-points ul {
+    -webkit-columns: 2;
+            columns: 2;
+    font-size: 18px;
+    letter-spacing: 1.13px;
+    margin: 128px 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content__bullet-points ul {
+    -webkit-columns: 3;
+            columns: 3;
+  }
+}
+
+.content__bullet-points ul li {
+  list-style: none;
+  text-indent: -26px;
+}
+
+.content__bullet-points ul li::before {
+  content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
+  position: relative;
+  padding-right: 10px;
+  top: 3px;
+}
+
 .bonus__h2 {
   margin-bottom: 32px;
   color: #fff !important;
@@ -4073,5 +4332,79 @@ hr {
 
 .blog__list .home__blog__card {
   margin: 0 0 64px 0;
+}
+
+.blog__filters {
+  margin: 64px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .blog__filters__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.blog__filters__toggle {
+  position: relative;
+  color: #001a70;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 64px;
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .blog__filters__toggle {
+    margin-top: 0;
+  }
+}
+
+.blog__filters__toggle::after {
+  content: url("/images/icons/chevron-down.svg");
+  position: absolute;
+}
+
+.blog__filters__toggle--open::after {
+  content: url("/images/icons/chevron-up.svg");
+  position: absolute;
+}
+
+.blog__filters__tags {
+  margin-top: 16px;
+  display: none;
+}
+
+.blog__search {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .blog__search {
+    width: 300px;
+  }
+}
+
+.blog__search::after {
+  content: url("/images/icons/icon-search.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.blog__search input {
+  border: none;
+  border-bottom: 1px solid #94a9cb;
+  padding-bottom: 3px;
+  width: 100%;
+  color: #001a70;
 }
 /*# sourceMappingURL=styles.css.map */

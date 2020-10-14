@@ -174,7 +174,24 @@
     <main id="main">
         <section class="blog__list">
             <div class="container">
-                <div class="row my-5">
+                <section class="blog__filters">
+                    <div class="blog__filters__row">
+                        <div class="blog__search">
+                            <form action="">
+                                <input type="text" name="" placeholder="Search blog">
+                            </form>
+                        </div>
+                        <a href="javascript:;" class="blog__filters__toggle">Filter Posts by Category</a>
+                    </div>
+                    <div class="blog__filters__tags">
+                        <a href="#"><span class="badge badge-green">Primary</span></a>
+                        <a href="#"><span class="badge badge-purple">Primary</span></a>
+                        <a href="#"><span class="badge badge-purple">Primary Primary</span></a>
+                        <a href="#"><span class="badge badge-purple">Primary Primary Primary</span></a>
+                    </div>
+                </section>
+                <section class="blog__articles">
+                    <div class="row my-5">
                     <div class="col-12 col-md-6 col-lg-4">
                         <a href="#">
                             <div class="home__blog__card card">
@@ -184,6 +201,22 @@
                                     <span class="badge badge-blue">Primary</span>
                                     <span class="badge badge-purple">Primary</span>
                                     <h5 class="card-title">How to Set Your Hotel Room Rates?</h5>
+                                    <p class="card-text">Your goal as a revenue manager is to sell hotel rooms at the highest rate possible, especially through your own website, to maximise revenue. Here's what you need to do…</p>
+                                    <hr>
+                                    <span class="home__blog__card--span">15 November 2019</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="home__blog__card card">
+                                <img class="card-img-top" src="https://via.placeholder.com/450x278" alt="Card image cap">
+                                <div class="card-body">
+                                    <span class="badge badge-green">Primary</span>
+                                    <span class="badge badge-blue">Primary</span>
+                                    <span class="badge badge-purple">Primary</span>
+                                    <h5 class="card-title">How to?</h5>
                                     <p class="card-text">Your goal as a revenue manager is to sell hotel rooms at the highest rate possible, especially through your own website, to maximise revenue. Here's what you need to do…</p>
                                     <hr>
                                     <span class="home__blog__card--span">15 November 2019</span>
@@ -239,23 +272,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="home__blog__card card">
-                                <img class="card-img-top" src="https://via.placeholder.com/450x278" alt="Card image cap">
-                                <div class="card-body">
-                                    <span class="badge badge-green">Primary</span>
-                                    <span class="badge badge-blue">Primary</span>
-                                    <span class="badge badge-purple">Primary</span>
-                                    <h5 class="card-title">How to Set Your Hotel Room Rates?</h5>
-                                    <p class="card-text">Your goal as a revenue manager is to sell hotel rooms at the highest rate possible, especially through your own website, to maximise revenue. Here's what you need to do…</p>
-                                    <hr>
-                                    <span class="home__blog__card--span">15 November 2019</span>
-                                </div>
-                            </div>
-                        </a>
                     </div>
-                </div>
+                </section>
             </div>
         </section>
     </main>

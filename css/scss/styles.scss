@@ -323,6 +323,9 @@ hr {
                     border-right: 1px solid rgba(148, 169, 203, 0.5);
                 }
             }
+            @include mQ(992px) {
+                width: 50%;
+            }
         }
         &__img {
             margin-bottom: 16px;
@@ -342,6 +345,115 @@ hr {
             margin-top: 32px;
             @include mQ(992px) {
                 margin-top: 58px;
+            }
+        }
+    }
+    &__contact {
+        background: $primaryColour1;
+        padding-top: 64px;
+        margin-bottom: -128px;
+        &__form {
+            width: 100%;
+                @include mQ(992px) {
+                    margin: 0 0 0 auto;
+                    max-width: 450px;
+                }
+                .h2 {
+                    margin-bottom: 34px;
+                    color: #fff;
+                    @include mQ(992px) {
+                        margin-bottom: 36px;
+                    }
+                }
+                .form-control {
+                    background-color: inherit;
+                    border: none;
+                    border-bottom: 1px solid $secondaryColour2;
+                    border-radius: 0;
+                    padding: 0;
+                    color: #fff;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                    option {
+                        color: $primaryColour1;
+                    }
+                }
+        }
+        &__heading {
+            text-align: center;
+            @include mQ(992px) {
+                text-align: left;
+            }
+        }
+        &__h2 {
+            color: #fff;
+        }
+        &__span {
+            color: $secondaryColour2;
+            font-weight: 600;
+            letter-spacing: 0.88px;
+        }
+        &__border {
+            @include mQ(992px) {
+                border-bottom: 1px solid rgba(148, 169, 203, 0.5);            ;
+                padding-bottom: 64px;
+            }
+        }
+        &__links {
+            margin-bottom: 32px;
+            a {
+                display: block;
+                margin-bottom: 16px;
+                @include mQ(992px) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        &--technical {
+            margin-top: 64px;
+            @include mQ(992px) {
+                margin-top: 0;
+            }
+        }
+        &__details {
+            background-color: #fff;
+            margin-top: 64px;
+            padding: 64px 15px;
+            @include mQmax(991px) {
+                width: 100vw;
+            }
+            @include mQ(992px) {
+                border-radius: 6px;
+                padding: 64px;
+                display: flex;
+                margin-left: 68px;
+                margin-top: 0;
+            }
+            h5 {
+                margin-bottom: 32px;
+                @include mQ(992px) {
+                    margin-bottom: 16px;
+                }
+            }
+            &--map {
+                @include mQ(992px) {
+                    margin-left: 48px;
+                }
+            }
+            .button-secondary-on-white {
+                @include mQmax(991px) {
+                    width: 100%;
+                }
+            }
+        }
+        &__mobile {
+            @include mQmax(991px) {
+                margin-left: -15px;
+                margin-right: -15px;
+                width: 100%;
             }
         }
     }
@@ -1448,6 +1560,9 @@ hr {
         @include mQ(992px) {
             margin: 128px 0;
         }
+        h2 {
+            margin-bottom: 16px;
+        }
         &__card {
             position: relative;
             height: 280px;
@@ -1470,9 +1585,9 @@ hr {
                 background-color: rgba(33, 35, 34, 0.5);
                 color: #fff;
                 margin: auto 0;
-                
                 h2 {
                     font-size: 22px;
+                    color: #fff;
                     @include mQ(992px) {
                         font-size: 32px;
                         font-family: $headingFont;
@@ -2083,6 +2198,58 @@ hr {
             }
         }
     }
+    &__stats-small {
+        margin: 64px 0;
+        @include mQ(992px) {
+            margin: 128px 0;
+        }
+        &__card {
+            display: flex;
+            align-items: center;
+            @include mQmax(991px) {
+                margin-bottom: 64px;
+            }
+            img {
+                padding-right: 30px;
+                @include mQ(992px) {
+                    padding-right: 56px;
+                }
+            }
+        }
+    }
+    &__bullet-points {
+        margin: 64px 0;
+        @include mQ(992px) {
+            margin: 128px 0;
+        }
+        ul {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 1.06px;
+            color: #212322;
+            margin: 62px 0;
+            @include mQ(992px) {
+                columns: 2;
+                font-size: 18px;
+                letter-spacing: 1.13px;
+                margin: 128px 0;
+            }
+            @include mQ(1400px) {
+                columns: 3;
+            }
+            li {
+                list-style: none;
+                text-indent: -26px;
+                &::before {
+                    content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
+                    position: relative;
+                    padding-right: 10px;
+                    top: 3px;
+                }
+            }
+        }
+    }
 }
 
 .bonus {
@@ -2221,6 +2388,60 @@ hr {
     &__list {
         .home__blog__card {
             margin: 0 0 64px 0;
+        }
+    }
+    &__filters {
+        margin: 64px 0;
+        &__row {
+            @include mQ(992px) {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+            }
+        }
+        &__toggle {
+            position: relative;
+            color: $primaryColour1;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            margin-top: 64px;
+            display: block;
+            @include mQ(992px) {
+                margin-top: 0;
+            }
+            &::after {
+                content: url("/images/icons/chevron-down.svg");;
+                position: absolute;
+            }
+            &--open {
+                &::after {
+                    content: url("/images/icons/chevron-up.svg");;
+                    position: absolute;
+                }
+            }
+        }
+        &__tags {
+            margin-top: 16px;
+            display: none;
+        }
+    }
+    &__search {
+        position: relative;
+        @include mQ(992px) {
+            width: 300px;
+        }
+        &::after {
+            content: url("/images/icons/icon-search.svg");;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        input {
+            border: none;
+            border-bottom: 1px solid $secondaryColour2;
+            padding-bottom: 3px;
+            width: 100%;
+            color: $primaryColour1;
         }
     }
 }

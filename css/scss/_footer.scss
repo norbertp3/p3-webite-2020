@@ -25,6 +25,11 @@
                 margin-right: 0;
             }
         }
+        img {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
     }
     &__reg {
         p {
@@ -41,7 +46,7 @@
         color: #fff;
         font-weight: 600;
         &:hover {
-            color: #fff;
+            color: $secondaryColour2;
         }
     }
     &__col-heading {

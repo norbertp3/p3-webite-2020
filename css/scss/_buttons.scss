@@ -19,6 +19,7 @@
         border-image-slice: 1;
         border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
         border-width: 2px;
+        color: $primaryColour1;
     }
     &:focus {
         border-image-slice: 1;
@@ -103,8 +104,20 @@
     padding: 13px 20px;
     text-align: center;
     font-weight: 500;
+    letter-spacing: 1.06px;
     &:hover {
-        color: $primaryColour1;
+        background-color: $primaryColour1;
+        color: #fff;
+    }
+    &:focus {
+        border: solid 3px #94a9cb;
+    }
+    &:active {
+        background-color: #2c5697;
+        color: #fff;
+    }
+    &:disabled {
+        opacity: 0.5;
     }
 }
 .button-secondary-on-dark {

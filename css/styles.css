@@ -434,6 +434,7 @@ template {
   border-image-slice: 1;
   border-image-source: linear-gradient(232deg, #3bd4ae, #00c1de, #9578d3);
   border-width: 2px;
+  color: #001a70;
 }
 
 .btn-primary-white:focus {
@@ -531,10 +532,25 @@ template {
   padding: 13px 20px;
   text-align: center;
   font-weight: 500;
+  letter-spacing: 1.06px;
 }
 
 .btn-secondary-border:hover {
-  color: #001a70;
+  background-color: #001a70;
+  color: #fff;
+}
+
+.btn-secondary-border:focus {
+  border: solid 3px #94a9cb;
+}
+
+.btn-secondary-border:active {
+  background-color: #2c5697;
+  color: #fff;
+}
+
+.btn-secondary-border:disabled {
+  opacity: 0.5;
 }
 
 .button-secondary-on-dark {
@@ -755,6 +771,10 @@ h5, .h5 {
   position: relative;
 }
 
+.link-gradient-arrow:hover {
+  color: #94a9cb;
+}
+
 .link-gradient-arrow::after {
   content: url("/images/icons/small-arrow-right.svg");
   position: relative;
@@ -837,10 +857,26 @@ h5, .h5 {
   color: #fff;
 }
 
+.nav__desktop__item:hover::before {
+  content: "";
+  background: -webkit-gradient(linear, right top, left top, from(#05c3dd), color-stop(#9678d3), to(#47d7ac));
+  background: linear-gradient(to left, #05c3dd, #9678d3, #47d7ac);
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
 .nav__desktop__lang {
   background-color: inherit;
   border: none;
   color: #fff;
+}
+
+.nav__desktop__lang:hover {
+  cursor: pointer;
 }
 
 .nav__desktop__lang:active, .nav__desktop__lang:focus {
@@ -1104,6 +1140,10 @@ h5, .h5 {
   margin-right: 0;
 }
 
+.footer__social-media img:hover {
+  opacity: 0.5;
+}
+
 .footer__reg p {
   color: #94a9cb;
   letter-spacing: 1px;
@@ -1119,7 +1159,7 @@ h5, .h5 {
 }
 
 .footer__link:hover {
-  color: #fff;
+  color: #94a9cb;
 }
 
 .footer__col-heading {
@@ -1168,14 +1208,26 @@ body {
   color: #fff;
 }
 
+.badge-green:hover {
+  background-color: #a5dfd3;
+}
+
 .badge-blue {
   background-color: #05c3dd;
   color: #fff;
 }
 
+.badge-blue:hover {
+  background-color: #a4dbe8;
+}
+
 .badge-purple {
   background-color: #9678d3;
   color: #fff;
+}
+
+.badge-purple:hover {
+  background-color: #d9c5e6;
 }
 
 .separator {
@@ -1228,6 +1280,12 @@ hr {
   letter-spacing: 0.88px;
   color: #94a9cb;
   text-transform: uppercase;
+}
+
+.facebook {
+  background-image: url("/images/icons/facebook-share.svg");
+  display: block;
+  repeat: no-repeat;
 }
 
 .generic__heading__text {
@@ -1462,7 +1520,7 @@ hr {
 }
 
 .generic__testimonials--company:hover {
-  color: #fff;
+  color: #94a9cb;
   text-decoration: underline;
 }
 
@@ -1770,9 +1828,12 @@ hr {
   text-align: center;
 }
 
+.home__header__button:hover {
+  color: #001a70;
+}
+
 .home__header a:hover {
   text-decoration: none;
-  color: inherit;
 }
 
 .home__header__slider {
@@ -1796,6 +1857,7 @@ hr {
 .home__arrow-scroll:hover {
   padding-top: 10px;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .home__diagram {
@@ -1991,6 +2053,10 @@ hr {
 
 .home__blog__btns button {
   border: none;
+}
+
+.home__blog__btns button:hover {
+  cursor: pointer;
 }
 
 .home__blog__btns__left {
@@ -2247,15 +2313,19 @@ hr {
   border-image-source: linear-gradient(258deg, #3bd4ae, #00c1de, #9578d3);
   border-image-slice: 1;
   margin-top: 36px;
+  font-weight: 500;
+  -webkit-transition: 0.5;
+  transition: 0.5;
 }
 
 .home__contact__submit:hover {
   cursor: pointer;
+  background-image: linear-gradient(258deg, #3bd4ae, #00c1de, #9578d3);
+  color: #001a70;
 }
 
 .home__contact__details {
   margin: 0 15px;
-  padding-bottom: 128px;
 }
 
 @media screen and (min-width: 992px) {
@@ -4150,6 +4220,7 @@ hr {
 .bonus__header {
   height: 100%;
   padding: 32px 0;
+  background-image: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -4284,6 +4355,10 @@ hr {
   }
 }
 
+.bonus__share li img:hover {
+  opacity: 0.5;
+}
+
 .bonus__share--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4406,5 +4481,9 @@ hr {
   padding-bottom: 3px;
   width: 100%;
   color: #001a70;
+}
+
+.blog__search input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=styles.css.map */

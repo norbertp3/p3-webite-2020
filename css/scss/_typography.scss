@@ -101,6 +101,9 @@ h5, .h5 {
     line-height: 1.5;
     letter-spacing: 1px;
     position: relative;
+    &:hover {
+        color: $secondaryColour2;
+    }
     &::after {
         content: url("/images/icons/small-arrow-right.svg");
         position: relative;

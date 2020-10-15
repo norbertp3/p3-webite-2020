@@ -39,14 +39,23 @@ body {
 .badge-green {
     background-color: #47d7ac;
     color: #fff;
+    &:hover {
+        background-color: #a5dfd3;
+    }
 }
 .badge-blue {
     background-color: #05c3dd;
     color: #fff;
+    &:hover {
+        background-color: #a4dbe8;
+    }
 }
 .badge-purple {
     background-color: #9678d3;
     color: #fff;
+    &:hover {
+        background-color: #d9c5e6;
+    }
 }
 
 .separator {
@@ -99,6 +108,12 @@ hr {
         color: $secondaryColour2;
         text-transform: uppercase;
     }
+}
+
+.facebook {
+    background-image: url('/images/icons/facebook-share.svg');
+    display: block;
+    repeat: no-repeat;
 }
 
 .generic {
@@ -284,7 +299,7 @@ hr {
             text-decoration: underline;
             color: #fff;
             &:hover {
-                color: #fff;
+                color: $secondaryColour2;
                 text-decoration: underline;
             }
         }
@@ -494,11 +509,13 @@ hr {
         &__button {
             margin-top: 30px;
             text-align: center;
+            &:hover {
+                color: $primaryColour1;
+            }
         }
         a {
             &:hover {
                 text-decoration: none;
-                color: inherit;
             }
         }
         &__slider {
@@ -517,6 +534,7 @@ hr {
         &:hover {
             padding-top: 10px;
             cursor: pointer;
+            opacity: 0.6;
         }
     }
     &__diagram {
@@ -664,8 +682,8 @@ hr {
             margin-top: 32px;
             button {
                 border: none;
-                &:active {
-                    
+                &:hover {
+                    cursor: pointer;
                 }
             }
             &__left {
@@ -851,13 +869,16 @@ hr {
             border-image-source: linear-gradient(258deg, #3bd4ae, #00c1de, #9578d3);
             border-image-slice: 1;
             margin-top: 36px;
+            font-weight: 500;
+            transition: 0.5;
             &:hover {
                 cursor: pointer;
+                background-image: linear-gradient(258deg, #3bd4ae, #00c1de, #9578d3);
+                color: $primaryColour1;
             }
         }
         &__details {
             margin: 0 15px;
-            padding-bottom: 128px;
             @include mQ(992px) {
                 margin: 0 auto 0 5%;
                 padding-bottom: 0;
@@ -2253,7 +2274,6 @@ hr {
 }
 
 .bonus {
-
     &__h2 {
         margin-bottom: 32px;
         color: #fff!important;
@@ -2265,6 +2285,7 @@ hr {
     &__header {
         height: 100%;
         padding: 32px 0;
+        background-image: none;
         @include mQ(992px) {
             padding: 64px 0;
         }
@@ -2351,6 +2372,11 @@ hr {
             @include mQ(768px) {
                 margin-bottom: 32px;
                 margin-left: 0px;
+            }
+            img {
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
         &--bottom {
@@ -2442,6 +2468,9 @@ hr {
             padding-bottom: 3px;
             width: 100%;
             color: $primaryColour1;
+            &:focus {
+                outline: none;
+            }
         }
     }
 }

@@ -2366,9 +2366,11 @@ hr {
                     margin-bottom: 0;
                 }
                 &::before {
-                    content: url(http://127.0.0.1:5501/images/icons/v-2.png);
+                    content: '';
+                    background: url(http://127.0.0.1:5501/images/icons/v-2.png); 
                     position: relative;
-                    padding-right: 10px;
+                    padding-right: 23px;
+                    background-repeat: no-repeat;
                     top: 3px;
                     height: 16px;
                     width: 16px;

@@ -607,6 +607,7 @@ template {
   font-family: "Muli";
   border: 1.5px solid #001a70;
   display: inline-block;
+  text-align: center;
 }
 
 @media screen and (min-width: 992px) {
@@ -4239,6 +4240,8 @@ hr {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 6px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media screen and (min-width: 992px) {
@@ -4253,6 +4256,34 @@ hr {
   .bonus__header__img {
     width: 30vw;
   }
+}
+
+.bonus__header__img__overlay {
+  position: absolute;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .bonus__header__img__overlay {
+    width: calc(100% - 32px);
+    max-height: 426px;
+  }
+}
+
+.bonus__header__img__overlay--circles {
+  background-image: url("/images/purple-circles.svg");
+}
+
+.bonus__header__img__overlay--squares {
+  background-image: url("/images/blue-squares.svg");
+}
+
+.bonus__header__img__overlay--triangles {
+  background-image: url("/images/green-triangles.svg");
 }
 
 @media screen and (min-width: 992px) {

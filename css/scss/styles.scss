@@ -2297,6 +2297,8 @@ hr {
             height: auto;
             object-fit: cover;
             border-radius: 6px;
+            filter: grayscale(100%);
+            // position: relative;
             @include mQ(992px) {
                 height: 426px;
                 width: 35vw;
@@ -2304,6 +2306,28 @@ hr {
             }
             @include mQ(1400px) {
                 width: 30vw;
+            }
+            &__overlay {
+                position: absolute;
+                // background-color: #9bcd9b;
+                z-index: 999;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                background-size: cover;
+                @include mQ(992px) {
+                    width: calc(100% - 32px);
+                    max-height: 426px;
+                }
+                &--circles {
+                    background-image: url('/images/purple-circles.svg');
+                }
+                &--squares {
+                    background-image: url('/images/blue-squares.svg');
+                }
+                &--triangles {
+                    background-image: url('/images/green-triangles.svg');
+                }
             }
         }
         &__wrapper {

@@ -2294,7 +2294,7 @@ hr {
         }
         &__img {
             width: 100%;
-            height: auto;
+            height: 179px;
             object-fit: cover;
             border-radius: 6px;
             filter: grayscale(100%);
@@ -2367,7 +2367,7 @@ hr {
                 }
                 &::before {
                     content: '';
-                    background: url(http://127.0.0.1:5501/images/icons/v-2.png); 
+                    background-image: url(http://127.0.0.1:5501/images/icons/v-2.png); 
                     position: relative;
                     padding-right: 23px;
                     background-repeat: no-repeat;

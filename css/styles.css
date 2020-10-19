@@ -4342,7 +4342,7 @@ hr {
 }
 
 .bonus__header__links a::before {
-  content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
+  content: url(http://127.0.0.1:5501/images/icons/v-2.png);
   position: relative;
   padding-right: 10px;
   top: 3px;

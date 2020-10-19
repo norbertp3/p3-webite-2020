@@ -4194,18 +4194,6 @@ hr {
   }
 }
 
-.content__bullet-points ul li {
-  list-style: none;
-  text-indent: -26px;
-}
-
-.content__bullet-points ul li::before {
-  content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
-  position: relative;
-  padding-right: 10px;
-  top: 3px;
-}
-
 .bonus__h2 {
   margin-bottom: 32px;
   color: #fff !important;
@@ -4313,7 +4301,7 @@ hr {
 }
 
 .bonus__header__links {
-  list-style: none;
+  margin-left: 15px;
   margin-top: 32px;
 }
 
@@ -4339,18 +4327,6 @@ hr {
     margin-right: 32px;
     margin-bottom: 0;
   }
-}
-
-.bonus__header__links a::before {
-  content: '';
-  background-image: url(http://127.0.0.1:5501/images/icons/v-2.png);
-  position: relative;
-  padding-right: 23px;
-  background-repeat: no-repeat;
-  top: 3px;
-  height: 16px;
-  width: 16px;
-  display: inline-block;
 }
 
 .bonus__share {

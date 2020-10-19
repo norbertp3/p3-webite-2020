@@ -2259,16 +2259,16 @@ hr {
             @include mQ(1400px) {
                 columns: 3;
             }
-            li {
-                list-style: none;
-                text-indent: -26px;
-                &::before {
-                    content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
-                    position: relative;
-                    padding-right: 10px;
-                    top: 3px;
-                }
-            }
+            // li {
+            //     list-style: none;
+            //     text-indent: -26px;
+            //     &::before {
+            //         content: url(http://127.0.0.1:5501/images/icons/v-2.svg);
+            //         position: relative;
+            //         padding-right: 10px;
+            //         top: 3px;
+            //     }
+            // }
         }
     }
 }
@@ -2349,7 +2349,8 @@ hr {
             text-transform: uppercase;
         }
         &__links {
-            list-style: none;
+            // list-style: none;
+            margin-left: 15px;
             margin-top: 32px;
             @include mQ(992px) {
                 display: flex;
@@ -2365,17 +2366,17 @@ hr {
                     margin-right: 32px;
                     margin-bottom: 0;
                 }
-                &::before {
-                    content: '';
-                    background-image: url(http://127.0.0.1:5501/images/icons/v-2.png); 
-                    position: relative;
-                    padding-right: 23px;
-                    background-repeat: no-repeat;
-                    top: 3px;
-                    height: 16px;
-                    width: 16px;
-                    display: inline-block;
-                }
+                // &::before {
+                //     content: '';
+                //     background-image: url(http://127.0.0.1:5501/images/icons/v-2.png); 
+                //     position: relative;
+                //     padding-right: 23px;
+                //     background-repeat: no-repeat;
+                //     top: 3px;
+                //     height: 16px;
+                //     width: 16px;
+                //     display: inline-block;
+                // }
             }
         }
     }
